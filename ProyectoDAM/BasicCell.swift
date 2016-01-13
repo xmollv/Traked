@@ -6,4 +6,8 @@
 //  Copyright © 2016 TaniaXavi. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class BasicCell{
+    
+}
