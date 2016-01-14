@@ -11,8 +11,10 @@ import UIKit
 class FirstViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     @IBOutlet weak var collectionView: UICollectionView!
     
+    override func viewWillAppear(animated: Bool) {
+        
+    }
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -26,18 +28,11 @@ class FirstViewController: UIViewController, UICollectionViewDataSource, UIColle
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell{
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("CollectionCell", forIndexPath: indexPath)
-        let img = cell.viewWithTag(1) as! UIImageView
-        img.image = UIImage(named: "first")
-        //img.image = arrayOfBadgesGlobal[indexPath.row].imageStored!
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("CollectionCell", forIndexPath: indexPath) as! BasicCell
         
-        /*if let image = arrayOfBadgesGlobal[indexPath.row].imageStored {
-            img.image = image
-        }*/
+        cell.imageView.image = UIImage(named: "first")
+        cell.textLabel.text = "Test"
         
-        let text = cell.viewWithTag(2) as! UILabel
-        text.text = "Test"
-        //text.text = arrayOfBadgesGlobal[indexPath.row].name!
         return cell
     }
     

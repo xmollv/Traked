@@ -8,6 +8,14 @@
 
 import UIKit
 
-class BasicCell{
+class BasicCell: UICollectionViewCell{
     
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var textLabel: UILabel!
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        imageView.image = UIImage()
+        textLabel.text = ""
+    }
 }

@@ -15,6 +15,7 @@
 		4771DA561C46E29C008022A5 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4771DA551C46E29C008022A5 /* ThirdViewController.swift */; };
 		4771DA581C46E2A5008022A5 /* FourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4771DA571C46E2A5008022A5 /* FourthViewController.swift */; };
 		4771DA5A1C46E6FE008022A5 /* BasicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4771DA591C46E6FE008022A5 /* BasicCell.swift */; };
+		6BB7E658DDC5C294CBF2A5F9 /* Pods_ProyectoDAM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7263278990CED0354C36A6DD /* Pods_ProyectoDAM.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,9 @@
 		4771DA551C46E29C008022A5 /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		4771DA571C46E2A5008022A5 /* FourthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FourthViewController.swift; sourceTree = "<group>"; };
 		4771DA591C46E6FE008022A5 /* BasicCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicCell.swift; sourceTree = "<group>"; };
+		7263278990CED0354C36A6DD /* Pods_ProyectoDAM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProyectoDAM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AB7A56224743243529506F3 /* Pods-ProyectoDAM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProyectoDAM.release.xcconfig"; path = "Pods/Target Support Files/Pods-ProyectoDAM/Pods-ProyectoDAM.release.xcconfig"; sourceTree = "<group>"; };
+		CCE90DD0EE03B493502804FB /* Pods-ProyectoDAM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProyectoDAM.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ProyectoDAM/Pods-ProyectoDAM.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BB7E658DDC5C294CBF2A5F9 /* Pods_ProyectoDAM.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,6 +51,8 @@
 			children = (
 				474E5CB51C289934007DADBD /* ProyectoDAM */,
 				474E5CB41C289934007DADBD /* Products */,
+				A550BAE11075749E73C14362 /* Pods */,
+				86DC5609463FDF86F32D668E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -73,6 +80,23 @@
 			path = ProyectoDAM;
 			sourceTree = "<group>";
 		};
+		86DC5609463FDF86F32D668E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7263278990CED0354C36A6DD /* Pods_ProyectoDAM.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A550BAE11075749E73C14362 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CCE90DD0EE03B493502804FB /* Pods-ProyectoDAM.debug.xcconfig */,
+				9AB7A56224743243529506F3 /* Pods-ProyectoDAM.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -80,9 +104,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 474E5CC71C289934007DADBD /* Build configuration list for PBXNativeTarget "ProyectoDAM" */;
 			buildPhases = (
+				720A0D27FF395FD470BCC472 /* Check Pods Manifest.lock */,
 				474E5CAF1C289934007DADBD /* Sources */,
 				474E5CB01C289934007DADBD /* Frameworks */,
 				474E5CB11C289934007DADBD /* Resources */,
+				8602B8B9D96DFFED6CEE168D /* Embed Pods Frameworks */,
+				124590358CC55E5DD50D1CD7 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -138,6 +165,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		124590358CC55E5DD50D1CD7 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ProyectoDAM/Pods-ProyectoDAM-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		720A0D27FF395FD470BCC472 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8602B8B9D96DFFED6CEE168D /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ProyectoDAM/Pods-ProyectoDAM-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		474E5CAF1C289934007DADBD /* Sources */ = {
@@ -250,6 +325,7 @@
 		};
 		474E5CC81C289934007DADBD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CCE90DD0EE03B493502804FB /* Pods-ProyectoDAM.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ProyectoDAM/Info.plist;
@@ -262,6 +338,7 @@
 		};
 		474E5CC91C289934007DADBD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9AB7A56224743243529506F3 /* Pods-ProyectoDAM.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ProyectoDAM/Info.plist;
