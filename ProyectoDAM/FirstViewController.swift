@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class FirstViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     @IBOutlet weak var collectionView: UICollectionView!

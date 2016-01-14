@@ -46,6 +46,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		474B52741C4800610095686C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		474E5CAA1C289934007DADBD = {
 			isa = PBXGroup;
 			children = (
@@ -68,8 +75,9 @@
 			isa = PBXGroup;
 			children = (
 				474E5CB61C289934007DADBD /* AppDelegate.swift */,
-				474E5CB81C289934007DADBD /* FirstViewController.swift */,
+				474B52741C4800610095686C /* Models */,
 				4771DA591C46E6FE008022A5 /* BasicCell.swift */,
+				474E5CB81C289934007DADBD /* FirstViewController.swift */,
 				474E5CBA1C289934007DADBD /* SecondViewController.swift */,
 				4771DA551C46E29C008022A5 /* ThirdViewController.swift */,
 				4771DA571C46E2A5008022A5 /* FourthViewController.swift */,
