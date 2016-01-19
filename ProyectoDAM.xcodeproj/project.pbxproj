@@ -15,6 +15,7 @@
 		4771DA561C46E29C008022A5 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4771DA551C46E29C008022A5 /* ThirdViewController.swift */; };
 		4771DA581C46E2A5008022A5 /* FourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4771DA571C46E2A5008022A5 /* FourthViewController.swift */; };
 		4771DA5A1C46E6FE008022A5 /* BasicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4771DA591C46E6FE008022A5 /* BasicCell.swift */; };
+		47BCABB61C4EA52D001B7E85 /* TraktKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BCABB51C4EA52D001B7E85 /* TraktKeys.swift */; };
 		6BB7E658DDC5C294CBF2A5F9 /* Pods_ProyectoDAM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7263278990CED0354C36A6DD /* Pods_ProyectoDAM.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +30,7 @@
 		4771DA551C46E29C008022A5 /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		4771DA571C46E2A5008022A5 /* FourthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FourthViewController.swift; sourceTree = "<group>"; };
 		4771DA591C46E6FE008022A5 /* BasicCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicCell.swift; sourceTree = "<group>"; };
+		47BCABB51C4EA52D001B7E85 /* TraktKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TraktKeys.swift; sourceTree = "<group>"; };
 		7263278990CED0354C36A6DD /* Pods_ProyectoDAM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProyectoDAM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AB7A56224743243529506F3 /* Pods-ProyectoDAM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProyectoDAM.release.xcconfig"; path = "Pods/Target Support Files/Pods-ProyectoDAM/Pods-ProyectoDAM.release.xcconfig"; sourceTree = "<group>"; };
 		CCE90DD0EE03B493502804FB /* Pods-ProyectoDAM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProyectoDAM.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ProyectoDAM/Pods-ProyectoDAM.debug.xcconfig"; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 				474B52741C4800610095686C /* Models */,
 				4771DA591C46E6FE008022A5 /* BasicCell.swift */,
 				474E5CB81C289934007DADBD /* FirstViewController.swift */,
+				47BCABB51C4EA52D001B7E85 /* TraktKeys.swift */,
 				474E5CBA1C289934007DADBD /* SecondViewController.swift */,
 				4771DA551C46E29C008022A5 /* ThirdViewController.swift */,
 				4771DA571C46E2A5008022A5 /* FourthViewController.swift */,
@@ -229,6 +232,7 @@
 			files = (
 				474E5CBB1C289934007DADBD /* SecondViewController.swift in Sources */,
 				474E5CB71C289934007DADBD /* AppDelegate.swift in Sources */,
+				47BCABB61C4EA52D001B7E85 /* TraktKeys.swift in Sources */,
 				4771DA561C46E29C008022A5 /* ThirdViewController.swift in Sources */,
 				474E5CB91C289934007DADBD /* FirstViewController.swift in Sources */,
 				4771DA5A1C46E6FE008022A5 /* BasicCell.swift in Sources */,
