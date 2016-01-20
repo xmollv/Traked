@@ -15,6 +15,18 @@
 		4771DA561C46E29C008022A5 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4771DA551C46E29C008022A5 /* ThirdViewController.swift */; };
 		4771DA581C46E2A5008022A5 /* FourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4771DA571C46E2A5008022A5 /* FourthViewController.swift */; };
 		4771DA5A1C46E6FE008022A5 /* BasicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4771DA591C46E6FE008022A5 /* BasicCell.swift */; };
+		479823E71C50122400905454 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479823E61C50122400905454 /* Helper.swift */; };
+		479823F21C50149100905454 /* Banner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479823E81C50149100905454 /* Banner.swift */; };
+		479823F31C50149100905454 /* Clearart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479823E91C50149100905454 /* Clearart.swift */; };
+		479823F41C50149100905454 /* Fanart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479823EA1C50149100905454 /* Fanart.swift */; };
+		479823F51C50149100905454 /* Ids.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479823EB1C50149100905454 /* Ids.swift */; };
+		479823F61C50149100905454 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479823EC1C50149100905454 /* Images.swift */; };
+		479823F71C50149100905454 /* TVShows.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479823ED1C50149100905454 /* TVShows.swift */; };
+		479823F81C50149100905454 /* Logo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479823EE1C50149100905454 /* Logo.swift */; };
+		479823F91C50149100905454 /* Poster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479823EF1C50149100905454 /* Poster.swift */; };
+		479823FA1C50149100905454 /* Show.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479823F01C50149100905454 /* Show.swift */; };
+		479823FB1C50149100905454 /* Thumb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479823F11C50149100905454 /* Thumb.swift */; };
+		479823FD1C50177900905454 /* HudView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479823FC1C50177900905454 /* HudView.swift */; };
 		47BCABB61C4EA52D001B7E85 /* TraktKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BCABB51C4EA52D001B7E85 /* TraktKeys.swift */; };
 		6BB7E658DDC5C294CBF2A5F9 /* Pods_ProyectoDAM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7263278990CED0354C36A6DD /* Pods_ProyectoDAM.framework */; };
 /* End PBXBuildFile section */
@@ -30,6 +42,18 @@
 		4771DA551C46E29C008022A5 /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		4771DA571C46E2A5008022A5 /* FourthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FourthViewController.swift; sourceTree = "<group>"; };
 		4771DA591C46E6FE008022A5 /* BasicCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicCell.swift; sourceTree = "<group>"; };
+		479823E61C50122400905454 /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		479823E81C50149100905454 /* Banner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Banner.swift; sourceTree = "<group>"; };
+		479823E91C50149100905454 /* Clearart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Clearart.swift; sourceTree = "<group>"; };
+		479823EA1C50149100905454 /* Fanart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fanart.swift; sourceTree = "<group>"; };
+		479823EB1C50149100905454 /* Ids.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ids.swift; sourceTree = "<group>"; };
+		479823EC1C50149100905454 /* Images.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
+		479823ED1C50149100905454 /* TVShows.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVShows.swift; sourceTree = "<group>"; };
+		479823EE1C50149100905454 /* Logo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logo.swift; sourceTree = "<group>"; };
+		479823EF1C50149100905454 /* Poster.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Poster.swift; sourceTree = "<group>"; };
+		479823F01C50149100905454 /* Show.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Show.swift; sourceTree = "<group>"; };
+		479823F11C50149100905454 /* Thumb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Thumb.swift; sourceTree = "<group>"; };
+		479823FC1C50177900905454 /* HudView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HudView.swift; sourceTree = "<group>"; };
 		47BCABB51C4EA52D001B7E85 /* TraktKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TraktKeys.swift; sourceTree = "<group>"; };
 		7263278990CED0354C36A6DD /* Pods_ProyectoDAM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProyectoDAM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AB7A56224743243529506F3 /* Pods-ProyectoDAM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProyectoDAM.release.xcconfig"; path = "Pods/Target Support Files/Pods-ProyectoDAM/Pods-ProyectoDAM.release.xcconfig"; sourceTree = "<group>"; };
@@ -51,6 +75,16 @@
 		474B52741C4800610095686C /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				479823ED1C50149100905454 /* TVShows.swift */,
+				479823F01C50149100905454 /* Show.swift */,
+				479823EC1C50149100905454 /* Images.swift */,
+				479823E81C50149100905454 /* Banner.swift */,
+				479823E91C50149100905454 /* Clearart.swift */,
+				479823EA1C50149100905454 /* Fanart.swift */,
+				479823EB1C50149100905454 /* Ids.swift */,
+				479823EE1C50149100905454 /* Logo.swift */,
+				479823EF1C50149100905454 /* Poster.swift */,
+				479823F11C50149100905454 /* Thumb.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -76,11 +110,13 @@
 		474E5CB51C289934007DADBD /* ProyectoDAM */ = {
 			isa = PBXGroup;
 			children = (
+				47BCABB51C4EA52D001B7E85 /* TraktKeys.swift */,
+				479823E61C50122400905454 /* Helper.swift */,
 				474E5CB61C289934007DADBD /* AppDelegate.swift */,
+				479823FC1C50177900905454 /* HudView.swift */,
 				474B52741C4800610095686C /* Models */,
 				4771DA591C46E6FE008022A5 /* BasicCell.swift */,
 				474E5CB81C289934007DADBD /* FirstViewController.swift */,
-				47BCABB51C4EA52D001B7E85 /* TraktKeys.swift */,
 				474E5CBA1C289934007DADBD /* SecondViewController.swift */,
 				4771DA551C46E29C008022A5 /* ThirdViewController.swift */,
 				4771DA571C46E2A5008022A5 /* FourthViewController.swift */,
@@ -230,13 +266,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				479823F51C50149100905454 /* Ids.swift in Sources */,
+				479823FA1C50149100905454 /* Show.swift in Sources */,
+				479823FB1C50149100905454 /* Thumb.swift in Sources */,
+				479823F81C50149100905454 /* Logo.swift in Sources */,
 				474E5CBB1C289934007DADBD /* SecondViewController.swift in Sources */,
 				474E5CB71C289934007DADBD /* AppDelegate.swift in Sources */,
+				479823F91C50149100905454 /* Poster.swift in Sources */,
+				479823F21C50149100905454 /* Banner.swift in Sources */,
+				479823F61C50149100905454 /* Images.swift in Sources */,
+				479823F71C50149100905454 /* TVShows.swift in Sources */,
+				479823F31C50149100905454 /* Clearart.swift in Sources */,
 				47BCABB61C4EA52D001B7E85 /* TraktKeys.swift in Sources */,
 				4771DA561C46E29C008022A5 /* ThirdViewController.swift in Sources */,
 				474E5CB91C289934007DADBD /* FirstViewController.swift in Sources */,
 				4771DA5A1C46E6FE008022A5 /* BasicCell.swift in Sources */,
 				4771DA581C46E2A5008022A5 /* FourthViewController.swift in Sources */,
+				479823E71C50122400905454 /* Helper.swift in Sources */,
+				479823F41C50149100905454 /* Fanart.swift in Sources */,
+				479823FD1C50177900905454 /* HudView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
