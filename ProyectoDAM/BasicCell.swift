@@ -14,6 +14,6 @@ class BasicCell: UICollectionViewCell{
     
     override func prepareForReuse() {
         super.prepareForReuse()
-        imageView.image = UIImage()
+        imageView.image = nil
     }
 }
