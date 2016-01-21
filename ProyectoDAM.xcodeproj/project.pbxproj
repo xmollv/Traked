@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		471E24801C5136A8003FB1E6 /* PreLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471E247F1C5136A8003FB1E6 /* PreLoginViewController.swift */; };
 		474E5CB71C289934007DADBD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474E5CB61C289934007DADBD /* AppDelegate.swift */; };
 		474E5CB91C289934007DADBD /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474E5CB81C289934007DADBD /* FirstViewController.swift */; };
 		474E5CBB1C289934007DADBD /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474E5CBA1C289934007DADBD /* SecondViewController.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		471E247F1C5136A8003FB1E6 /* PreLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreLoginViewController.swift; sourceTree = "<group>"; };
 		474E5CB31C289934007DADBD /* ProyectoDAM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProyectoDAM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		474E5CB61C289934007DADBD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		474E5CB81C289934007DADBD /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 				479823FF1C501EA400905454 /* Helpers */,
 				474B52741C4800610095686C /* Models */,
 				479823FE1C501E9100905454 /* Basic Cells */,
+				471E247F1C5136A8003FB1E6 /* PreLoginViewController.swift */,
 				474E5CB81C289934007DADBD /* FirstViewController.swift */,
 				474E5CBA1C289934007DADBD /* SecondViewController.swift */,
 				4771DA551C46E29C008022A5 /* ThirdViewController.swift */,
@@ -276,6 +279,7 @@
 				479823F71C50149100905454 /* TVShows.swift in Sources */,
 				47BCABB61C4EA52D001B7E85 /* TraktKeys.swift in Sources */,
 				4771DA561C46E29C008022A5 /* ThirdViewController.swift in Sources */,
+				471E24801C5136A8003FB1E6 /* PreLoginViewController.swift in Sources */,
 				474E5CB91C289934007DADBD /* FirstViewController.swift in Sources */,
 				4771DA5A1C46E6FE008022A5 /* BasicCell.swift in Sources */,
 				4771DA581C46E2A5008022A5 /* FourthViewController.swift in Sources */,
