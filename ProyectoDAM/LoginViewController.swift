@@ -9,10 +9,16 @@
 import UIKit
 import SafariServices
 
-class PreLoginViewController: UIViewController {
+class LoginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        if Helper().getUserToken() != nil {
+            self.dismissViewControllerAnimated(true, completion: nil)
+        }
     }
     
     @IBAction func openWebLogin(sender: UIButton) {

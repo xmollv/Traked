@@ -18,7 +18,15 @@ class FirstViewController: UIViewController, UICollectionViewDataSource, UIColle
     //let arrayOfMovies = [Movies]()
     
     override func viewWillAppear(animated: Bool) {
-
+        print("Client ID -> \(Helper().clientId)")
+        print("User Token -> \(Helper().getUserToken()!)")
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        let hudView = HudView.hudInView(view,animated: true)
+        
         Alamofire.request(.GET, "https://api-v2launch.trakt.tv/users/me/watchlist/shows?extended=images", headers: Helper().getApiHeaders()).responseJSON{ response in
             switch response.result {
             case .Success (let JSON):
@@ -32,19 +40,6 @@ class FirstViewController: UIViewController, UICollectionViewDataSource, UIColle
                 print("Request failed with error: \(error)")
             }
         }
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        print("Client ID -> \(Helper().clientId)")
-        print("User Token -> \(Helper().getUserToken())")
-        
-        self.collectionView.delegate = self;
-        self.collectionView.dataSource = self;
-        
-        
-        let hudView = HudView.hudInView(view,animated: true)
         
         let time = dispatch_time(dispatch_time_t(DISPATCH_TIME_NOW), 3 * Int64(NSEC_PER_SEC))
         dispatch_after(time, dispatch_get_main_queue()) {
@@ -53,8 +48,14 @@ class FirstViewController: UIViewController, UICollectionViewDataSource, UIColle
         }
     }
     
+    override func viewDidAppear(animated: Bool) {
+        if Helper().getUserToken() == nil {
+            performSegueWithIdentifier("ShowLogin", sender: self)
+        }
+    }
+    
     @IBAction func segmentedControlAction(sender: UISegmentedControl) {
-        if sender.selectedSegmentIndex == 0{
+        if sender.selectedSegmentIndex == 0 {
             collectionView.reloadData()
         } else if sender.selectedSegmentIndex == 1 {
             collectionView.reloadData()
@@ -73,11 +74,10 @@ class FirstViewController: UIViewController, UICollectionViewDataSource, UIColle
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell{
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("CollectionCell", forIndexPath: indexPath) as! BasicCell
         
-        cell.imageView.image = UIImage(named: "first")
+        cell.imageView.image = nil
         
         if segmentedControl.selectedSegmentIndex == 0 {
             cell.imageView.af_setImageWithURL(NSURL(string: arrayOfTvShows[indexPath.row].show!.images!.poster!.thumb!)!)
-            //cell.imageView.af_setImageWithURL(NSURL(string: "https://walter.trakt.us/images/shows/000/060/300/posters/thumb/79bd96a4d3.jpg")!)
         } else {
             //cell.imageView.af_setImageWithURL(NSURL(named: arrayOfMovies.image!)!)
         }
