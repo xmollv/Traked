@@ -19,7 +19,7 @@ class FirstViewController: UIViewController, UICollectionViewDataSource, UIColle
     
     override func viewWillAppear(animated: Bool) {
 
-        Alamofire.request(.GET, "https://api-v2launch.trakt.tv/users/\(Helper().getUserName())/watchlist/shows?extended=images", headers: Helper().getApiHeaders()).responseJSON{ response in
+        Alamofire.request(.GET, "https://api-v2launch.trakt.tv/users/me/watchlist/shows?extended=images", headers: Helper().getApiHeaders()).responseJSON{ response in
             switch response.result {
             case .Success (let JSON):
                 if let shows = JSON as? [[String:AnyObject]] {

@@ -14,9 +14,7 @@ class Helper {
     let clientSecret = "cfbb7eb462977c0cab69e2cfae90347723ddab0b5046ca630112fc9f4a73eff6"
     let redirectUri = "ProyectoDAM://x.com"
     
-    func getApiHeaders() -> [String : String] { return ["Content-Type":"application/json", "trakt-api-version":"2", "trakt-api-key": clientId]}
-    
-    func getUserName() -> String { return "ProjecteDAM" }
+    func getApiHeaders() -> [String : String] { return ["Content-Type":"application/json", "trakt-api-version":"2", "trakt-api-key": clientId, "Authorization" : "Bearer \(Helper().getUserToken())"]}
     
     func getUserToken() -> String {
         if let token = NSUserDefaults.standardUserDefaults().objectForKey("access_token") {
