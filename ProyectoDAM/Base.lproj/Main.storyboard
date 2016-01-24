@@ -20,7 +20,7 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="flP-C5-BSI">
                                 <rect key="frame" x="6" y="53" width="308" height="466"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="0.0" id="sHr-Jh-Ggp">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="sHr-Jh-Ggp">
                                     <size key="itemSize" width="100" height="130"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -35,21 +35,42 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="first" translatesAutoresizingMaskIntoConstraints="NO" id="QBY-1R-JO0">
-                                                    <rect key="frame" x="6" y="15" width="88" height="100"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="88" id="O2E-vs-Ve6"/>
-                                                        <constraint firstAttribute="height" constant="100" id="T19-IC-PoZ"/>
-                                                    </constraints>
+                                                    <rect key="frame" x="8" y="8" width="84" height="114"/>
                                                 </imageView>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z7n-hT-uUc">
+                                                    <rect key="frame" x="39" y="100" width="22" height="22"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Tn9-t3-ppz">
+                                                            <rect key="frame" x="0.0" y="1" width="22" height="21"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="0.51372549019607838" green="0.15294117647058825" blue="0.062745098039215685" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="22" id="DsT-Qb-HzA"/>
+                                                        <constraint firstItem="Tn9-t3-ppz" firstAttribute="leading" secondItem="z7n-hT-uUc" secondAttribute="leading" id="FON-ic-mhp"/>
+                                                        <constraint firstAttribute="trailing" secondItem="Tn9-t3-ppz" secondAttribute="trailing" id="bBq-w7-aSy"/>
+                                                        <constraint firstItem="Tn9-t3-ppz" firstAttribute="centerY" secondItem="z7n-hT-uUc" secondAttribute="centerY" id="kDP-LJ-Uq6"/>
+                                                        <constraint firstAttribute="height" constant="22" id="u6H-RR-M3r"/>
+                                                    </constraints>
+                                                </view>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <constraints>
-                                            <constraint firstItem="QBY-1R-JO0" firstAttribute="centerY" secondItem="b0F-Lw-fOB" secondAttribute="centerY" id="Pkk-8e-yGT"/>
-                                            <constraint firstItem="QBY-1R-JO0" firstAttribute="centerX" secondItem="b0F-Lw-fOB" secondAttribute="centerX" id="rC8-pF-KXT"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="QBY-1R-JO0" secondAttribute="bottom" id="5UZ-Au-zrd"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="QBY-1R-JO0" secondAttribute="trailing" id="6GD-cO-hfa"/>
+                                            <constraint firstItem="QBY-1R-JO0" firstAttribute="leading" secondItem="b0F-Lw-fOB" secondAttribute="leadingMargin" id="GM5-vp-NU0"/>
+                                            <constraint firstItem="z7n-hT-uUc" firstAttribute="top" secondItem="QBY-1R-JO0" secondAttribute="bottom" constant="-22" id="H3D-ne-lyd"/>
+                                            <constraint firstItem="z7n-hT-uUc" firstAttribute="centerX" secondItem="QBY-1R-JO0" secondAttribute="centerX" id="mWV-mb-HDE"/>
+                                            <constraint firstItem="QBY-1R-JO0" firstAttribute="top" secondItem="b0F-Lw-fOB" secondAttribute="topMargin" id="wYh-cd-Jwq"/>
                                         </constraints>
                                         <connections>
+                                            <outlet property="containerRemainingDays" destination="z7n-hT-uUc" id="TK7-FI-rt7"/>
                                             <outlet property="imageView" destination="QBY-1R-JO0" id="3fR-U4-R7V"/>
+                                            <outlet property="labelRemainigDays" destination="Tn9-t3-ppz" id="vdt-sI-rlc"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -80,7 +101,7 @@
                             <constraint firstItem="flP-C5-BSI" firstAttribute="top" secondItem="Dsx-dO-OqG" secondAttribute="bottom" id="kpc-ct-P7a"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Watchlist" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="Watchlist" image="Watchlist" id="acW-dT-cKf"/>
                     <connections>
                         <outlet property="collectionView" destination="flP-C5-BSI" id="ZqV-cd-JJb"/>
                         <outlet property="segmentedControl" destination="Dsx-dO-OqG" id="Uvh-SG-bCw"/>
@@ -91,7 +112,7 @@
             </objects>
             <point key="canvasLocation" x="420" y="-947"/>
         </scene>
-        <!--Second View Controller-->
+        <!--Discover-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
                 <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="ProyectoDAM" customModuleProvider="target" sceneMemberID="viewController">
@@ -147,7 +168,7 @@
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="U1u-Qs-2mT">
                                 <rect key="frame" x="16" y="25" width="288" height="29"/>
                                 <segments>
-                                    <segment title="TVShows"/>
+                                    <segment title="TV Shows"/>
                                     <segment title="Movies"/>
                                 </segments>
                                 <connections>
@@ -166,7 +187,7 @@
                             <constraint firstItem="rB4-Bq-CdR" firstAttribute="top" secondItem="U1u-Qs-2mT" secondAttribute="bottom" id="Rtz-7l-DKk"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="featured" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="Discover" image="Discover" selectedImage="Discover" id="cPa-gy-q4n"/>
                     <connections>
                         <outlet property="collectionView" destination="rB4-Bq-CdR" id="OiS-cY-qBJ"/>
                         <outlet property="segmentedControl" destination="U1u-Qs-2mT" id="Sxl-74-kgd"/>
@@ -248,13 +269,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Stats" image="first" id="1H9-KX-sXQ"/>
+                    <tabBarItem key="tabBarItem" title="Stats" image="Stats" selectedImage="Stats" id="1H9-KX-sXQ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YZa-Ip-xgI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="420" y="360"/>
         </scene>
-        <!--Fourth View Controller-->
+        <!--Search-->
         <scene sceneID="aTs-Au-M2s">
             <objects>
                 <viewController id="tNI-zy-szv" customClass="FourthViewController" customModule="ProyectoDAM" customModuleProvider="target" sceneMemberID="viewController">
@@ -267,7 +288,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="search" id="qks-4g-LRq"/>
+                    <tabBarItem key="tabBarItem" title="Search" image="Search" id="qks-4g-LRq"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RIw-0A-EgP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -275,6 +296,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Discover" width="25" height="25"/>
+        <image name="Search" width="25" height="25"/>
+        <image name="Stats" width="25" height="25"/>
+        <image name="Watchlist" width="25" height="25"/>
         <image name="first" width="30" height="30"/>
     </resources>
 </document>

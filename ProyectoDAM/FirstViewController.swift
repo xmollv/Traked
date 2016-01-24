@@ -71,8 +71,10 @@ class FirstViewController: UIViewController, UICollectionViewDataSource, UIColle
     @IBAction func segmentedControlAction(sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0 {
             collectionView.reloadData()
+            self.collectionView.resetScrollPositionToTop()
         } else if sender.selectedSegmentIndex == 1 {
             collectionView.reloadData()
+            self.collectionView.resetScrollPositionToTop()
         }
     }
     
@@ -86,10 +88,12 @@ class FirstViewController: UIViewController, UICollectionViewDataSource, UIColle
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell{
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("CollectionCellWatchlist", forIndexPath: indexPath) as! BasicCellWatchslist
+        cell.containerRemainingDays.layer.cornerRadius = 6
         
-        cell.imageView.image = nil
+        cell.imageView.image = UIImage(named: "Grey background")
         
         if segmentedControl.selectedSegmentIndex == 0 {
+            
             if let thumb = arrayOfTvShows[indexPath.row].show!.images!.poster!.thumb {
                 cell.imageView.af_setImageWithURL(NSURL(string: thumb)!)
             } else if let medium = arrayOfTvShows[indexPath.row].show!.images!.poster!.medium {
@@ -97,12 +101,22 @@ class FirstViewController: UIViewController, UICollectionViewDataSource, UIColle
             } else if let full = arrayOfTvShows[indexPath.row].show!.images!.poster!.full {
                 cell.imageView.af_setImageWithURL(NSURL(string: full)!)
             } else {
-                cell.imageView.image = UIImage(named: "first")
+                cell.imageView.image = UIImage(named: "No image")
                 print(arrayOfTvShows[indexPath.row].show!.title)
             }
             
         } else {
-            cell.imageView.af_setImageWithURL(NSURL(string: arrayOfMovies[indexPath.row].movie!.images!.poster!.thumb!)!)
+            
+            if let thumb = arrayOfMovies[indexPath.row].movie!.images!.poster!.thumb {
+                cell.imageView.af_setImageWithURL(NSURL(string: thumb)!)
+            } else if let medium = arrayOfMovies[indexPath.row].movie!.images!.poster!.medium {
+                cell.imageView.af_setImageWithURL(NSURL(string: medium)!)
+            } else if let full = arrayOfMovies[indexPath.row].movie!.images!.poster!.full {
+                cell.imageView.af_setImageWithURL(NSURL(string: full)!)
+            } else {
+                cell.imageView.image = UIImage(named: "No image")
+                print(arrayOfMovies[indexPath.row].movie!.title)
+            }
         }
         
         return cell

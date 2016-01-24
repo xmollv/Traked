@@ -11,6 +11,8 @@ import UIKit
 class BasicCellWatchslist: UICollectionViewCell{
     
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var containerRemainingDays: UIView!
+    @IBOutlet weak var labelRemainigDays: UILabel!
     
     override func prepareForReuse() {
         super.prepareForReuse()

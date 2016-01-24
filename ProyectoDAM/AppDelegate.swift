@@ -71,3 +71,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+extension UIScrollView {
+    /// Sets content offset to the top.
+    func resetScrollPositionToTop() {
+        self.contentOffset = CGPoint(x: -contentInset.left, y: -contentInset.top)
+    }
+}
+
