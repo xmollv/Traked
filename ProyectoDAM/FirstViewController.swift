@@ -37,8 +37,8 @@ class FirstViewController: UIViewController, UICollectionViewDataSource, UIColle
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print(Helper().clientId)
-        print(Helper().getUserToken())
+        print("Client ID -> \(Helper().clientId)")
+        print("User Token -> \(Helper().getUserToken())")
         
         self.collectionView.delegate = self;
         self.collectionView.dataSource = self;
