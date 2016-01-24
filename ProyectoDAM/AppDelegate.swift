@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -42,10 +43,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
-        print(url.query)
+        var brokenString = url.query!.componentsSeparatedByString("=")
+        if brokenString[0] != "error" {
+            
+            let helper = Helper()
+            
+            let headers = ["Content-Type" : "application/json"]
+            let parameters = ["code": "\(brokenString[1])", "client_id": "\(helper.clientId)", "client_secret": "\(helper.clientSecret)", "redirect_uri": "\(helper.redirectUri)", "grant_type": "authorization_code"]
+            
+            Alamofire.request(.POST, "https://api-v2launch.trakt.tv/oauth/token", headers: headers, parameters: parameters, encoding: .JSON).responseJSON{ response in
+                switch response.result {
+                case .Success (let JSON):
+                    print("New token -> \(JSON["access_token"]!!)")
+                    NSUserDefaults.standardUserDefaults().setObject("\(JSON["access_token"]!!)", forKey: "access_token")
+                    
+                case .Failure (let error):
+                    //self.showSimpleAlert("¡Error!", message: "Ha habido un problema al realizar la petición al servidor. Vuelve a intentarlo en unos minutos.", buttonText: "Volver a intentarlo.")
+                    print("Request failed with error: \(error)")
+                }
+            }
+            
+        } else {
+            //SHOW ERROR MESSAGE ON THE SCREEN
+        }
         return true
     }
-
 
 }
 

@@ -23,7 +23,6 @@
 		479823F91C50149100905454 /* Poster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479823EF1C50149100905454 /* Poster.swift */; };
 		479823FA1C50149100905454 /* Show.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479823F01C50149100905454 /* Show.swift */; };
 		479823FD1C50177900905454 /* HudView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479823FC1C50177900905454 /* HudView.swift */; };
-		47BCABB61C4EA52D001B7E85 /* TraktKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BCABB51C4EA52D001B7E85 /* TraktKeys.swift */; };
 		6BB7E658DDC5C294CBF2A5F9 /* Pods_ProyectoDAM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7263278990CED0354C36A6DD /* Pods_ProyectoDAM.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,7 +45,6 @@
 		479823EF1C50149100905454 /* Poster.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Poster.swift; sourceTree = "<group>"; };
 		479823F01C50149100905454 /* Show.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Show.swift; sourceTree = "<group>"; };
 		479823FC1C50177900905454 /* HudView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HudView.swift; sourceTree = "<group>"; };
-		47BCABB51C4EA52D001B7E85 /* TraktKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TraktKeys.swift; sourceTree = "<group>"; };
 		7263278990CED0354C36A6DD /* Pods_ProyectoDAM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProyectoDAM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AB7A56224743243529506F3 /* Pods-ProyectoDAM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProyectoDAM.release.xcconfig"; path = "Pods/Target Support Files/Pods-ProyectoDAM/Pods-ProyectoDAM.release.xcconfig"; sourceTree = "<group>"; };
 		CCE90DD0EE03B493502804FB /* Pods-ProyectoDAM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProyectoDAM.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ProyectoDAM/Pods-ProyectoDAM.debug.xcconfig"; sourceTree = "<group>"; };
@@ -124,7 +122,6 @@
 		479823FF1C501EA400905454 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				47BCABB51C4EA52D001B7E85 /* TraktKeys.swift */,
 				479823E61C50122400905454 /* Helper.swift */,
 				479823FC1C50177900905454 /* HudView.swift */,
 			);
@@ -277,7 +274,6 @@
 				479823F91C50149100905454 /* Poster.swift in Sources */,
 				479823F61C50149100905454 /* Images.swift in Sources */,
 				479823F71C50149100905454 /* TVShows.swift in Sources */,
-				47BCABB61C4EA52D001B7E85 /* TraktKeys.swift in Sources */,
 				4771DA561C46E29C008022A5 /* ThirdViewController.swift in Sources */,
 				471E24801C5136A8003FB1E6 /* PreLoginViewController.swift in Sources */,
 				474E5CB91C289934007DADBD /* FirstViewController.swift in Sources */,

@@ -26,10 +26,6 @@ class FirstViewController: UIViewController, UICollectionViewDataSource, UIColle
                     for show in shows{
                         self.arrayOfTvShows.append(TVShows(dictionary: show)!)
                     }
-                    
-                    for elem in self.arrayOfTvShows{
-                        print(elem.dictionaryRepresentation())
-                    }
                 }
             case .Failure (let error):
                 self.showSimpleAlert("¡Error!", message: "Ha habido un problema al realizar la petición al servidor. Vuelve a intentarlo en unos minutos.", buttonText: "Volver a intentarlo.")
@@ -40,6 +36,9 @@ class FirstViewController: UIViewController, UICollectionViewDataSource, UIColle
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print(Helper().clientId)
+        print(Helper().getUserToken())
         
         self.collectionView.delegate = self;
         self.collectionView.dataSource = self;
@@ -63,7 +62,6 @@ class FirstViewController: UIViewController, UICollectionViewDataSource, UIColle
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        //return 1
         if segmentedControl.selectedSegmentIndex == 0 {
             return arrayOfTvShows.count
         } else {
