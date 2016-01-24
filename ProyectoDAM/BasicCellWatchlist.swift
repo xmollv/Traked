@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BasicCell: UICollectionViewCell{
+class BasicCellWatchslist: UICollectionViewCell{
     
     @IBOutlet weak var imageView: UIImageView!
     

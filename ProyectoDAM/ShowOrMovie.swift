@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class Show {
+public class ShowOrMovie {
 	public var title : String?
 	public var year : Int?
 	public var ids : Ids?
@@ -24,12 +24,12 @@ public class Show {
 
     - returns: Array of Show Instances.
 */
-    public class func modelsFromDictionaryArray(array:NSArray) -> [Show]
+    public class func modelsFromDictionaryArray(array:NSArray) -> [ShowOrMovie]
     {
-        var models:[Show] = []
+        var models:[ShowOrMovie] = []
         for item in array
         {
-            models.append(Show(dictionary: item as! NSDictionary)!)
+            models.append(ShowOrMovie(dictionary: item as! NSDictionary)!)
         }
         return models
     }

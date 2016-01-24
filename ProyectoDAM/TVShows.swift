@@ -13,7 +13,7 @@ public class TVShows {
 	public var rank : Int?
 	public var listed_at : String?
 	public var type : String?
-	public var show : Show?
+	public var show : ShowOrMovie?
 
 /**
     Returns an array of models based on given dictionary.
@@ -50,7 +50,7 @@ public class TVShows {
 		rank = dictionary["rank"] as? Int
 		listed_at = dictionary["listed_at"] as? String
 		type = dictionary["type"] as? String
-		if (dictionary["show"] != nil) { show = Show(dictionary: dictionary["show"] as! NSDictionary) }
+		if (dictionary["show"] != nil) { show = ShowOrMovie(dictionary: dictionary["show"] as! NSDictionary) }
 	}
 
 		

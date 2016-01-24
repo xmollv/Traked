@@ -15,7 +15,7 @@ class FirstViewController: UIViewController, UICollectionViewDataSource, UIColle
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     
     var arrayOfTvShows = [TVShows]()
-    //let arrayOfMovies = [Movies]()
+    var arrayOfMovies = [Movies]()
     
     override func viewWillAppear(animated: Bool) {
         print("Client ID -> \(Helper().clientId)")
@@ -33,6 +33,20 @@ class FirstViewController: UIViewController, UICollectionViewDataSource, UIColle
                 if let shows = JSON as? [[String:AnyObject]] {
                     for show in shows{
                         self.arrayOfTvShows.append(TVShows(dictionary: show)!)
+                    }
+                }
+            case .Failure (let error):
+                self.showSimpleAlert("¡Error!", message: "Ha habido un problema al realizar la petición al servidor. Vuelve a intentarlo en unos minutos.", buttonText: "Volver a intentarlo.")
+                print("Request failed with error: \(error)")
+            }
+        }
+        
+        Alamofire.request(.GET, "https://api-v2launch.trakt.tv/users/me/watchlist/movies?extended=images", headers: Helper().getApiHeaders()).responseJSON{ response in
+            switch response.result {
+            case .Success (let JSON):
+                if let movies = JSON as? [[String:AnyObject]] {
+                    for movie in movies{
+                        self.arrayOfMovies.append(Movies(dictionary: movie)!)
                     }
                 }
             case .Failure (let error):
@@ -66,53 +80,33 @@ class FirstViewController: UIViewController, UICollectionViewDataSource, UIColle
         if segmentedControl.selectedSegmentIndex == 0 {
             return arrayOfTvShows.count
         } else {
-            //return arrayOfMovies.count
-            return 1
+            return arrayOfMovies.count
         }
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell{
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("CollectionCell", forIndexPath: indexPath) as! BasicCell
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("CollectionCellWatchlist", forIndexPath: indexPath) as! BasicCellWatchslist
         
         cell.imageView.image = nil
         
         if segmentedControl.selectedSegmentIndex == 0 {
-            cell.imageView.af_setImageWithURL(NSURL(string: arrayOfTvShows[indexPath.row].show!.images!.poster!.thumb!)!)
+            if let thumb = arrayOfTvShows[indexPath.row].show!.images!.poster!.thumb {
+                cell.imageView.af_setImageWithURL(NSURL(string: thumb)!)
+            } else if let medium = arrayOfTvShows[indexPath.row].show!.images!.poster!.medium {
+                cell.imageView.af_setImageWithURL(NSURL(string: medium)!)
+            } else if let full = arrayOfTvShows[indexPath.row].show!.images!.poster!.full {
+                cell.imageView.af_setImageWithURL(NSURL(string: full)!)
+            } else {
+                cell.imageView.image = UIImage(named: "first")
+                print(arrayOfTvShows[indexPath.row].show!.title)
+            }
+            
         } else {
-            //cell.imageView.af_setImageWithURL(NSURL(named: arrayOfMovies.image!)!)
+            cell.imageView.af_setImageWithURL(NSURL(string: arrayOfMovies[indexPath.row].movie!.images!.poster!.thumb!)!)
         }
         
         return cell
     }
-    
-    /*func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        let vistaDetalle: DetailBadgeViewController = self.storyboard?.instantiateViewControllerWithIdentifier("DetailBadgeViewController") as! DetailBadgeViewController
-        //vistaDetalle.imagen = arrayOfBadgesGlobal[indexPath.row].imageStored!
-        vistaDetalle.imagenString = arrayOfBadgesGlobal[indexPath.row].image!
-        vistaDetalle.titleBadge = arrayOfBadgesGlobal[indexPath.row].name!;
-        vistaDetalle.descriptionBadge = arrayOfBadgesGlobal[indexPath.row].description!;
-        if let winDateRAW = arrayOfBadgesGlobal[indexPath.row].winDate {
-            
-            let dateFormatter = NSDateFormatter()
-            dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZZZ"
-            let winDate = dateFormatter.dateFromString(winDateRAW)
-            
-            
-            let myCalendar = NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian)!
-            
-            let myComponents = myCalendar.components(NSCalendarUnit.Day, fromDate: winDate!)
-            let day = myComponents.day
-            let myComponents2 = myCalendar.components(NSCalendarUnit.Month, fromDate: winDate!)
-            let month = myComponents2.month
-            let myComponents3 = myCalendar.components(NSCalendarUnit.Year, fromDate: winDate!)
-            let year = myComponents3.year
-            
-            vistaDetalle.date = "Desbloqueaste esta insignia el \(day)-\(month)-\(year)"
-        } else {
-            vistaDetalle.date = ""
-        }
-        self.presentViewController(vistaDetalle, animated: true, completion: nil)
-    }*/
     
     func showSimpleAlert(title: String, message: String, buttonText: String){
         let alertController = UIAlertController(title: title, message:message, preferredStyle: UIAlertControllerStyle.Alert)
