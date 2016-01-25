@@ -92,7 +92,7 @@ class FirstViewController: UIViewController, UICollectionViewDataSource, UIColle
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell{
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("CollectionCellWatchlist", forIndexPath: indexPath) as! BasicCellWatchslist
-        cell.containerRemainingDays.layer.cornerRadius = 6
+        //cell.containerRemainingDays.layer.cornerRadius = 6
         
         cell.imageView.image = UIImage(named: "Grey background")
         
@@ -124,10 +124,28 @@ class FirstViewController: UIViewController, UICollectionViewDataSource, UIColle
         return cell
     }
     
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        if segmentedControl.selectedSegmentIndex == 0 {
+            performSegueWithIdentifier("ShowEpisodeList", sender: nil)
+        } else {
+            
+        }
+    }
+    
     func showSimpleAlert(title: String, message: String, buttonText: String){
         let alertController = UIAlertController(title: title, message:message, preferredStyle: UIAlertControllerStyle.Alert)
         alertController.addAction(UIAlertAction(title: buttonText, style: UIAlertActionStyle.Default, handler: nil))
         self.presentViewController(alertController, animated: true, completion: nil)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "ShowEpisodeList"{
+            
+            let vc = segue.destinationViewController as! TableShowsViewController
+            let indexPath = collectionView.indexPathsForSelectedItems()
+            vc.showId = arrayOfTvShows[indexPath![0].row].show!.ids!.trakt!
+            vc.showTitle = arrayOfTvShows[indexPath![0].row].show!.title!
+        }
     }
     
     

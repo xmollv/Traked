@@ -1,20 +1,16 @@
-/* 
-Copyright (c) 2016 Swift Models Generated from JSON powered by http://www.json4swift.com
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-*/
+//
+//  TraktKeys.swift
+//  ProyectoDAM
+//
+//  Created by Xavi Moll Villalonga on 25/01/16.
+//  Copyright © 2016 TaniaXavi. All rights reserved.
+//
 
 import Foundation
- 
-/* For support, please feel free to contact me at https://www.linkedin.com/in/syedabsar */
 
-public class Json4Swift_Base {
+public class Seasons {
 	public var number : Int?
-	public var ids : Ids?
+	//public var ids : Ids?
 	public var episodes : Array<Episodes>?
 
 /**
@@ -27,12 +23,12 @@ public class Json4Swift_Base {
 
     - returns: Array of Json4Swift_Base Instances.
 */
-    public class func modelsFromDictionaryArray(array:NSArray) -> [Json4Swift_Base]
+    public class func modelsFromDictionaryArray(array:NSArray) -> [Seasons]
     {
-        var models:[Json4Swift_Base] = []
+        var models:[Seasons] = []
         for item in array
         {
-            models.append(Json4Swift_Base(dictionary: item as! NSDictionary)!)
+            models.append(Seasons(dictionary: item as! NSDictionary)!)
         }
         return models
     }
@@ -50,7 +46,7 @@ public class Json4Swift_Base {
 	required public init?(dictionary: NSDictionary) {
 
 		number = dictionary["number"] as? Int
-		if (dictionary["ids"] != nil) { ids = Ids(dictionary: dictionary["ids"] as! NSDictionary) }
+		//if (dictionary["ids"] != nil) { ids = Ids(dictionary: dictionary["ids"] as! NSDictionary) }
 		if (dictionary["episodes"] != nil) { episodes = Episodes.modelsFromDictionaryArray(dictionary["episodes"] as! NSArray) }
 	}
 
@@ -65,7 +61,7 @@ public class Json4Swift_Base {
 		let dictionary = NSMutableDictionary()
 
 		dictionary.setValue(self.number, forKey: "number")
-		dictionary.setValue(self.ids?.dictionaryRepresentation(), forKey: "ids")
+		//dictionary.setValue(self.ids?.dictionaryRepresentation(), forKey: "ids")
 
 		return dictionary
 	}

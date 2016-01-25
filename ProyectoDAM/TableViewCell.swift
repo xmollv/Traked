@@ -6,4 +6,14 @@
 //  Copyright © 2016 TaniaXavi. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class TableViewCell: UITableViewCell{
+    
+    @IBOutlet weak var label: UILabel!
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        label.text = ""
+    }
+}
