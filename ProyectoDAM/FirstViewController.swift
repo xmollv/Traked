@@ -34,6 +34,8 @@ class FirstViewController: UIViewController, UICollectionViewDataSource, UIColle
                     for show in shows{
                         self.arrayOfTvShows.append(TVShows(dictionary: show)!)
                     }
+                    self.collectionView.reloadData()
+                    hudView.removeFromSuperview()
                 }
             case .Failure (let error):
                 self.showSimpleAlert("¡Error!", message: "Ha habido un problema al realizar la petición al servidor. Vuelve a intentarlo en unos minutos.", buttonText: "Volver a intentarlo.")
@@ -48,6 +50,8 @@ class FirstViewController: UIViewController, UICollectionViewDataSource, UIColle
                     for movie in movies{
                         self.arrayOfMovies.append(Movies(dictionary: movie)!)
                     }
+                    self.collectionView.reloadData()
+                    hudView.removeFromSuperview()
                 }
             case .Failure (let error):
                 self.showSimpleAlert("¡Error!", message: "Ha habido un problema al realizar la petición al servidor. Vuelve a intentarlo en unos minutos.", buttonText: "Volver a intentarlo.")
@@ -55,11 +59,11 @@ class FirstViewController: UIViewController, UICollectionViewDataSource, UIColle
             }
         }
         
-        let time = dispatch_time(dispatch_time_t(DISPATCH_TIME_NOW), 3 * Int64(NSEC_PER_SEC))
+        /*let time = dispatch_time(dispatch_time_t(DISPATCH_TIME_NOW), 3 * Int64(NSEC_PER_SEC))
         dispatch_after(time, dispatch_get_main_queue()) {
             self.collectionView.reloadData()
             hudView.removeFromSuperview()
-        }
+        }*/
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -102,7 +106,6 @@ class FirstViewController: UIViewController, UICollectionViewDataSource, UIColle
                 cell.imageView.af_setImageWithURL(NSURL(string: full)!)
             } else {
                 cell.imageView.image = UIImage(named: "No image")
-                print(arrayOfTvShows[indexPath.row].show!.title)
             }
             
         } else {
@@ -115,7 +118,6 @@ class FirstViewController: UIViewController, UICollectionViewDataSource, UIColle
                 cell.imageView.af_setImageWithURL(NSURL(string: full)!)
             } else {
                 cell.imageView.image = UIImage(named: "No image")
-                print(arrayOfMovies[indexPath.row].movie!.title)
             }
         }
         
