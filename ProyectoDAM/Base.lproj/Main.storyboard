@@ -67,7 +67,7 @@
                                                             <rect key="frame" x="22" y="0.0" width="38" height="18"/>
                                                             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
@@ -129,13 +129,33 @@
                         <outlet property="segmentedControl" destination="Dsx-dO-OqG" id="Uvh-SG-bCw"/>
                         <segue destination="dcs-hb-Bze" kind="modal" identifier="ShowLogin" id="h4u-ee-c5R"/>
                         <segue destination="AFD-Mp-Xzj" kind="push" identifier="ShowEpisodeList" id="6ej-Nv-MGX"/>
+                        <segue destination="dtE-hX-sLk" kind="push" identifier="ShowMovieDetails" id="enH-cW-SbP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="952" y="-947"/>
         </scene>
-        <!--(SHOW/MOVIE TITLE)-->
+        <!--(MOVIE TITLE)-->
+        <scene sceneID="kdl-3y-xrq">
+            <objects>
+                <viewController id="dtE-hX-sLk" customClass="MovieDetailsViewController" customModule="ProyectoDAM" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cPW-uX-lgZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="1vC-ZA-Q5W"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="VN2-T7-MG1">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="(MOVIE TITLE)" id="egW-Jd-a7A"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0PC-JY-Twi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1390" y="-612"/>
+        </scene>
+        <!--(SHOW TITLE)-->
         <scene sceneID="Uxt-GY-RE0">
             <objects>
                 <viewController id="AFD-Mp-Xzj" customClass="TableShowsViewController" customModule="ProyectoDAM" customModuleProvider="target" sceneMemberID="viewController">
@@ -156,13 +176,13 @@
                                         <rect key="frame" x="0.0" y="92" width="308" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cqx-BQ-Ks5" id="8cI-uy-jLm">
-                                            <rect key="frame" x="0.0" y="0.0" width="275" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="275" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tjl-C0-DtJ">
                                                     <rect key="frame" x="8" y="11" width="267" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -191,14 +211,14 @@
                             <constraint firstItem="XbX-RC-Zx4" firstAttribute="leading" secondItem="QD7-Ow-kGa" secondAttribute="leadingMargin" constant="-10" id="sxJ-W6-aKf"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="(SHOW/MOVIE TITLE)" id="vrN-Vu-3oJ"/>
+                    <navigationItem key="navigationItem" title="(SHOW TITLE)" id="vrN-Vu-3oJ"/>
                     <connections>
                         <outlet property="tableView" destination="XbX-RC-Zx4" id="0vX-ch-Axn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DXg-95-2SA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1367" y="-947"/>
+            <point key="canvasLocation" x="1390" y="-1235"/>
         </scene>
         <!--Discover-->
         <scene sceneID="wg7-f3-ORb">

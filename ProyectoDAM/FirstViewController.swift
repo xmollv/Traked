@@ -128,7 +128,7 @@ class FirstViewController: UIViewController, UICollectionViewDataSource, UIColle
         if segmentedControl.selectedSegmentIndex == 0 {
             performSegueWithIdentifier("ShowEpisodeList", sender: nil)
         } else {
-            
+            performSegueWithIdentifier("ShowMovieDetails", sender: nil)
         }
     }
     
@@ -139,12 +139,16 @@ class FirstViewController: UIViewController, UICollectionViewDataSource, UIColle
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "ShowEpisodeList"{
-            
+        if segue.identifier == "ShowEpisodeList" {
             let vc = segue.destinationViewController as! TableShowsViewController
             let indexPath = collectionView.indexPathsForSelectedItems()
             vc.showId = arrayOfTvShows[indexPath![0].row].show!.ids!.trakt!
             vc.showTitle = arrayOfTvShows[indexPath![0].row].show!.title!
+        } else if segue.identifier == "ShowMovieDetails"{
+            let vc = segue.destinationViewController as! MovieDetailsViewController
+            let indexPath = collectionView.indexPathsForSelectedItems()
+            vc.movieId = arrayOfMovies[indexPath![0].row].movie!.ids!.trakt!
+            vc.movieTitle = arrayOfMovies[indexPath![0].row].movie!.title!
         }
     }
     
