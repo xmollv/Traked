@@ -60,12 +60,6 @@ class FirstViewController: UIViewController, UICollectionViewDataSource, UIColle
         }
     }
     
-    override func viewDidAppear(animated: Bool) {
-        if Helper().getUserToken() == nil {
-            performSegueWithIdentifier("ShowLogin", sender: self)
-        }
-    }
-    
     @IBAction func segmentedControlAction(sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0 {
             collectionView.reloadData()

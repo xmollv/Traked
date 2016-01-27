@@ -17,7 +17,12 @@ class LoginViewController: UIViewController {
     
     override func viewDidAppear(animated: Bool) {
         if Helper().getUserToken() != nil {
-            self.dismissViewControllerAnimated(true, completion: nil)
+            performSegueWithIdentifier("ShowMainView", sender: nil)
+        }
+    }
+    @IBAction func openMainApp(sender: UIButton) {
+        if Helper().getUserToken() != nil {
+            performSegueWithIdentifier("ShowMainView", sender: nil)
         }
     }
     
