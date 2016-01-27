@@ -17,53 +17,47 @@ class FirstViewController: UIViewController, UICollectionViewDataSource, UIColle
     var arrayOfTvShows = [TVShows]()
     var arrayOfMovies = [Movies]()
     
-    override func viewWillAppear(animated: Bool) {
-        print("Client ID -> \(Helper().clientId)")
-        print("User Token -> \(Helper().getUserToken()!)")
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let hudView = HudView.hudInView(view,animated: true)
         
-        Alamofire.request(.GET, "https://api-v2launch.trakt.tv/users/me/watchlist/shows?extended=images", headers: Helper().getApiHeaders()).responseJSON{ response in
-            switch response.result {
-            case .Success (let JSON):
-                if let shows = JSON as? [[String:AnyObject]] {
-                    for show in shows{
-                        self.arrayOfTvShows.append(TVShows(dictionary: show)!)
+        if let _ = Helper().getUserToken() {
+            print("Client ID -> \(Helper().clientId)")
+            print("User Token -> \(Helper().getUserToken()!)")
+            
+            Alamofire.request(.GET, "https://api-v2launch.trakt.tv/users/me/watchlist/shows?extended=images", headers: Helper().getApiHeaders()).responseJSON{ response in
+                switch response.result {
+                case .Success (let JSON):
+                    if let shows = JSON as? [[String:AnyObject]] {
+                        for show in shows{
+                            self.arrayOfTvShows.append(TVShows(dictionary: show)!)
+                        }
+                        self.collectionView.reloadData()
+                        hudView.removeFromSuperview()
                     }
-                    self.collectionView.reloadData()
-                    hudView.removeFromSuperview()
+                case .Failure (let error):
+                    self.showSimpleAlert("¡Error!", message: "Ha habido un problema al realizar la petición al servidor. Vuelve a intentarlo en unos minutos.", buttonText: "Volver a intentarlo.")
+                    print("Request failed with error: \(error)")
                 }
-            case .Failure (let error):
-                self.showSimpleAlert("¡Error!", message: "Ha habido un problema al realizar la petición al servidor. Vuelve a intentarlo en unos minutos.", buttonText: "Volver a intentarlo.")
-                print("Request failed with error: \(error)")
+            }
+            
+            Alamofire.request(.GET, "https://api-v2launch.trakt.tv/users/me/watchlist/movies?extended=images", headers: Helper().getApiHeaders()).responseJSON{ response in
+                switch response.result {
+                case .Success (let JSON):
+                    if let movies = JSON as? [[String:AnyObject]] {
+                        for movie in movies{
+                            self.arrayOfMovies.append(Movies(dictionary: movie)!)
+                        }
+                        self.collectionView.reloadData()
+                        hudView.removeFromSuperview()
+                    }
+                case .Failure (let error):
+                    self.showSimpleAlert("¡Error!", message: "Ha habido un problema al realizar la petición al servidor. Vuelve a intentarlo en unos minutos.", buttonText: "Volver a intentarlo.")
+                    print("Request failed with error: \(error)")
+                }
             }
         }
-        
-        Alamofire.request(.GET, "https://api-v2launch.trakt.tv/users/me/watchlist/movies?extended=images", headers: Helper().getApiHeaders()).responseJSON{ response in
-            switch response.result {
-            case .Success (let JSON):
-                if let movies = JSON as? [[String:AnyObject]] {
-                    for movie in movies{
-                        self.arrayOfMovies.append(Movies(dictionary: movie)!)
-                    }
-                    self.collectionView.reloadData()
-                    hudView.removeFromSuperview()
-                }
-            case .Failure (let error):
-                self.showSimpleAlert("¡Error!", message: "Ha habido un problema al realizar la petición al servidor. Vuelve a intentarlo en unos minutos.", buttonText: "Volver a intentarlo.")
-                print("Request failed with error: \(error)")
-            }
-        }
-        
-        /*let time = dispatch_time(dispatch_time_t(DISPATCH_TIME_NOW), 3 * Int64(NSEC_PER_SEC))
-        dispatch_after(time, dispatch_get_main_queue()) {
-            self.collectionView.reloadData()
-            hudView.removeFromSuperview()
-        }*/
     }
     
     override func viewDidAppear(animated: Bool) {
