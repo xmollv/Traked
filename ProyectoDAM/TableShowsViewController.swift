@@ -45,7 +45,7 @@ class TableShowsViewController: UIViewController, UITableViewDelegate, UITableVi
                     })
                 }
             case .Failure (let error):
-                //self.showSimpleAlert("¡Error!", message: "Ha habido un problema al realizar la petición al servidor. Vuelve a intentarlo en unos minutos.", buttonText: "Volver a intentarlo.")
+                self.showSimpleAlert("¡Error!", message: "Ha habido un problema al realizar la petición al servidor. Vuelve a intentarlo en unos minutos.", buttonText: "Volver a intentarlo.")
                 print("Request failed with error: \(error)")
             }
         }
@@ -57,7 +57,6 @@ class TableShowsViewController: UIViewController, UITableViewDelegate, UITableVi
         } else {
             return arrayOfEpisodes.count
         }
-        //return 1
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -73,6 +72,12 @@ class TableShowsViewController: UIViewController, UITableViewDelegate, UITableVi
         }
         
         return cell
+    }
+    
+    func showSimpleAlert(title: String, message: String, buttonText: String){
+        let alertController = UIAlertController(title: title, message:message, preferredStyle: UIAlertControllerStyle.Alert)
+        alertController.addAction(UIAlertAction(title: buttonText, style: UIAlertActionStyle.Default, handler: nil))
+        self.presentViewController(alertController, animated: true, completion: nil)
     }
     
 }

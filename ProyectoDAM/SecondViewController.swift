@@ -58,7 +58,6 @@ class SecondViewController: UIViewController, UICollectionViewDelegate, UICollec
         if segmentedControl.selectedSegmentIndex == 0 {
             return arrayOfTvShows.count
         } else {
-            //return arrayOfMovies.count
             return 1
         }
     }
@@ -67,13 +66,7 @@ class SecondViewController: UIViewController, UICollectionViewDelegate, UICollec
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("CollectionCellDiscover", forIndexPath: indexPath) as! BasicCellDiscover
         
         cell.imageView.image = nil
-        
-        /*if segmentedControl.selectedSegmentIndex == 0 {
-            cell.imageView.af_setImageWithURL(NSURL(string: arrayOfTvShows[indexPath.row].show!.images!.poster!.thumb!)!)
-        } else {
-            //cell.imageView.af_setImageWithURL(NSURL(named: arrayOfMovies.image!)!)
-        }*/
-        
+
         return cell
     }
     
