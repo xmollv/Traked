@@ -5,7 +5,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--¯\_(ツ)_/¯-->
+        <!--ProyectoDAM-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
                 <viewController storyboardIdentifier="FirstViewController" id="9pv-A4-QxB" customClass="FirstViewController" customModule="ProyectoDAM" customModuleProvider="target" sceneMemberID="viewController">
@@ -121,7 +121,7 @@
                             <constraint firstItem="flP-C5-BSI" firstAttribute="top" secondItem="Dsx-dO-OqG" secondAttribute="bottom" constant="-60" id="kpc-ct-P7a"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="¯\_(ツ)_/¯" id="CTj-3b-DrX">
+                    <navigationItem key="navigationItem" title="ProyectoDAM" id="CTj-3b-DrX">
                         <barButtonItem key="leftBarButtonItem" image="Settings" id="2jo-oE-aek"/>
                     </navigationItem>
                     <connections>
@@ -328,7 +328,6 @@
                                 <state key="normal" title="Let's go!"/>
                                 <connections>
                                     <action selector="openMainApp:" destination="dcs-hb-Bze" eventType="touchUpInside" id="li1-c5-hRi"/>
-                                    <segue destination="49e-Tb-3d3" kind="modal" identifier="ShowMainView" id="Ryz-Gp-PIQ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -348,7 +347,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
             <objects>
-                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabBarController" id="49e-Tb-3d3" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="2Og-OC-6X3"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">

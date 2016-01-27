@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import SafariServices
+import Alamofire
 
 class LoginViewController: UIViewController {
 
@@ -16,18 +16,37 @@ class LoginViewController: UIViewController {
     }
     
     override func viewDidAppear(animated: Bool) {
-        if Helper().getUserToken() != nil {
-            performSegueWithIdentifier("ShowMainView", sender: nil)
-        }
+        checkIfHasTokenAndIsValid()
     }
     @IBAction func openMainApp(sender: UIButton) {
-        if Helper().getUserToken() != nil {
-            performSegueWithIdentifier("ShowMainView", sender: nil)
-        }
+        checkIfHasTokenAndIsValid()
     }
     
     @IBAction func openWebLogin(sender: UIButton) {
         UIApplication.sharedApplication().openURL(NSURL(string: "https://api-v2launch.trakt.tv/oauth/authorize?response_type=code&client_id=\(Helper().clientId)&redirect_uri=\(Helper().redirectUri)")!)
+    }
+    
+    func checkIfHasTokenAndIsValid(){
+        if Helper().getUserToken() != nil {
+            Alamofire.request(.GET, "https://api-v2launch.trakt.tv/users/me", headers: Helper().getApiHeaders()).responseJSON{ response in
+                switch response.result {
+                case .Success:
+                    let vc = self.storyboard!.instantiateViewControllerWithIdentifier("TabBarController")
+                    self.presentViewController(vc, animated: true, completion: nil)
+                    
+                case .Failure (let error):
+                    self.showSimpleAlert("¡Error!", message: "Ha habido un problema al realizar la petición al servidor. Vuelve a intentarlo en unos minutos.", buttonText: "Volver a intentarlo.")
+                    print("Request failed with error: \(error)")
+                }
+            }
+            
+        }
+    }
+    
+    func showSimpleAlert(title: String, message: String, buttonText: String){
+        let alertController = UIAlertController(title: title, message:message, preferredStyle: UIAlertControllerStyle.Alert)
+        alertController.addAction(UIAlertAction(title: buttonText, style: UIAlertActionStyle.Default, handler: nil))
+        self.presentViewController(alertController, animated: true, completion: nil)
     }
 
 
