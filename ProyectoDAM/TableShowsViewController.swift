@@ -21,7 +21,7 @@ class TableShowsViewController: UIViewController, UITableViewDelegate, UITableVi
     override func viewDidLoad() {
         super.viewDidLoad()
         let hudView = HudView.hudInView(view,animated: true)
-        print(showTitle)
+        print("\(showTitle), \(showId)")
         
         title = showTitle
         
@@ -30,6 +30,12 @@ class TableShowsViewController: UIViewController, UITableViewDelegate, UITableVi
             case .Success (let JSON):
                 if let seasons = JSON as? [[String:AnyObject]] {
                     for season in seasons {
+                        
+                        //Jumps the special episodes that are usually stored in the "0" season
+                        if season["episodes"]![0]!["season"] as! Int == 0 {
+                            continue
+                        }
+                        
                         self.arrayOfSeasons.append(Seasons(dictionary: season)!)
                     }
                     
