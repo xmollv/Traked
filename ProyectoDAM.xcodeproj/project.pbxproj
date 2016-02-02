@@ -30,6 +30,7 @@
 		479823F91C50149100905454 /* Poster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479823EF1C50149100905454 /* Poster.swift */; };
 		479823FA1C50149100905454 /* ShowOrMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479823F01C50149100905454 /* ShowOrMovie.swift */; };
 		479823FD1C50177900905454 /* HudView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479823FC1C50177900905454 /* HudView.swift */; };
+		47BA63241C61378800DC0E13 /* Launchscreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47BA63231C61378800DC0E13 /* Launchscreen.storyboard */; };
 		47DED3521C6118940077C232 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DED3511C6118940077C232 /* SettingsViewController.swift */; };
 		6BB7E658DDC5C294CBF2A5F9 /* Pods_ProyectoDAM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7263278990CED0354C36A6DD /* Pods_ProyectoDAM.framework */; };
 /* End PBXBuildFile section */
@@ -60,6 +61,7 @@
 		479823EF1C50149100905454 /* Poster.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Poster.swift; sourceTree = "<group>"; };
 		479823F01C50149100905454 /* ShowOrMovie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowOrMovie.swift; sourceTree = "<group>"; };
 		479823FC1C50177900905454 /* HudView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HudView.swift; sourceTree = "<group>"; };
+		47BA63231C61378800DC0E13 /* Launchscreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Launchscreen.storyboard; sourceTree = "<group>"; };
 		47DED3511C6118940077C232 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		7263278990CED0354C36A6DD /* Pods_ProyectoDAM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProyectoDAM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AB7A56224743243529506F3 /* Pods-ProyectoDAM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProyectoDAM.release.xcconfig"; path = "Pods/Target Support Files/Pods-ProyectoDAM/Pods-ProyectoDAM.release.xcconfig"; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 				4771DA551C46E29C008022A5 /* ThirdViewController.swift */,
 				4771DA571C46E2A5008022A5 /* FourthViewController.swift */,
 				474E5CBC1C289934007DADBD /* Main.storyboard */,
+				47BA63231C61378800DC0E13 /* Launchscreen.storyboard */,
 				4776D85E1C553704006844CC /* Assets.xcassets */,
 				474E5CC41C289934007DADBD /* Info.plist */,
 			);
@@ -231,6 +234,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47BA63241C61378800DC0E13 /* Launchscreen.storyboard in Resources */,
 				4776D85F1C553704006844CC /* Assets.xcassets in Resources */,
 				474E5CBE1C289934007DADBD /* Main.storyboard in Resources */,
 			);
