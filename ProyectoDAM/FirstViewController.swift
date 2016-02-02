@@ -133,10 +133,10 @@ class FirstViewController: UIViewController, UICollectionViewDataSource, UIColle
             vc.showId = arrayOfTvShows[indexPath![0].row].show!.ids!.trakt!
             vc.showTitle = arrayOfTvShows[indexPath![0].row].show!.title!
         } else if segue.identifier == "ShowMovieDetails"{
-            let vc = segue.destinationViewController as! MovieDetailsViewController
+            let vc = segue.destinationViewController as! MovieEpisodeDetailsViewController
             let indexPath = collectionView.indexPathsForSelectedItems()
-            vc.movieId = arrayOfMovies[indexPath![0].row].movie!.ids!.trakt!
-            vc.movieTitle = arrayOfMovies[indexPath![0].row].movie!.title!
+            vc.elementId = arrayOfMovies[indexPath![0].row].movie!.ids!.trakt!
+            vc.elementTitle = arrayOfMovies[indexPath![0].row].movie!.title!
         }
     }
     

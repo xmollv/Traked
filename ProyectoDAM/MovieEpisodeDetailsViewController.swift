@@ -8,14 +8,15 @@
 
 import UIKit
 
-class MovieDetailsViewController: UIViewController {
+class MovieEpisodeDetailsViewController: UIViewController {
     
-    var movieId: Int?
-    var movieTitle: String?
+    var elementId: Int?
+    var elementTitle: String?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = movieTitle!
+        title = elementTitle!
+        print("\(elementTitle!), \(elementId!)")
     }
     
     func showSimpleAlert(title: String, message: String, buttonText: String){

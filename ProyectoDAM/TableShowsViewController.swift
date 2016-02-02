@@ -80,6 +80,15 @@ class TableShowsViewController: UIViewController, UITableViewDelegate, UITableVi
         return cell
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "ShowEpisodeDetails" {
+            let vc = segue.destinationViewController as! MovieEpisodeDetailsViewController
+            let indexPath = tableView.indexPathForSelectedRow
+            vc.elementId = arrayOfEpisodes[indexPath!.row].number!
+            vc.elementTitle = arrayOfEpisodes[indexPath!.row].title!
+        }
+    }
+    
     func showSimpleAlert(title: String, message: String, buttonText: String){
         let alertController = UIAlertController(title: title, message:message, preferredStyle: UIAlertControllerStyle.Alert)
         alertController.addAction(UIAlertAction(title: buttonText, style: UIAlertActionStyle.Default, handler: nil))

@@ -138,7 +138,7 @@
         <!--(MOVIE TITLE)-->
         <scene sceneID="kdl-3y-xrq">
             <objects>
-                <viewController id="dtE-hX-sLk" customClass="MovieDetailsViewController" customModule="ProyectoDAM" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="dtE-hX-sLk" customClass="MovieEpisodeDetailsViewController" customModule="ProyectoDAM" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cPW-uX-lgZ"/>
                         <viewControllerLayoutGuide type="bottom" id="1vC-ZA-Q5W"/>
@@ -152,7 +152,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0PC-JY-Twi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1390" y="-612"/>
+            <point key="canvasLocation" x="1390" y="-562"/>
         </scene>
         <!--(SHOW TITLE)-->
         <scene sceneID="Uxt-GY-RE0">
@@ -193,6 +193,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="label" destination="Tjl-C0-DtJ" id="ewo-To-9fP"/>
+                                            <segue destination="dtE-hX-sLk" kind="push" identifier="ShowEpisodeDetails" id="IS1-Fi-eYB"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -432,4 +433,7 @@
         <image name="Watchlist" width="25" height="25"/>
         <image name="first" width="30" height="30"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="IS1-Fi-eYB"/>
+    </inferredMetricsTieBreakers>
 </document>

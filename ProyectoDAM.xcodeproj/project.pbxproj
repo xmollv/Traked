@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		470DA0FF1C57E6EB0073D6D4 /* MovieDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470DA0FE1C57E6EB0073D6D4 /* MovieDetailsViewController.swift */; };
+		470DA0FF1C57E6EB0073D6D4 /* MovieEpisodeDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470DA0FE1C57E6EB0073D6D4 /* MovieEpisodeDetailsViewController.swift */; };
 		4718BF511C56B87A00FAC195 /* TableShowsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4718BF501C56B87A00FAC195 /* TableShowsViewController.swift */; };
 		4718BF531C56B95400FAC195 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4718BF521C56B95400FAC195 /* TableViewCell.swift */; };
 		4718BF561C56C13400FAC195 /* Episodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4718BF541C56C13400FAC195 /* Episodes.swift */; };
@@ -34,7 +34,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		470DA0FE1C57E6EB0073D6D4 /* MovieDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewController.swift; sourceTree = "<group>"; };
+		470DA0FE1C57E6EB0073D6D4 /* MovieEpisodeDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieEpisodeDetailsViewController.swift; sourceTree = "<group>"; };
 		4718BF501C56B87A00FAC195 /* TableShowsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableShowsViewController.swift; sourceTree = "<group>"; };
 		4718BF521C56B95400FAC195 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		4718BF541C56C13400FAC195 /* Episodes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Episodes.swift; sourceTree = "<group>"; };
@@ -119,7 +119,7 @@
 				479823FE1C501E9100905454 /* Basic Cells */,
 				474E5CB81C289934007DADBD /* FirstViewController.swift */,
 				4718BF501C56B87A00FAC195 /* TableShowsViewController.swift */,
-				470DA0FE1C57E6EB0073D6D4 /* MovieDetailsViewController.swift */,
+				470DA0FE1C57E6EB0073D6D4 /* MovieEpisodeDetailsViewController.swift */,
 				474E5CBA1C289934007DADBD /* SecondViewController.swift */,
 				4771DA551C46E29C008022A5 /* ThirdViewController.swift */,
 				4771DA571C46E2A5008022A5 /* FourthViewController.swift */,
@@ -305,7 +305,7 @@
 				4776D85D1C55222E006844CC /* Movies.swift in Sources */,
 				474E5CB91C289934007DADBD /* FirstViewController.swift in Sources */,
 				4771DA5A1C46E6FE008022A5 /* BasicCellWatchlist.swift in Sources */,
-				470DA0FF1C57E6EB0073D6D4 /* MovieDetailsViewController.swift in Sources */,
+				470DA0FF1C57E6EB0073D6D4 /* MovieEpisodeDetailsViewController.swift in Sources */,
 				4771DA581C46E2A5008022A5 /* FourthViewController.swift in Sources */,
 				479823E71C50122400905454 /* Helper.swift in Sources */,
 				479823FD1C50177900905454 /* HudView.swift in Sources */,
