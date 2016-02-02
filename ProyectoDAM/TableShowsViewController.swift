@@ -80,6 +80,10 @@ class TableShowsViewController: UIViewController, UITableViewDelegate, UITableVi
         return cell
     }
     
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    }
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "ShowEpisodeDetails" {
             let vc = segue.destinationViewController as! MovieEpisodeDetailsViewController
