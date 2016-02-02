@@ -98,6 +98,8 @@ class FirstViewController: UIViewController, UICollectionViewDataSource, UIColle
             
         } else {
             
+            cell.remainingDaysStackView.hidden = true
+            
             if let thumb = arrayOfMovies[indexPath.row].movie!.images!.poster!.thumb {
                 cell.imageView.af_setImageWithURL(NSURL(string: thumb)!)
             } else if let medium = arrayOfMovies[indexPath.row].movie!.images!.poster!.medium {

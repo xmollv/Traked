@@ -129,6 +129,7 @@
                                             <outlet property="containerRemainingDays" destination="z7n-hT-uUc" id="TK7-FI-rt7"/>
                                             <outlet property="imageView" destination="QBY-1R-JO0" id="3fR-U4-R7V"/>
                                             <outlet property="labelRemainigDays" destination="Tn9-t3-ppz" id="vdt-sI-rlc"/>
+                                            <outlet property="remainingDaysStackView" destination="DGi-F9-zJY" id="PmO-w5-Gi3"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
