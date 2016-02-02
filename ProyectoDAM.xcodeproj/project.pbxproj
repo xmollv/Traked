@@ -30,6 +30,7 @@
 		479823F91C50149100905454 /* Poster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479823EF1C50149100905454 /* Poster.swift */; };
 		479823FA1C50149100905454 /* ShowOrMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479823F01C50149100905454 /* ShowOrMovie.swift */; };
 		479823FD1C50177900905454 /* HudView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479823FC1C50177900905454 /* HudView.swift */; };
+		47DED3521C6118940077C232 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DED3511C6118940077C232 /* SettingsViewController.swift */; };
 		6BB7E658DDC5C294CBF2A5F9 /* Pods_ProyectoDAM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7263278990CED0354C36A6DD /* Pods_ProyectoDAM.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +60,7 @@
 		479823EF1C50149100905454 /* Poster.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Poster.swift; sourceTree = "<group>"; };
 		479823F01C50149100905454 /* ShowOrMovie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowOrMovie.swift; sourceTree = "<group>"; };
 		479823FC1C50177900905454 /* HudView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HudView.swift; sourceTree = "<group>"; };
+		47DED3511C6118940077C232 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		7263278990CED0354C36A6DD /* Pods_ProyectoDAM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProyectoDAM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AB7A56224743243529506F3 /* Pods-ProyectoDAM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProyectoDAM.release.xcconfig"; path = "Pods/Target Support Files/Pods-ProyectoDAM/Pods-ProyectoDAM.release.xcconfig"; sourceTree = "<group>"; };
 		CCE90DD0EE03B493502804FB /* Pods-ProyectoDAM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProyectoDAM.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ProyectoDAM/Pods-ProyectoDAM.debug.xcconfig"; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 				479823FF1C501EA400905454 /* Helpers */,
 				474B52741C4800610095686C /* Models */,
 				479823FE1C501E9100905454 /* Basic Cells */,
+				47DED3511C6118940077C232 /* SettingsViewController.swift */,
 				474E5CB81C289934007DADBD /* FirstViewController.swift */,
 				4718BF501C56B87A00FAC195 /* TableShowsViewController.swift */,
 				470DA0FE1C57E6EB0073D6D4 /* MovieEpisodeDetailsViewController.swift */,
@@ -301,6 +304,7 @@
 				479823F71C50149100905454 /* TVShows.swift in Sources */,
 				4718BF511C56B87A00FAC195 /* TableShowsViewController.swift in Sources */,
 				4771DA561C46E29C008022A5 /* ThirdViewController.swift in Sources */,
+				47DED3521C6118940077C232 /* SettingsViewController.swift in Sources */,
 				471E24801C5136A8003FB1E6 /* LoginViewController.swift in Sources */,
 				4776D85D1C55222E006844CC /* Movies.swift in Sources */,
 				474E5CB91C289934007DADBD /* FirstViewController.swift in Sources */,
