@@ -27,7 +27,6 @@ class SecondViewController: UIViewController, UICollectionViewDelegate, UICollec
         Alamofire.request(.GET, "https://api-v2launch.trakt.tv/shows/popular?extended=images&page=1&limit=99", headers: Helper().getApiHeaders()).responseJSON{ response in
             switch response.result {
             case .Success (let JSON):
-                print(JSON)
                 if let shows = JSON as? [[String:AnyObject]] {
                     for show in shows{
                         self.arrayOfTvShows.append(ShowOrMovie(dictionary: show)!)
@@ -44,7 +43,6 @@ class SecondViewController: UIViewController, UICollectionViewDelegate, UICollec
         Alamofire.request(.GET, "https://api-v2launch.trakt.tv/movies/popular?extended=images&page=1&limit=99", headers: Helper().getApiHeaders()).responseJSON{ response in
             switch response.result {
             case .Success (let JSON):
-                print(JSON)
                 if let movies = JSON as? [[String:AnyObject]] {
                     for movie in movies{
                         self.arrayOfMovies.append(ShowOrMovie(dictionary: movie)!)
@@ -113,6 +111,30 @@ class SecondViewController: UIViewController, UICollectionViewDelegate, UICollec
         }
         
         return cell
+    }
+    
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        if segmentedControl.selectedSegmentIndex == 0 {
+            performSegueWithIdentifier("ShowEpisodeListFromDiscover", sender: nil)
+        } else {
+            performSegueWithIdentifier("ShowMovieDetailsFromDiscover", sender: nil)
+        }
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "ShowEpisodeListFromDiscover" {
+            let vc = segue.destinationViewController as! TableShowsViewController
+            let indexPath = collectionView.indexPathsForSelectedItems()
+            vc.showId = arrayOfTvShows[indexPath![0].row].ids!.trakt!
+            vc.showTitle = arrayOfTvShows[indexPath![0].row].title!
+            
+        } else if segue.identifier == "ShowMovieDetailsFromDiscover"{
+            let vc = segue.destinationViewController as! MovieEpisodeDetailsViewController
+            let indexPath = collectionView.indexPathsForSelectedItems()
+            vc.elementId = arrayOfMovies[indexPath![0].row].ids!.trakt!
+            vc.elementTitle = arrayOfMovies[indexPath![0].row].title!
+        }
+        
     }
     
     func showSimpleAlert(title: String, message: String, buttonText: String){

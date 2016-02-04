@@ -179,7 +179,7 @@
             </objects>
             <point key="canvasLocation" x="952" y="-947"/>
         </scene>
-        <!--(MOVIE TITLE)-->
+        <!--(MOVIE/EPISODE TITLE)-->
         <scene sceneID="kdl-3y-xrq">
             <objects>
                 <viewController id="dtE-hX-sLk" customClass="MovieEpisodeDetailsViewController" customModule="ProyectoDAM" customModuleProvider="target" sceneMemberID="viewController">
@@ -192,11 +192,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="(MOVIE TITLE)" id="egW-Jd-a7A"/>
+                    <navigationItem key="navigationItem" title="(MOVIE/EPISODE TITLE)" id="egW-Jd-a7A"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0PC-JY-Twi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1922" y="-562"/>
+            <point key="canvasLocation" x="1467" y="-457"/>
         </scene>
         <!--(SHOW TITLE)-->
         <scene sceneID="Uxt-GY-RE0">
@@ -262,7 +262,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DXg-95-2SA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1390" y="-1235"/>
+            <point key="canvasLocation" x="1467" y="-1203"/>
         </scene>
         <!--Discover-->
         <scene sceneID="wg7-f3-ORb">
@@ -344,6 +344,8 @@
                     <connections>
                         <outlet property="collectionView" destination="rB4-Bq-CdR" id="OiS-cY-qBJ"/>
                         <outlet property="segmentedControl" destination="U1u-Qs-2mT" id="Sxl-74-kgd"/>
+                        <segue destination="AFD-Mp-Xzj" kind="push" identifier="ShowEpisodeListFromDiscover" id="VH5-UL-Uef"/>
+                        <segue destination="dtE-hX-sLk" kind="push" identifier="ShowMovieDetailsFromDiscover" id="UFB-ZV-iae"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
@@ -535,6 +537,7 @@
         <image name="Watchlist" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="enH-cW-SbP"/>
+        <segue reference="UFB-ZV-iae"/>
+        <segue reference="VH5-UL-Uef"/>
     </inferredMetricsTieBreakers>
 </document>
