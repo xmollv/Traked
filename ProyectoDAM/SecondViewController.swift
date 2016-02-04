@@ -16,7 +16,7 @@ class SecondViewController: UIViewController, UICollectionViewDelegate, UICollec
     @IBOutlet weak var collectionView: UICollectionView!
     
     
-    var arrayOfTvShows = [TVShows]()
+    var arrayOfTvShows = [ShowOrMovie]()
     //let arrayOfMovies = [Movies]()
 
     override func viewDidLoad() {
@@ -24,13 +24,16 @@ class SecondViewController: UIViewController, UICollectionViewDelegate, UICollec
         
         let hudView = HudView.hudInView(view,animated: true)
         
-        Alamofire.request(.GET, "https://api-v2launch.trakt.tv/shows/popular?extended=images", headers: Helper().getApiHeaders()).responseJSON{ response in
+        Alamofire.request(.GET, "https://api-v2launch.trakt.tv/shows/popular?extended=images&page=1&limit=50", headers: Helper().getApiHeaders()).responseJSON{ response in
             switch response.result {
             case .Success (let JSON):
+                print(JSON)
                 if let shows = JSON as? [[String:AnyObject]] {
                     for show in shows{
-                        self.arrayOfTvShows.append(TVShows(dictionary: show)!)
+                        self.arrayOfTvShows.append(ShowOrMovie(dictionary: show)!)
                     }
+                    self.collectionView.reloadData()
+                    hudView.removeFromSuperview()
                 }
             case .Failure (let error):
                 self.showSimpleAlert("¡Error!", message: "Ha habido un problema al realizar la petición al servidor. Vuelve a intentarlo en unos minutos.", buttonText: "Volver a intentarlo.")
@@ -49,8 +52,10 @@ class SecondViewController: UIViewController, UICollectionViewDelegate, UICollec
     @IBAction func segmentedControlAction(sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0 {
             collectionView.reloadData()
+            self.collectionView.resetScrollPositionToTop()
         } else if sender.selectedSegmentIndex == 1 {
             collectionView.reloadData()
+            self.collectionView.resetScrollPositionToTop()
         }
     }
     
@@ -65,8 +70,33 @@ class SecondViewController: UIViewController, UICollectionViewDelegate, UICollec
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell{
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("CollectionCellDiscover", forIndexPath: indexPath) as! BasicCellDiscover
         
-        cell.imageView.image = nil
-
+        cell.imageView.image = UIImage(named: "Grey background")
+        
+        if segmentedControl.selectedSegmentIndex == 0 {
+            
+            if let thumb = arrayOfTvShows[indexPath.row].images!.poster!.thumb {
+                cell.imageView.af_setImageWithURL(NSURL(string: thumb)!)
+            } else if let medium = arrayOfTvShows[indexPath.row].images!.poster!.medium {
+                cell.imageView.af_setImageWithURL(NSURL(string: medium)!)
+            } else if let full = arrayOfTvShows[indexPath.row].images!.poster!.full {
+                cell.imageView.af_setImageWithURL(NSURL(string: full)!)
+            } else {
+                cell.imageView.image = UIImage(named: "No image")
+            }
+            
+        } else {
+            
+            /*if let thumb = arrayOfMovies[indexPath.row].movie!.images!.poster!.thumb {
+                cell.imageView.af_setImageWithURL(NSURL(string: thumb)!)
+            } else if let medium = arrayOfMovies[indexPath.row].movie!.images!.poster!.medium {
+                cell.imageView.af_setImageWithURL(NSURL(string: medium)!)
+            } else if let full = arrayOfMovies[indexPath.row].movie!.images!.poster!.full {
+                cell.imageView.af_setImageWithURL(NSURL(string: full)!)
+            } else {
+                cell.imageView.image = UIImage(named: "No image")
+            }*/
+        }
+        
         return cell
     }
     
