@@ -17,20 +17,37 @@ class SecondViewController: UIViewController, UICollectionViewDelegate, UICollec
     
     
     var arrayOfTvShows = [ShowOrMovie]()
-    //let arrayOfMovies = [Movies]()
+    var arrayOfMovies = [ShowOrMovie]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let hudView = HudView.hudInView(view,animated: true)
         
-        Alamofire.request(.GET, "https://api-v2launch.trakt.tv/shows/popular?extended=images&page=1&limit=50", headers: Helper().getApiHeaders()).responseJSON{ response in
+        Alamofire.request(.GET, "https://api-v2launch.trakt.tv/shows/popular?extended=images&page=1&limit=99", headers: Helper().getApiHeaders()).responseJSON{ response in
             switch response.result {
             case .Success (let JSON):
                 print(JSON)
                 if let shows = JSON as? [[String:AnyObject]] {
                     for show in shows{
                         self.arrayOfTvShows.append(ShowOrMovie(dictionary: show)!)
+                    }
+                    self.collectionView.reloadData()
+                    hudView.removeFromSuperview()
+                }
+            case .Failure (let error):
+                self.showSimpleAlert("¡Error!", message: "Ha habido un problema al realizar la petición al servidor. Vuelve a intentarlo en unos minutos.", buttonText: "Volver a intentarlo.")
+                print("Request failed with error: \(error)")
+            }
+        }
+        
+        Alamofire.request(.GET, "https://api-v2launch.trakt.tv/movies/popular?extended=images&page=1&limit=99", headers: Helper().getApiHeaders()).responseJSON{ response in
+            switch response.result {
+            case .Success (let JSON):
+                print(JSON)
+                if let movies = JSON as? [[String:AnyObject]] {
+                    for movie in movies{
+                        self.arrayOfMovies.append(ShowOrMovie(dictionary: movie)!)
                     }
                     self.collectionView.reloadData()
                     hudView.removeFromSuperview()
@@ -61,7 +78,7 @@ class SecondViewController: UIViewController, UICollectionViewDelegate, UICollec
         if segmentedControl.selectedSegmentIndex == 0 {
             return arrayOfTvShows.count
         } else {
-            return 1
+            return arrayOfMovies.count
         }
     }
     
@@ -84,15 +101,15 @@ class SecondViewController: UIViewController, UICollectionViewDelegate, UICollec
             
         } else {
             
-            /*if let thumb = arrayOfMovies[indexPath.row].movie!.images!.poster!.thumb {
+            if let thumb = arrayOfMovies[indexPath.row].images!.poster!.thumb {
                 cell.imageView.af_setImageWithURL(NSURL(string: thumb)!)
-            } else if let medium = arrayOfMovies[indexPath.row].movie!.images!.poster!.medium {
+            } else if let medium = arrayOfMovies[indexPath.row].images!.poster!.medium {
                 cell.imageView.af_setImageWithURL(NSURL(string: medium)!)
-            } else if let full = arrayOfMovies[indexPath.row].movie!.images!.poster!.full {
+            } else if let full = arrayOfMovies[indexPath.row].images!.poster!.full {
                 cell.imageView.af_setImageWithURL(NSURL(string: full)!)
             } else {
                 cell.imageView.image = UIImage(named: "No image")
-            }*/
+            }
         }
         
         return cell
