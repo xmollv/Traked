@@ -40,12 +40,10 @@ class SecondViewController: UIViewController, UICollectionViewDelegate, UICollec
                 print("Request failed with error: \(error)")
             }
         }
-        
-        let time = dispatch_time(dispatch_time_t(DISPATCH_TIME_NOW), 3 * Int64(NSEC_PER_SEC))
-        dispatch_after(time, dispatch_get_main_queue()) {
-            self.collectionView.reloadData()
-            hudView.removeFromSuperview()
-        }
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        self.collectionView.resetScrollPositionToTop()
     }
     
     

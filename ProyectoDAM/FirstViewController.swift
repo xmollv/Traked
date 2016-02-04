@@ -60,6 +60,10 @@ class FirstViewController: UIViewController, UICollectionViewDataSource, UIColle
         }
     }
     
+    override func viewDidAppear(animated: Bool) {
+        self.collectionView.resetScrollPositionToTop()
+    }
+    
     @IBAction func segmentedControlAction(sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0 {
             collectionView.reloadData()
