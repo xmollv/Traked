@@ -1,4 +1,4 @@
-##Trakt TV App
+##Traked
 
 Nuestro proyecto se basara en una aplicación para **iPhone**. Una aplicación destinada a usuarios finales que deseen llevar un seguimiento de sus series y películas favoritas. 
 
