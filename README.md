@@ -1,10 +1,11 @@
 ##Traked
+<center>![Traked](http://imgur.com/HPaIC6x.png)</center>
 
-Nuestro proyecto se basara en una aplicación para **iPhone**. Una aplicación destinada a usuarios finales que deseen llevar un seguimiento de sus series y películas favoritas. 
+Nuestro proyecto se basara en el desarrollo de una aplicación para **dispositivos iOS**, aunque de momento sólo estará disponible para iPhone. Estará destinada a usuarios finales que deseen llevar un seguimiento de sus series y películas favoritas. 
 
-La aplicación consumirá datos de la **API de trakt.tv**, la cual ofrece seguridad ante la autentificación de usuarios mediante **oAuth 2.0**. Esta web nos ofrece una gran base de datos de contenido audiovisual de forma gratuita.
+La aplicación consumirá datos a través de la **API de trakt.tv**, la cual ofrece el protocolo **oAuth 2.0** para la autenticación de usuarios. Esta API nos ofrece una gran base de datos de contenido audiovisual de forma gratuita.
 
-Dispondrá de una parte social en la que los usuarios tendrán la opción de compartir las series y películas que desean ver, o que ya han visualizado, en las redes sociales (con el Hashtag de nuestra app para promocionarlo).
+Dispondrá de una parte social en la que los usuarios tendrán la opción de compartir las series y películas en sus redes sociales favoritas (con el Hashtag de nuestra app para promocionarla).
 
 Los usuarios tendrán la opción de **recibir notificaciones** el día estreno de una película, o el lanzamiento de un nuevo episodio de una serie de TV, siempre y cuando lo tengan marcado.
 
@@ -21,14 +22,14 @@ Los usuarios tendrán la opción de **recibir notificaciones** el día estreno d
 <br/>
 
 
-####Evaluación de las tecnologías utilizadas en el proyecto:####
+####Tecnologías utilizadas en el proyecto:####
 <br/>
 <br/>
-![Swift](http://imgur.com/tmx8sGb.png)
-![AlamoFire](http://i.imgur.com/bmYcYrO.png)
-![oAuth 2](http://imgur.com/idvWxMq.png)
-![JSON](http://imgur.com/I2Snyin.png)
-
+![Swift](http://imgur.com/q0FWKVD.png) 
+![Trakt.tv](http://imgur.com/30zsPGU.png)
+![JSON](http://imgur.com/Vhp0VFV.png)
+![AlamoFire](http://imgur.com/3i03x9Z.png)
+![oAuth 2](http://imgur.com/2hyL7Pr.png)
 
 
 
