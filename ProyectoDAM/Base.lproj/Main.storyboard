@@ -258,6 +258,8 @@
                                         </tableViewCellContentView>
                                         <inset key="separatorInset" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
                                         <connections>
+                                            <outlet property="dateLabel" destination="ehS-O5-IrT" id="qrh-c3-NRO"/>
+                                            <outlet property="episodeNumberLabel" destination="nbU-SY-p41" id="HOd-el-enu"/>
                                             <outlet property="label" destination="Tjl-C0-DtJ" id="ewo-To-9fP"/>
                                             <segue destination="dtE-hX-sLk" kind="push" identifier="ShowEpisodeDetails" id="IS1-Fi-eYB"/>
                                         </connections>

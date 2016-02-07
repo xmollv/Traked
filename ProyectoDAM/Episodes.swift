@@ -12,6 +12,7 @@ public class Episodes {
 	public var season : Int?
 	public var number : Int?
 	public var title : String?
+    public var firstAired : String?
 	//public var ids : Ids?
 
 /**
@@ -49,6 +50,7 @@ public class Episodes {
 		season = dictionary["season"] as? Int
 		number = dictionary["number"] as? Int
 		title = dictionary["title"] as? String
+        if (dictionary["first_aired"] != nil) { firstAired = dictionary["first_aired"] as? String }
 		//if (dictionary["ids"] != nil) { ids = Ids(dictionary: dictionary["ids"] as! NSDictionary) }
 	}
 
@@ -65,6 +67,7 @@ public class Episodes {
 		dictionary.setValue(self.season, forKey: "season")
 		dictionary.setValue(self.number, forKey: "number")
 		dictionary.setValue(self.title, forKey: "title")
+        dictionary.setValue(self.firstAired, forKey: "first_aired")
 		//dictionary.setValue(self.ids?.dictionaryRepresentation(), forKey: "ids")
 
 		return dictionary

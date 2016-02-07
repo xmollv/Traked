@@ -25,7 +25,7 @@ class TableShowsViewController: UIViewController, UITableViewDelegate, UITableVi
         
         title = showTitle
         
-        Alamofire.request(.GET, "https://api-v2launch.trakt.tv/shows/\(showId)/seasons?extended=episodes", headers: Helper().getApiHeaders()).responseJSON{ response in
+        Alamofire.request(.GET, "https://api-v2launch.trakt.tv/shows/\(showId)/seasons?extended=episodes,full", headers: Helper().getApiHeaders()).responseJSON{ response in
             switch response.result {
             case .Success (let JSON):
                 if let seasons = JSON as? [[String:AnyObject]] {
@@ -39,8 +39,24 @@ class TableShowsViewController: UIViewController, UITableViewDelegate, UITableVi
                         self.arrayOfSeasons.append(Seasons(dictionary: season)!)
                     }
                     
+                    let dateFormatter = NSDateFormatter()
+                    dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+                    let cal = NSCalendar.currentCalendar()
+                    
                     for season in self.arrayOfSeasons{
                         for episode in season.episodes!{
+                            
+                            if let _ = episode.firstAired {
+                                let date = dateFormatter.dateFromString(episode.firstAired!)!
+                                
+                                let year = cal.component(NSCalendarUnit.Year, fromDate: date)
+                                let month = cal.component(NSCalendarUnit.Month, fromDate: date)
+                                let day = cal.component(NSCalendarUnit.Day, fromDate: date)
+                                
+                                episode.firstAired = "\(day)/\(month)/\(year)"
+                            }
+                            
+                            
                             self.arrayOfEpisodes.append(episode)
                         }
                     }
@@ -70,11 +86,23 @@ class TableShowsViewController: UIViewController, UITableViewDelegate, UITableVi
         if arrayOfEpisodes.count != 0 {
             if let episodeName = arrayOfEpisodes[indexPath.row].title {
                 cell.label.text = episodeName
+                
+                if let _ = arrayOfEpisodes[indexPath.row].firstAired {
+                    cell.dateLabel.text = arrayOfEpisodes[indexPath.row].firstAired!
+                } else {
+                    cell.dateLabel.text = ""
+                }
+
+                cell.episodeNumberLabel.text = String(arrayOfEpisodes[indexPath.row].number!)
             } else {
                 cell.label.text = "TBA"
+                cell.dateLabel.text = ""
+                cell.episodeNumberLabel.text = ""
             }
         } else {
             cell.label.text = ""
+            cell.dateLabel.text = ""
+            cell.episodeNumberLabel.text = ""
         }
         
         return cell

@@ -11,9 +11,13 @@ import UIKit
 class TableViewCell: UITableViewCell{
     
     @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var episodeNumberLabel: UILabel!
     
     override func prepareForReuse() {
         super.prepareForReuse()
         label.text = ""
+        dateLabel.text = ""
+        episodeNumberLabel.text = ""
     }
 }
