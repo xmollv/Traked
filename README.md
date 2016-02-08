@@ -1,7 +1,7 @@
 ##Traked
 <div style="text-align:center" markdown="1">
 
-![Alt Text](/path/to/image "Caption")
+![Traked](http://imgur.com/HPaIC6x.png)
 
 </div>
 
