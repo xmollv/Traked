@@ -1,5 +1,10 @@
 ##Traked
-<center>![Traked](http://imgur.com/HPaIC6x.png)</center>
+<div style="text-align:center" markdown="1">
+
+![Alt Text](/path/to/image "Caption")
+
+</div>
+
 
 Nuestro proyecto se basara en el desarrollo de una aplicación para **dispositivos iOS**, aunque de momento sólo estará disponible para iPhone. Estará destinada a usuarios finales que deseen llevar un seguimiento de sus series y películas favoritas. 
 
@@ -11,7 +16,9 @@ Los usuarios tendrán la opción de **recibir notificaciones** el día estreno d
 
 
 
-####Funcionalidades de la aplicación:####+ Añadir series o películas en las categorías por ver, vistas o archivadas
+####Funcionalidades de la aplicación:####
+
++ Añadir series o películas en las categorías por ver, vistas o archivadas
 +	Eliminar una serie o película
 +	Activar o desactivar notificaciones
 +	Agregar amigos 
