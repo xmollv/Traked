@@ -1,9 +1,6 @@
 ##Traked
-<div style="text-align:center" markdown="1">
 
 ![Traked](http://imgur.com/HPaIC6x.png)
-
-</div>
 
 
 Nuestro proyecto se basara en el desarrollo de una aplicación para **dispositivos iOS**, aunque de momento sólo estará disponible para iPhone. Estará destinada a usuarios finales que deseen llevar un seguimiento de sus series y películas favoritas. 
