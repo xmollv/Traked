@@ -136,7 +136,7 @@ class FirstViewController: UIViewController, UICollectionViewDataSource, UIColle
         if segue.identifier == "ShowEpisodeList" {
             let vc = segue.destinationViewController as! TableShowsViewController
             let indexPath = collectionView.indexPathsForSelectedItems()
-            vc.tvShow = arrayOfTvShows[indexPath![0].row]
+            vc.tvShow = arrayOfTvShows[indexPath![0].row].showOrMovie!
         } else if segue.identifier == "ShowMovieDetails"{
             let vc = segue.destinationViewController as! MovieEpisodeDetailsViewController
             let indexPath = collectionView.indexPathsForSelectedItems()

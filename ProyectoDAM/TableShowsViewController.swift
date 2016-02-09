@@ -12,7 +12,7 @@ import Alamofire
 class TableShowsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
-    var tvShow: Result?
+    var tvShow: ShowOrMovie?
 
     var arrayOfEpisodes = [Episodes]()
 
@@ -21,18 +21,18 @@ class TableShowsViewController: UIViewController, UITableViewDelegate, UITableVi
         
         
         let hudView = HudView.hudInView(view,animated: true)
-        print("\(tvShow!.showOrMovie!.title!), \(tvShow!.showOrMovie!.ids!.trakt)")
+        print("\(tvShow!.title!), \(tvShow!.ids!.trakt)")
         
-        title = tvShow!.showOrMovie!.title!
+        title = tvShow!.title!
         
-        Alamofire.request(.GET, "https://api-v2launch.trakt.tv/shows/\(tvShow!.showOrMovie!.ids!.trakt!)/seasons?extended=episodes,full", headers: Helper().getApiHeaders()).responseJSON{ response in
+        Alamofire.request(.GET, "https://api-v2launch.trakt.tv/shows/\(tvShow!.ids!.trakt!)/seasons?extended=episodes,full", headers: Helper().getApiHeaders()).responseJSON{ response in
             switch response.result {
             case .Success (let JSON):
                 if let seasons = JSON as? [[String:AnyObject]] {
                     print(seasons)
                     
                     for season in seasons{
-                        self.tvShow!.showOrMovie!.seasons!.append(Seasons(dictionary: season)!)
+                        self.tvShow!.seasons!.append(Seasons(dictionary: season)!)
                     }
                     
                     
@@ -85,15 +85,15 @@ class TableShowsViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        if let _ = tvShow!.showOrMovie!.seasons {
-            return tvShow!.showOrMovie!.seasons!.count
+        if let _ = tvShow!.seasons {
+            return tvShow!.seasons!.count
         } else {
             return 0
         }
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if let seasons = tvShow!.showOrMovie!.seasons {
+        if let seasons = tvShow!.seasons {
             if seasons.count == 0 {
                 return 0
             } else {
@@ -115,9 +115,9 @@ class TableShowsViewController: UIViewController, UITableViewDelegate, UITableVi
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("TableViewCell", forIndexPath: indexPath) as! TableViewCell
-        if tvShow!.showOrMovie!.seasons!.count != 0 {
+        if tvShow!.seasons!.count != 0 {
             
-            if let episodeName = tvShow!.showOrMovie!.seasons![indexPath.section].episodes![indexPath.row].title {
+            if let episodeName = tvShow!.seasons![indexPath.section].episodes![indexPath.row].title {
                 cell.label.text = episodeName
                 cell.episodeNumberLabel.text = "\(indexPath.row)"
             } else {
@@ -158,7 +158,7 @@ class TableShowsViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Season \(tvShow!.showOrMovie!.seasons![section].number!)"
+        return "Season \(tvShow!.seasons![section].number!)"
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
@@ -169,7 +169,7 @@ class TableShowsViewController: UIViewController, UITableViewDelegate, UITableVi
         if segue.identifier == "ShowEpisodeDetails" {
             let vc = segue.destinationViewController as! MovieEpisodeDetailsViewController
             let indexPath = tableView.indexPathForSelectedRow
-            vc.episode = tvShow!.showOrMovie!.seasons![indexPath!.section].episodes![indexPath!.row]
+            vc.episode = tvShow!.seasons![indexPath!.section].episodes![indexPath!.row]
         }
     }
     
