@@ -9,11 +9,11 @@
 
 import Foundation
 
-public class TVShows {
+public class Result {
 	public var rank : Int?
 	public var listed_at : String?
 	public var type : String?
-	public var show : ShowOrMovie?
+	public var showOrMovie : ShowOrMovie?
 
 /**
     Returns an array of models based on given dictionary.
@@ -25,12 +25,12 @@ public class TVShows {
 
     - returns: Array of Json4Swift_Base Instances.
 */
-    public class func modelsFromDictionaryArray(array:NSArray) -> [TVShows]
+    public class func modelsFromDictionaryArray(array:NSArray) -> [Result]
     {
-        var models:[TVShows] = []
+        var models:[Result] = []
         for item in array
         {
-            models.append(TVShows(dictionary: item as! NSDictionary)!)
+            models.append(Result(dictionary: item as! NSDictionary)!)
         }
         return models
     }
@@ -50,7 +50,8 @@ public class TVShows {
 		rank = dictionary["rank"] as? Int
 		listed_at = dictionary["listed_at"] as? String
 		type = dictionary["type"] as? String
-		if (dictionary["show"] != nil) { show = ShowOrMovie(dictionary: dictionary["show"] as! NSDictionary) }
+		if (dictionary["show"] != nil) { showOrMovie = ShowOrMovie(dictionary: dictionary["show"] as! NSDictionary) }
+        if (dictionary["movie"] != nil) { showOrMovie = ShowOrMovie(dictionary: dictionary["movie"] as! NSDictionary) }
 	}
 
 		
@@ -66,7 +67,7 @@ public class TVShows {
 		dictionary.setValue(self.rank, forKey: "rank")
 		dictionary.setValue(self.listed_at, forKey: "listed_at")
 		dictionary.setValue(self.type, forKey: "type")
-		dictionary.setValue(self.show?.dictionaryRepresentation(), forKey: "show")
+		dictionary.setValue(self.showOrMovie?.dictionaryRepresentation(), forKey: "show")
 
 		return dictionary
 	}

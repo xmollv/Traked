@@ -14,8 +14,8 @@ class FirstViewController: UIViewController, UICollectionViewDataSource, UIColle
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     
-    var arrayOfTvShows = [TVShows]()
-    var arrayOfMovies = [Movies]()
+    var arrayOfTvShows = [Result]()
+    var arrayOfMovies = [Result]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,7 +31,7 @@ class FirstViewController: UIViewController, UICollectionViewDataSource, UIColle
                 case .Success (let JSON):
                     if let shows = JSON as? [[String:AnyObject]] {
                         for show in shows{
-                            self.arrayOfTvShows.append(TVShows(dictionary: show)!)
+                            self.arrayOfTvShows.append(Result(dictionary: show)!)
                         }
                         self.collectionView.reloadData()
                         hudView.removeFromSuperview()
@@ -47,7 +47,7 @@ class FirstViewController: UIViewController, UICollectionViewDataSource, UIColle
                 case .Success (let JSON):
                     if let movies = JSON as? [[String:AnyObject]] {
                         for movie in movies{
-                            self.arrayOfMovies.append(Movies(dictionary: movie)!)
+                            self.arrayOfMovies.append(Result(dictionary: movie)!)
                         }
                         self.collectionView.reloadData()
                         hudView.removeFromSuperview()
@@ -90,11 +90,11 @@ class FirstViewController: UIViewController, UICollectionViewDataSource, UIColle
         
         if segmentedControl.selectedSegmentIndex == 0 {
             
-            if let thumb = arrayOfTvShows[indexPath.row].show!.images!.poster!.thumb {
+            if let thumb = arrayOfTvShows[indexPath.row].showOrMovie!.images!.poster!.thumb {
                 cell.imageView.af_setImageWithURL(NSURL(string: thumb)!)
-            } else if let medium = arrayOfTvShows[indexPath.row].show!.images!.poster!.medium {
+            } else if let medium = arrayOfTvShows[indexPath.row].showOrMovie!.images!.poster!.medium {
                 cell.imageView.af_setImageWithURL(NSURL(string: medium)!)
-            } else if let full = arrayOfTvShows[indexPath.row].show!.images!.poster!.full {
+            } else if let full = arrayOfTvShows[indexPath.row].showOrMovie!.images!.poster!.full {
                 cell.imageView.af_setImageWithURL(NSURL(string: full)!)
             } else {
                 cell.imageView.image = UIImage(named: "No image")
@@ -104,11 +104,11 @@ class FirstViewController: UIViewController, UICollectionViewDataSource, UIColle
             
             cell.remainingDaysStackView.hidden = true
             
-            if let thumb = arrayOfMovies[indexPath.row].movie!.images!.poster!.thumb {
+            if let thumb = arrayOfMovies[indexPath.row].showOrMovie!.images!.poster!.thumb {
                 cell.imageView.af_setImageWithURL(NSURL(string: thumb)!)
-            } else if let medium = arrayOfMovies[indexPath.row].movie!.images!.poster!.medium {
+            } else if let medium = arrayOfMovies[indexPath.row].showOrMovie!.images!.poster!.medium {
                 cell.imageView.af_setImageWithURL(NSURL(string: medium)!)
-            } else if let full = arrayOfMovies[indexPath.row].movie!.images!.poster!.full {
+            } else if let full = arrayOfMovies[indexPath.row].showOrMovie!.images!.poster!.full {
                 cell.imageView.af_setImageWithURL(NSURL(string: full)!)
             } else {
                 cell.imageView.image = UIImage(named: "No image")
@@ -136,13 +136,11 @@ class FirstViewController: UIViewController, UICollectionViewDataSource, UIColle
         if segue.identifier == "ShowEpisodeList" {
             let vc = segue.destinationViewController as! TableShowsViewController
             let indexPath = collectionView.indexPathsForSelectedItems()
-            vc.showId = arrayOfTvShows[indexPath![0].row].show!.ids!.trakt!
-            vc.showTitle = arrayOfTvShows[indexPath![0].row].show!.title!
+            vc.tvShow = arrayOfTvShows[indexPath![0].row]
         } else if segue.identifier == "ShowMovieDetails"{
             let vc = segue.destinationViewController as! MovieEpisodeDetailsViewController
             let indexPath = collectionView.indexPathsForSelectedItems()
-            vc.elementId = arrayOfMovies[indexPath![0].row].movie!.ids!.trakt!
-            vc.elementTitle = arrayOfMovies[indexPath![0].row].movie!.title!
+            vc.movie = arrayOfMovies[indexPath![0].row].showOrMovie!
         }
     }
     

@@ -13,6 +13,7 @@ public class ShowOrMovie {
 	public var year : Int?
 	public var ids : Ids?
 	public var images : Images?
+    public var seasons : Array<Seasons>?
 
 /**
     Returns an array of models based on given dictionary.
@@ -50,6 +51,7 @@ public class ShowOrMovie {
 		year = dictionary["year"] as? Int
 		if (dictionary["ids"] != nil) { ids = Ids(dictionary: dictionary["ids"] as! NSDictionary) }
 		if (dictionary["images"] != nil) { images = Images(dictionary: dictionary["images"] as! NSDictionary) }
+        seasons = [Seasons]()
 	}
 
 		

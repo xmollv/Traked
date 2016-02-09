@@ -21,12 +21,11 @@
 		4771DA581C46E2A5008022A5 /* FourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4771DA571C46E2A5008022A5 /* FourthViewController.swift */; };
 		4771DA5A1C46E6FE008022A5 /* BasicCellWatchlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4771DA591C46E6FE008022A5 /* BasicCellWatchlist.swift */; };
 		4776D85B1C551C9E006844CC /* BasicCellDiscover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4776D85A1C551C9E006844CC /* BasicCellDiscover.swift */; };
-		4776D85D1C55222E006844CC /* Movies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4776D85C1C55222E006844CC /* Movies.swift */; };
 		4776D85F1C553704006844CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4776D85E1C553704006844CC /* Assets.xcassets */; };
 		479823E71C50122400905454 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479823E61C50122400905454 /* Helper.swift */; };
 		479823F51C50149100905454 /* Ids.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479823EB1C50149100905454 /* Ids.swift */; };
 		479823F61C50149100905454 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479823EC1C50149100905454 /* Images.swift */; };
-		479823F71C50149100905454 /* TVShows.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479823ED1C50149100905454 /* TVShows.swift */; };
+		479823F71C50149100905454 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479823ED1C50149100905454 /* Result.swift */; };
 		479823F91C50149100905454 /* Poster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479823EF1C50149100905454 /* Poster.swift */; };
 		479823FA1C50149100905454 /* ShowOrMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479823F01C50149100905454 /* ShowOrMovie.swift */; };
 		479823FD1C50177900905454 /* HudView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479823FC1C50177900905454 /* HudView.swift */; };
@@ -52,12 +51,11 @@
 		4771DA571C46E2A5008022A5 /* FourthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FourthViewController.swift; sourceTree = "<group>"; };
 		4771DA591C46E6FE008022A5 /* BasicCellWatchlist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicCellWatchlist.swift; sourceTree = "<group>"; };
 		4776D85A1C551C9E006844CC /* BasicCellDiscover.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicCellDiscover.swift; sourceTree = "<group>"; };
-		4776D85C1C55222E006844CC /* Movies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movies.swift; sourceTree = "<group>"; };
 		4776D85E1C553704006844CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		479823E61C50122400905454 /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		479823EB1C50149100905454 /* Ids.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ids.swift; sourceTree = "<group>"; };
 		479823EC1C50149100905454 /* Images.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
-		479823ED1C50149100905454 /* TVShows.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVShows.swift; sourceTree = "<group>"; };
+		479823ED1C50149100905454 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		479823EF1C50149100905454 /* Poster.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Poster.swift; sourceTree = "<group>"; };
 		479823F01C50149100905454 /* ShowOrMovie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowOrMovie.swift; sourceTree = "<group>"; };
 		479823FC1C50177900905454 /* HudView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HudView.swift; sourceTree = "<group>"; };
@@ -83,8 +81,7 @@
 		474B52741C4800610095686C /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				479823ED1C50149100905454 /* TVShows.swift */,
-				4776D85C1C55222E006844CC /* Movies.swift */,
+				479823ED1C50149100905454 /* Result.swift */,
 				479823F01C50149100905454 /* ShowOrMovie.swift */,
 				479823EB1C50149100905454 /* Ids.swift */,
 				479823EC1C50149100905454 /* Images.swift */,
@@ -305,12 +302,11 @@
 				479823F61C50149100905454 /* Images.swift in Sources */,
 				4718BF571C56C13400FAC195 /* Seasons.swift in Sources */,
 				4776D85B1C551C9E006844CC /* BasicCellDiscover.swift in Sources */,
-				479823F71C50149100905454 /* TVShows.swift in Sources */,
+				479823F71C50149100905454 /* Result.swift in Sources */,
 				4718BF511C56B87A00FAC195 /* TableShowsViewController.swift in Sources */,
 				4771DA561C46E29C008022A5 /* ThirdViewController.swift in Sources */,
 				47DED3521C6118940077C232 /* SettingsViewController.swift in Sources */,
 				471E24801C5136A8003FB1E6 /* LoginViewController.swift in Sources */,
-				4776D85D1C55222E006844CC /* Movies.swift in Sources */,
 				474E5CB91C289934007DADBD /* FirstViewController.swift in Sources */,
 				4771DA5A1C46E6FE008022A5 /* BasicCellWatchlist.swift in Sources */,
 				470DA0FF1C57E6EB0073D6D4 /* MovieEpisodeDetailsViewController.swift in Sources */,
