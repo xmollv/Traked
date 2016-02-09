@@ -125,12 +125,14 @@ class SecondViewController: UIViewController, UICollectionViewDelegate, UICollec
         if segue.identifier == "ShowEpisodeListFromDiscover" {
             let vc = segue.destinationViewController as! TableShowsViewController
             let indexPath = collectionView.indexPathsForSelectedItems()
+            vc.tvShow = arrayOfTvShows[indexPath![0].row]
             //vc.showId = arrayOfTvShows[indexPath![0].row].ids!.trakt!
             //vc.showTitle = arrayOfTvShows[indexPath![0].row].title!
             
         } else if segue.identifier == "ShowMovieDetailsFromDiscover"{
             let vc = segue.destinationViewController as! MovieEpisodeDetailsViewController
             let indexPath = collectionView.indexPathsForSelectedItems()
+            vc.movie = arrayOfMovies[indexPath![0].row]
             //vc.elementId = arrayOfMovies[indexPath![0].row].ids!.trakt!
             //vc.elementTitle = arrayOfMovies[indexPath![0].row].title!
         }
