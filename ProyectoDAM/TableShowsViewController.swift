@@ -14,10 +14,11 @@ class TableShowsViewController: UIViewController, UITableViewDelegate, UITableVi
     @IBOutlet weak var tableView: UITableView!
     var tvShow: ShowOrMovie?
 
-    var arrayOfEpisodes = [Episodes]()
-
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //Check if there are seasons. If there are, we shouldn't download again the same seasons. This should be checked
+        tvShow!.seasons = [Seasons]()
         
         
         let hudView = HudView.hudInView(view,animated: true)
