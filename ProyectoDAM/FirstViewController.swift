@@ -140,7 +140,7 @@ class FirstViewController: UIViewController, UICollectionViewDataSource, UIColle
         } else if segue.identifier == "ShowMovieDetails"{
             let vc = segue.destinationViewController as! MovieEpisodeDetailsViewController
             let indexPath = collectionView.indexPathsForSelectedItems()
-            vc.movie = arrayOfMovies[indexPath![0].row].showOrMovie!
+            vc.showOrMovie = arrayOfMovies[indexPath![0].row].showOrMovie!
         }
     }
     

@@ -22,7 +22,7 @@ class TableShowsViewController: UIViewController, UITableViewDelegate, UITableVi
         
         
         let hudView = HudView.hudInView(view,animated: true)
-        print("\(tvShow!.title!), \(tvShow!.ids!.trakt)")
+        print("\(tvShow!.title!), \(tvShow!.ids!.trakt!)")
         
         title = tvShow!.title!
         
@@ -30,9 +30,8 @@ class TableShowsViewController: UIViewController, UITableViewDelegate, UITableVi
             switch response.result {
             case .Success (let JSON):
                 if let seasons = JSON as? [[String:AnyObject]] {
-                    print(seasons)
-                    
                     for season in seasons{
+                        //This if skips the special seasons
                         if season["episodes"]![0]!["season"] as! Int == 0 {
                             continue
                         }
@@ -130,6 +129,7 @@ class TableShowsViewController: UIViewController, UITableViewDelegate, UITableVi
         if segue.identifier == "ShowEpisodeDetails" {
             let vc = segue.destinationViewController as! MovieEpisodeDetailsViewController
             let indexPath = tableView.indexPathForSelectedRow
+            vc.showOrMovie = tvShow!
             vc.episode = tvShow!.seasons![indexPath!.section].episodes![indexPath!.row]
         }
     }
