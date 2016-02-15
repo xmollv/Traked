@@ -33,6 +33,9 @@ class TableShowsViewController: UIViewController, UITableViewDelegate, UITableVi
                     print(seasons)
                     
                     for season in seasons{
+                        if season["episodes"]![0]!["season"] as! Int == 0 {
+                            continue
+                        }
                         self.tvShow!.seasons!.append(Seasons(dictionary: season)!)
                     }
                     
