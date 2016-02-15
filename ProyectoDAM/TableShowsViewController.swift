@@ -36,26 +36,12 @@ class TableShowsViewController: UIViewController, UITableViewDelegate, UITableVi
                         self.tvShow!.seasons!.append(Seasons(dictionary: season)!)
                     }
                     
-                    
-                    
-                    
-                    /*for season in seasons {
-                        
-                        //Jumps the special episodes that are usually stored in the "0" season
-                        if season["episodes"]![0]!["season"] as! Int == 0 {
-                            continue
-                        }
-                        
-                        self.arrayOfSeasons.append(Seasons(dictionary: season)!)
-                    }
-                    
                     let dateFormatter = NSDateFormatter()
                     dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
                     let cal = NSCalendar.currentCalendar()
                     
-                    for season in self.arrayOfSeasons{
-                        for episode in season.episodes!{
-                            
+                    for season in self.tvShow!.seasons!{
+                        for episode in season.episodes! {
                             if let _ = episode.firstAired {
                                 let date = dateFormatter.dateFromString(episode.firstAired!)!
                                 
@@ -65,13 +51,8 @@ class TableShowsViewController: UIViewController, UITableViewDelegate, UITableVi
                                 
                                 episode.firstAired = "\(day)/\(month)/\(year)"
                             }
-                            
-                            
-                            self.arrayOfEpisodes.append(episode)
                         }
                     }
-                
-                    */
                     
                     dispatch_async(dispatch_get_main_queue(), { () -> Void in
                         self.tableView.reloadData()
@@ -99,15 +80,6 @@ class TableShowsViewController: UIViewController, UITableViewDelegate, UITableVi
                 return 0
             } else {
                 return seasons[section].episodes!.count
-                /*var numberOfEpisodes = 0
-                for season in tvShow!.showOrMovie!.seasons! {
-                    for ep in season.episodes! {
-                        numberOfEpisodes = numberOfEpisodes + 1
-                        arrayOfEpisodes.append(ep)
-                    }
-                }
-                
-                return numberOfEpisodes*/
             }
         } else {
             return 0
@@ -121,34 +93,19 @@ class TableShowsViewController: UIViewController, UITableViewDelegate, UITableVi
             if let episodeName = tvShow!.seasons![indexPath.section].episodes![indexPath.row].title {
                 cell.label.text = episodeName
                 cell.episodeNumberLabel.text = "\(indexPath.row)"
+                
+                if let dateAired = tvShow!.seasons![indexPath.section].episodes![indexPath.row].firstAired {
+                    cell.dateLabel.text = dateAired
+                } else {
+                    cell.dateLabel.text = ""
+                }
+                
             } else {
                 cell.label.text = "TBA"
                 cell.dateLabel.text = ""
                 cell.episodeNumberLabel.text = ""
             }
-            
-            
-            
-            
-            
-            
-            
-            /*if let episodeName = tvShow!.showOrMovie!.seasons![indexPath.section].episodes![indexPath.row].title {
-            //if let _ = arrayOfEpisodes[indexPath.row].title {
-                cell.label.text = episodeName
-                
-                /*if let _ = arrayOfEpisodes[indexPath.row].firstAired {
-                    cell.dateLabel.text = arrayOfEpisodes[indexPath.row].firstAired!
-                } else {
-                    cell.dateLabel.text = ""
-                }*/
 
-                cell.episodeNumberLabel.text = "\(indexPath.row)"
-            } else {
-                cell.label.text = "TBA"
-                cell.dateLabel.text = ""
-                cell.episodeNumberLabel.text = ""
-            }*/
         } else {
             cell.label.text = ""
             cell.dateLabel.text = ""
