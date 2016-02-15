@@ -7,21 +7,48 @@
 //
 
 import UIKit
+import Alamofire
 
 class MovieEpisodeDetailsViewController: UIViewController {
     
-    var showOrMovie: ShowOrMovie?
+    @IBOutlet weak var imageHeader: UIImageView!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    
+    var movie: ShowOrMovie?
     var episode: Episodes?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         if let _ = episode {
-            title = episode!.title!
+            
+            print("\(episode!.season!), \(episode!.number!)")
+            
+            if let episodeTitle = episode!.title {
+                title = episodeTitle
+            } else {
+                title = "TBA"
+            }
+
+            if let screenshot = episode!.images!.screenshot!.thumb {
+                imageHeader.af_setImageWithURL(NSURL(string: screenshot)!)
+            } else {
+                imageHeader.image = UIImage(named: "No Image")
+            }
+            
+            if let overview = episode!.overview {
+                descriptionLabel.text = overview
+            } else {
+                descriptionLabel.text = "No description yet!"
+            }
+            
+            
+
+            
+            
         } else {
-            title = showOrMovie!.title!
+            title = movie!.title!
         }
         
-        //print("\(elementTitle!), \(elementId!), \(tvshowId), \(seasonId)")
     }
     
     func showSimpleAlert(title: String, message: String, buttonText: String){

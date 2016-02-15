@@ -3,6 +3,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Settings View Controller-->
@@ -190,9 +191,59 @@
                     <view key="view" contentMode="scaleToFill" id="VN2-T7-MG1">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NQ7-6K-Rvl">
+                                <rect key="frame" x="-4" y="4" width="328" height="515"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0r7-rB-D6q">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="238"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="j4I-ao-KeD">
+                                                <rect key="frame" x="20" y="10" width="280" height="170"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lA6-aZ-Vxp">
+                                                <rect key="frame" x="20" y="200" width="280" height="18"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="j4I-ao-KeD" firstAttribute="leading" secondItem="0r7-rB-D6q" secondAttribute="leading" constant="20" id="1bC-jA-qIA"/>
+                                            <constraint firstItem="lA6-aZ-Vxp" firstAttribute="leading" secondItem="0r7-rB-D6q" secondAttribute="leading" constant="20" id="TEq-ju-epB"/>
+                                            <constraint firstAttribute="trailing" secondItem="lA6-aZ-Vxp" secondAttribute="trailing" constant="20" id="ZxC-G0-sjZ"/>
+                                            <constraint firstItem="lA6-aZ-Vxp" firstAttribute="top" secondItem="j4I-ao-KeD" secondAttribute="bottom" constant="20" id="duI-4c-2Kr"/>
+                                            <constraint firstAttribute="trailing" secondItem="j4I-ao-KeD" secondAttribute="trailing" constant="20" id="ljS-zW-LMb"/>
+                                            <constraint firstItem="j4I-ao-KeD" firstAttribute="top" secondItem="0r7-rB-D6q" secondAttribute="top" constant="10" id="rxW-wL-TwF"/>
+                                            <constraint firstAttribute="bottom" secondItem="lA6-aZ-Vxp" secondAttribute="bottom" constant="20" id="tsF-0o-JFT"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="0r7-rB-D6q" secondAttribute="trailing" id="X8V-Rc-Scu"/>
+                                    <constraint firstAttribute="bottom" secondItem="0r7-rB-D6q" secondAttribute="bottom" id="XPa-qv-WCC"/>
+                                    <constraint firstItem="0r7-rB-D6q" firstAttribute="top" secondItem="NQ7-6K-Rvl" secondAttribute="top" id="gt9-22-bhr"/>
+                                    <constraint firstItem="0r7-rB-D6q" firstAttribute="leading" secondItem="NQ7-6K-Rvl" secondAttribute="leading" id="jfI-6E-eUz"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="j4I-ao-KeD" firstAttribute="height" secondItem="VN2-T7-MG1" secondAttribute="height" multiplier="0.3" id="GyU-Qj-z1c"/>
+                            <constraint firstItem="0r7-rB-D6q" firstAttribute="width" secondItem="VN2-T7-MG1" secondAttribute="width" id="dBu-H8-una"/>
+                            <constraint firstItem="NQ7-6K-Rvl" firstAttribute="leading" secondItem="VN2-T7-MG1" secondAttribute="leadingMargin" constant="-20" id="gOD-NJ-IiA"/>
+                            <constraint firstItem="1vC-ZA-Q5W" firstAttribute="top" secondItem="NQ7-6K-Rvl" secondAttribute="bottom" id="ln5-X0-SaE"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="NQ7-6K-Rvl" secondAttribute="trailing" constant="-20" id="nAQ-6h-3t6"/>
+                            <constraint firstItem="NQ7-6K-Rvl" firstAttribute="top" secondItem="cPW-uX-lgZ" secondAttribute="bottom" constant="-60" id="weS-Tc-iUg"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="(MOVIE/EPISODE TITLE)" id="egW-Jd-a7A"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="568"/>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="lA6-aZ-Vxp" id="BWm-ir-ZzG"/>
+                        <outlet property="imageHeader" destination="j4I-ao-KeD" id="9cM-RH-jwX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0PC-JY-Twi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -216,10 +267,10 @@
                                 <inset key="separatorInset" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TableViewCell" id="cqx-BQ-Ks5" customClass="TableViewCell" customModule="ProyectoDAM" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="113.5" width="328" height="44"/>
+                                        <rect key="frame" x="0.0" y="114" width="328" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cqx-BQ-Ks5" id="8cI-uy-jLm">
-                                            <rect key="frame" x="0.0" y="0.0" width="295" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="295" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="nbU-SY-p41">
@@ -561,7 +612,7 @@
         <image name="Watchlist" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="VH5-UL-Uef"/>
-        <segue reference="IS1-Fi-eYB"/>
+        <segue reference="6ej-Nv-MGX"/>
+        <segue reference="enH-cW-SbP"/>
     </inferredMetricsTieBreakers>
 </document>

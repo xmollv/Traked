@@ -28,9 +28,11 @@ class LoginViewController: UIViewController {
     
     func checkIfHasTokenAndIsValid(){
         if Helper().getUserToken() != nil {
+            let hudView = HudView.hudInView(view,animated: true)
             Alamofire.request(.GET, "https://api-v2launch.trakt.tv/users/me", headers: Helper().getApiHeaders()).responseJSON{ response in
                 switch response.result {
                 case .Success:
+                    hudView.removeFromSuperview()
                     let vc = self.storyboard!.instantiateViewControllerWithIdentifier("TabBarController")
                     self.presentViewController(vc, animated: true, completion: nil)
                     

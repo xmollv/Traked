@@ -26,7 +26,7 @@ class TableShowsViewController: UIViewController, UITableViewDelegate, UITableVi
         
         title = tvShow!.title!
         
-        Alamofire.request(.GET, "https://api-v2launch.trakt.tv/shows/\(tvShow!.ids!.trakt!)/seasons?extended=episodes,full", headers: Helper().getApiHeaders()).responseJSON{ response in
+        Alamofire.request(.GET, "https://api-v2launch.trakt.tv/shows/\(tvShow!.ids!.trakt!)/seasons?extended=episodes,full,images", headers: Helper().getApiHeaders()).responseJSON{ response in
             switch response.result {
             case .Success (let JSON):
                 if let seasons = JSON as? [[String:AnyObject]] {
@@ -129,7 +129,7 @@ class TableShowsViewController: UIViewController, UITableViewDelegate, UITableVi
         if segue.identifier == "ShowEpisodeDetails" {
             let vc = segue.destinationViewController as! MovieEpisodeDetailsViewController
             let indexPath = tableView.indexPathForSelectedRow
-            vc.showOrMovie = tvShow!
+            //vc.showOrMovie = tvShow!
             vc.episode = tvShow!.seasons![indexPath!.section].episodes![indexPath!.row]
         }
     }
