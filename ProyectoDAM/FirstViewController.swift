@@ -42,7 +42,7 @@ class FirstViewController: UIViewController, UICollectionViewDataSource, UIColle
                 }
             }
             
-            Alamofire.request(.GET, "https://api-v2launch.trakt.tv/users/me/watchlist/movies?extended=images", headers: Helper().getApiHeaders()).responseJSON{ response in
+            Alamofire.request(.GET, "https://api-v2launch.trakt.tv/users/me/watchlist/movies?extended=images,full", headers: Helper().getApiHeaders()).responseJSON{ response in
                 switch response.result {
                 case .Success (let JSON):
                     if let movies = JSON as? [[String:AnyObject]] {

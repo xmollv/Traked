@@ -47,6 +47,18 @@ class MovieEpisodeDetailsViewController: UIViewController {
             
         } else {
             title = movie!.title!
+            
+            if let poster = movie!.images!.poster!.thumb {
+                imageHeader.af_setImageWithURL(NSURL(string: poster)!)
+            } else {
+                imageHeader.image = UIImage(named: "No Image")
+            }
+            
+            if let overview = movie!.overview {
+                descriptionLabel.text = overview
+            } else {
+                descriptionLabel.text = "No overview yet"
+            }
         }
         
     }
