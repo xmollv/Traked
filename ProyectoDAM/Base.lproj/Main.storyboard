@@ -43,7 +43,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dH4-s0-34w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="964" y="-1443"/>
+            <point key="canvasLocation" x="3142" y="-357"/>
         </scene>
         <!--Watchlist-->
         <scene sceneID="hNz-n2-bh7">
@@ -128,6 +128,7 @@
                                 <segue destination="IKx-Mn-FHX" kind="modal" identifier="ShowSettings" id="TiR-kp-pDH"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="hxi-mv-DYk"/>
                     </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="flP-C5-BSI" id="ZqV-cd-JJb"/>
@@ -361,7 +362,14 @@
                             <constraint firstItem="rB4-Bq-CdR" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" id="KjM-PS-KCF"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Watching" id="f8L-ku-XYp"/>
+                    <navigationItem key="navigationItem" title="Watching" id="f8L-ku-XYp">
+                        <barButtonItem key="leftBarButtonItem" image="Settings" id="uyM-Jj-UUS">
+                            <connections>
+                                <segue destination="IKx-Mn-FHX" kind="modal" id="43o-dP-DiS"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="H2c-Wc-gkH"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="rB4-Bq-CdR" id="OiS-cY-qBJ"/>
                         <segue destination="AFD-Mp-Xzj" kind="push" identifier="ShowEpisodeListFromDiscover" id="VH5-UL-Uef"/>
@@ -445,7 +453,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Watched" id="SYN-22-7lw"/>
+                    <navigationItem key="navigationItem" title="Watched" id="SYN-22-7lw">
+                        <barButtonItem key="leftBarButtonItem" image="Settings" id="N8W-sS-Jcl">
+                            <connections>
+                                <segue destination="IKx-Mn-FHX" kind="modal" id="TZg-zP-BZk"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="jZi-oP-BNg"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YZa-Ip-xgI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -474,7 +489,7 @@
         <scene sceneID="3Fy-a9-G9K">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="guh-Fd-0ZE" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Watching" selectedImage="Discover" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="Watching" image="Watchlist" selectedImage="Watchlist" id="cPa-gy-q4n"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="9J6-2v-Tii">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -493,7 +508,7 @@
         <scene sceneID="fAg-D6-bKN">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="YjG-yI-PMw" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Watched" selectedImage="Stats" id="1H9-KX-sXQ"/>
+                    <tabBarItem key="tabBarItem" title="Watched" image="Watchlist" selectedImage="Watchlist" id="1H9-KX-sXQ"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="B0y-k1-0c2">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -510,12 +525,11 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Discover" width="25" height="25"/>
         <image name="Settings" width="25" height="25"/>
-        <image name="Stats" width="25" height="25"/>
         <image name="Watchlist" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="TZg-zP-BZk"/>
         <segue reference="VH5-UL-Uef"/>
         <segue reference="IS1-Fi-eYB"/>
     </inferredMetricsTieBreakers>

@@ -76,9 +76,12 @@ class SecondViewController: UIViewController, UICollectionViewDelegate, UICollec
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let vc = segue.destinationViewController as! TableShowsViewController
-        let indexPath = collectionView.indexPathsForSelectedItems()
-        vc.tvShow = arrayOfTvShows[indexPath![0].row]
+        if segue.identifier == "ShowEpisodeListFromDiscover" {
+            let vc = segue.destinationViewController as! TableShowsViewController
+            let indexPath = collectionView.indexPathsForSelectedItems()
+            vc.tvShow = arrayOfTvShows[indexPath![0].row]
+        }
+        
     }
     
     func showSimpleAlert(title: String, message: String, buttonText: String){
