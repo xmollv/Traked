@@ -8,16 +8,12 @@
 
 import UIKit
 
-class BasicCellWatchslist: UICollectionViewCell{
+class BasicCell: UICollectionViewCell{
     
     @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var containerRemainingDays: UIView!
-    @IBOutlet weak var labelRemainigDays: UILabel!
-    
-    @IBOutlet weak var remainingDaysStackView: UIStackView!
+
     override func prepareForReuse() {
         super.prepareForReuse()
         imageView.image = nil
-        remainingDaysStackView.hidden = false
     }
 }

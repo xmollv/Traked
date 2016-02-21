@@ -48,7 +48,7 @@ class SecondViewController: UIViewController, UICollectionViewDelegate, UICollec
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell{
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("CollectionCellDiscover", forIndexPath: indexPath) as! BasicCellDiscover
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("CollectionCellDiscover", forIndexPath: indexPath) as! BasicCellWatching
         
         cell.imageView.image = UIImage(named: "Grey background")
             

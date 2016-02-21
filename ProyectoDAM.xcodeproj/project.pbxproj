@@ -19,8 +19,8 @@
 		474E5CBE1C289934007DADBD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 474E5CBC1C289934007DADBD /* Main.storyboard */; };
 		4750C5471C723AF000DB92A5 /* Screenshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4750C5461C723AF000DB92A5 /* Screenshot.swift */; };
 		4771DA561C46E29C008022A5 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4771DA551C46E29C008022A5 /* ThirdViewController.swift */; };
-		4771DA5A1C46E6FE008022A5 /* BasicCellWatchlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4771DA591C46E6FE008022A5 /* BasicCellWatchlist.swift */; };
-		4776D85B1C551C9E006844CC /* BasicCellDiscover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4776D85A1C551C9E006844CC /* BasicCellDiscover.swift */; };
+		4771DA5A1C46E6FE008022A5 /* BasicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4771DA591C46E6FE008022A5 /* BasicCell.swift */; };
+		4776D85B1C551C9E006844CC /* BasicCellWatching.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4776D85A1C551C9E006844CC /* BasicCellWatching.swift */; };
 		4776D85F1C553704006844CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4776D85E1C553704006844CC /* Assets.xcassets */; };
 		479823E71C50122400905454 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479823E61C50122400905454 /* Helper.swift */; };
 		479823F51C50149100905454 /* Ids.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479823EB1C50149100905454 /* Ids.swift */; };
@@ -49,8 +49,8 @@
 		474E5CC41C289934007DADBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4750C5461C723AF000DB92A5 /* Screenshot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Screenshot.swift; sourceTree = "<group>"; };
 		4771DA551C46E29C008022A5 /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
-		4771DA591C46E6FE008022A5 /* BasicCellWatchlist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicCellWatchlist.swift; sourceTree = "<group>"; };
-		4776D85A1C551C9E006844CC /* BasicCellDiscover.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicCellDiscover.swift; sourceTree = "<group>"; };
+		4771DA591C46E6FE008022A5 /* BasicCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicCell.swift; sourceTree = "<group>"; };
+		4776D85A1C551C9E006844CC /* BasicCellWatching.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicCellWatching.swift; sourceTree = "<group>"; };
 		4776D85E1C553704006844CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		479823E61C50122400905454 /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		479823EB1C50149100905454 /* Ids.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ids.swift; sourceTree = "<group>"; };
@@ -136,8 +136,8 @@
 		479823FE1C501E9100905454 /* Basic Cells */ = {
 			isa = PBXGroup;
 			children = (
-				4771DA591C46E6FE008022A5 /* BasicCellWatchlist.swift */,
-				4776D85A1C551C9E006844CC /* BasicCellDiscover.swift */,
+				4771DA591C46E6FE008022A5 /* BasicCell.swift */,
+				4776D85A1C551C9E006844CC /* BasicCellWatching.swift */,
 				4718BF521C56B95400FAC195 /* TableViewCell.swift */,
 			);
 			name = "Basic Cells";
@@ -301,14 +301,14 @@
 				479823F91C50149100905454 /* Poster.swift in Sources */,
 				479823F61C50149100905454 /* Images.swift in Sources */,
 				4718BF571C56C13400FAC195 /* Seasons.swift in Sources */,
-				4776D85B1C551C9E006844CC /* BasicCellDiscover.swift in Sources */,
+				4776D85B1C551C9E006844CC /* BasicCellWatching.swift in Sources */,
 				479823F71C50149100905454 /* Result.swift in Sources */,
 				4718BF511C56B87A00FAC195 /* TableShowsViewController.swift in Sources */,
 				4771DA561C46E29C008022A5 /* ThirdViewController.swift in Sources */,
 				47DED3521C6118940077C232 /* SettingsViewController.swift in Sources */,
 				471E24801C5136A8003FB1E6 /* LoginViewController.swift in Sources */,
 				474E5CB91C289934007DADBD /* FirstViewController.swift in Sources */,
-				4771DA5A1C46E6FE008022A5 /* BasicCellWatchlist.swift in Sources */,
+				4771DA5A1C46E6FE008022A5 /* BasicCell.swift in Sources */,
 				470DA0FF1C57E6EB0073D6D4 /* MovieEpisodeDetailsViewController.swift in Sources */,
 				4750C5471C723AF000DB92A5 /* Screenshot.swift in Sources */,
 				479823E71C50122400905454 /* Helper.swift in Sources */,

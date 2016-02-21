@@ -82,7 +82,7 @@ class FirstViewController: UIViewController, UICollectionViewDataSource, UIColle
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell{
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("CollectionCellWatchlist", forIndexPath: indexPath) as! BasicCellWatchslist
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("CollectionCellWatchlist", forIndexPath: indexPath) as! BasicCell
         //cell.containerRemainingDays.layer.cornerRadius = 6
         
         cell.imageView.image = UIImage(named: "Grey background")
@@ -100,8 +100,6 @@ class FirstViewController: UIViewController, UICollectionViewDataSource, UIColle
             }
             
         } else {
-            
-            cell.remainingDaysStackView.hidden = true
             
             if let thumb = arrayOfMovies[indexPath.row].showOrMovie!.images!.poster!.thumb {
                 cell.imageView.af_setImageWithURL(NSURL(string: thumb)!)
