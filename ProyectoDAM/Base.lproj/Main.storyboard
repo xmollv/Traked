@@ -453,7 +453,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="3h3-4l-Qv3">
-                                <rect key="frame" x="16" y="4" width="288" height="545"/>
+                                <rect key="frame" x="16" y="102" width="288" height="447"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="HIt-E5-RI6">
                                     <size key="itemSize" width="90" height="150"/>
@@ -463,7 +463,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CollectionCellWatched" id="A1R-lk-4v6" customClass="BasicCell" customModule="ProyectoDAM" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="64" width="90" height="150"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="90" height="150"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="90" height="150"/>
@@ -493,13 +493,23 @@
                                     <outlet property="delegate" destination="8rJ-Kc-sve" id="WD1-cF-33i"/>
                                 </connections>
                             </collectionView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="1bZ-al-d6m">
+                                <rect key="frame" x="16" y="69" width="288" height="29"/>
+                                <segments>
+                                    <segment title="TV Shows"/>
+                                    <segment title="Movies"/>
+                                </segments>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="1bZ-al-d6m" secondAttribute="trailing" id="BK1-Pd-WfZ"/>
                             <constraint firstItem="3h3-4l-Qv3" firstAttribute="leading" secondItem="idh-XX-TBP" secondAttribute="leadingMargin" id="BnN-wL-Mbn"/>
+                            <constraint firstItem="1bZ-al-d6m" firstAttribute="top" secondItem="93l-IL-HMg" secondAttribute="bottom" constant="5" id="Ef8-0K-gFn"/>
                             <constraint firstItem="cRJ-rD-R4K" firstAttribute="top" secondItem="3h3-4l-Qv3" secondAttribute="bottom" constant="-30" id="Ggr-kO-tEM"/>
-                            <constraint firstItem="3h3-4l-Qv3" firstAttribute="top" secondItem="93l-IL-HMg" secondAttribute="bottom" constant="-60" id="Nc1-Ag-Hsg"/>
+                            <constraint firstItem="1bZ-al-d6m" firstAttribute="leading" secondItem="idh-XX-TBP" secondAttribute="leadingMargin" id="ICx-16-xCB"/>
                             <constraint firstAttribute="trailingMargin" secondItem="3h3-4l-Qv3" secondAttribute="trailing" id="R1A-ZW-DgY"/>
+                            <constraint firstItem="3h3-4l-Qv3" firstAttribute="top" secondItem="1bZ-al-d6m" secondAttribute="bottom" constant="5" id="qJq-j5-9YH"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Watched" id="SYN-22-7lw">
@@ -578,8 +588,8 @@
         <image name="Watchlist" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="VH5-UL-Uef"/>
-        <segue reference="43o-dP-DiS"/>
-        <segue reference="IS1-Fi-eYB"/>
+        <segue reference="TZg-zP-BZk"/>
+        <segue reference="6ej-Nv-MGX"/>
+        <segue reference="enH-cW-SbP"/>
     </inferredMetricsTieBreakers>
 </document>
