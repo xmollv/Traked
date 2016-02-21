@@ -19,7 +19,6 @@
 		474E5CBE1C289934007DADBD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 474E5CBC1C289934007DADBD /* Main.storyboard */; };
 		4750C5471C723AF000DB92A5 /* Screenshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4750C5461C723AF000DB92A5 /* Screenshot.swift */; };
 		4771DA561C46E29C008022A5 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4771DA551C46E29C008022A5 /* ThirdViewController.swift */; };
-		4771DA581C46E2A5008022A5 /* FourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4771DA571C46E2A5008022A5 /* FourthViewController.swift */; };
 		4771DA5A1C46E6FE008022A5 /* BasicCellWatchlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4771DA591C46E6FE008022A5 /* BasicCellWatchlist.swift */; };
 		4776D85B1C551C9E006844CC /* BasicCellDiscover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4776D85A1C551C9E006844CC /* BasicCellDiscover.swift */; };
 		4776D85F1C553704006844CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4776D85E1C553704006844CC /* Assets.xcassets */; };
@@ -50,7 +49,6 @@
 		474E5CC41C289934007DADBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4750C5461C723AF000DB92A5 /* Screenshot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Screenshot.swift; sourceTree = "<group>"; };
 		4771DA551C46E29C008022A5 /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
-		4771DA571C46E2A5008022A5 /* FourthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FourthViewController.swift; sourceTree = "<group>"; };
 		4771DA591C46E6FE008022A5 /* BasicCellWatchlist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicCellWatchlist.swift; sourceTree = "<group>"; };
 		4776D85A1C551C9E006844CC /* BasicCellDiscover.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicCellDiscover.swift; sourceTree = "<group>"; };
 		4776D85E1C553704006844CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -123,11 +121,10 @@
 				479823FE1C501E9100905454 /* Basic Cells */,
 				47DED3511C6118940077C232 /* SettingsViewController.swift */,
 				474E5CB81C289934007DADBD /* FirstViewController.swift */,
-				4718BF501C56B87A00FAC195 /* TableShowsViewController.swift */,
-				470DA0FE1C57E6EB0073D6D4 /* MovieEpisodeDetailsViewController.swift */,
 				474E5CBA1C289934007DADBD /* SecondViewController.swift */,
 				4771DA551C46E29C008022A5 /* ThirdViewController.swift */,
-				4771DA571C46E2A5008022A5 /* FourthViewController.swift */,
+				4718BF501C56B87A00FAC195 /* TableShowsViewController.swift */,
+				470DA0FE1C57E6EB0073D6D4 /* MovieEpisodeDetailsViewController.swift */,
 				474E5CBC1C289934007DADBD /* Main.storyboard */,
 				47BA63231C61378800DC0E13 /* Launchscreen.storyboard */,
 				4776D85E1C553704006844CC /* Assets.xcassets */,
@@ -313,7 +310,6 @@
 				474E5CB91C289934007DADBD /* FirstViewController.swift in Sources */,
 				4771DA5A1C46E6FE008022A5 /* BasicCellWatchlist.swift in Sources */,
 				470DA0FF1C57E6EB0073D6D4 /* MovieEpisodeDetailsViewController.swift in Sources */,
-				4771DA581C46E2A5008022A5 /* FourthViewController.swift in Sources */,
 				4750C5471C723AF000DB92A5 /* Screenshot.swift in Sources */,
 				479823E71C50122400905454 /* Helper.swift in Sources */,
 				479823FD1C50177900905454 /* HudView.swift in Sources */,

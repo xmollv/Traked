@@ -43,7 +43,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dH4-s0-34w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="952" y="-1573"/>
+            <point key="canvasLocation" x="964" y="-1443"/>
         </scene>
         <!--Watchlist-->
         <scene sceneID="hNz-n2-bh7">
@@ -178,7 +178,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="952" y="-947"/>
+            <point key="canvasLocation" x="964" y="-763"/>
         </scene>
         <!--(MOVIE/EPISODE TITLE)-->
         <scene sceneID="kdl-3y-xrq">
@@ -247,7 +247,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0PC-JY-Twi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1467" y="-457"/>
+            <point key="canvasLocation" x="2157" y="0.0"/>
         </scene>
         <!--(SHOW TITLE)-->
         <scene sceneID="Uxt-GY-RE0">
@@ -337,9 +337,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DXg-95-2SA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1467" y="-1203"/>
+            <point key="canvasLocation" x="1539" y="0.0"/>
         </scene>
-        <!--Discover-->
+        <!--Watching-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
                 <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="ProyectoDAM" customModuleProvider="target" sceneMemberID="viewController">
@@ -352,7 +352,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="rB4-Bq-CdR">
-                                <rect key="frame" x="16" y="37" width="288" height="512"/>
+                                <rect key="frame" x="16" y="4" width="288" height="545"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="aRs-2h-VHc">
                                     <size key="itemSize" width="90" height="150"/>
@@ -392,40 +392,24 @@
                                     <outlet property="delegate" destination="8rJ-Kc-sve" id="wc5-6v-b2P"/>
                                 </connections>
                             </collectionView>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="U1u-Qs-2mT">
-                                <rect key="frame" x="16" y="69" width="288" height="29"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <segments>
-                                    <segment title="TV Shows"/>
-                                    <segment title="Movies"/>
-                                </segments>
-                                <connections>
-                                    <action selector="segmentedControlAction:" destination="8rJ-Kc-sve" eventType="valueChanged" id="Ss8-Ae-6zL"/>
-                                </connections>
-                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="U1u-Qs-2mT" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" id="2n1-Aj-uLS"/>
+                            <constraint firstItem="rB4-Bq-CdR" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" constant="-60" id="6zu-s7-ma1"/>
                             <constraint firstAttribute="trailingMargin" secondItem="rB4-Bq-CdR" secondAttribute="trailing" id="AEE-z2-Hln"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="U1u-Qs-2mT" secondAttribute="trailing" id="FIt-jw-seZ"/>
                             <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="rB4-Bq-CdR" secondAttribute="bottom" constant="-30" id="Gky-eO-hrl"/>
                             <constraint firstItem="rB4-Bq-CdR" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" id="KjM-PS-KCF"/>
-                            <constraint firstItem="U1u-Qs-2mT" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" constant="5" id="MQF-2L-5zi"/>
-                            <constraint firstItem="rB4-Bq-CdR" firstAttribute="top" secondItem="U1u-Qs-2mT" secondAttribute="bottom" constant="-60" id="Rtz-7l-DKk"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Discover" id="f8L-ku-XYp"/>
+                    <navigationItem key="navigationItem" title="Watching" id="f8L-ku-XYp"/>
                     <connections>
                         <outlet property="collectionView" destination="rB4-Bq-CdR" id="OiS-cY-qBJ"/>
-                        <outlet property="segmentedControl" destination="U1u-Qs-2mT" id="Sxl-74-kgd"/>
                         <segue destination="AFD-Mp-Xzj" kind="push" identifier="ShowEpisodeListFromDiscover" id="VH5-UL-Uef"/>
-                        <segue destination="dtE-hX-sLk" kind="push" identifier="ShowMovieDetailsFromDiscover" id="UFB-ZV-iae"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="952" y="-276"/>
+            <point key="canvasLocation" x="964" y="0.0"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="y0d-1s-hq9">
@@ -482,14 +466,13 @@
                         <segue destination="TFw-EX-aju" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="guh-Fd-0ZE" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
                         <segue destination="YjG-yI-PMw" kind="relationship" relationship="viewControllers" id="PmF-Lz-FrH"/>
-                        <segue destination="dXc-Dl-TOG" kind="relationship" relationship="viewControllers" id="mUp-lb-nFd"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="0.0" y="0.0"/>
         </scene>
-        <!--Stats-->
+        <!--Watched-->
         <scene sceneID="pwf-Bc-m24">
             <objects>
                 <viewController id="ln9-pL-SbX" customClass="ThirdViewController" customModule="ProyectoDAM" customModuleProvider="target" sceneMemberID="viewController">
@@ -502,30 +485,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Stats" id="SYN-22-7lw"/>
+                    <navigationItem key="navigationItem" title="Watched" id="SYN-22-7lw"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YZa-Ip-xgI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="952" y="360"/>
-        </scene>
-        <!--Search-->
-        <scene sceneID="aTs-Au-M2s">
-            <objects>
-                <viewController id="tNI-zy-szv" customClass="FourthViewController" customModule="ProyectoDAM" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="jzD-WC-G1H"/>
-                        <viewControllerLayoutGuide type="bottom" id="a1V-7W-DTd"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="stO-fR-aVz">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Search" id="kLY-QK-Z4r"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="RIw-0A-EgP" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="952" y="988"/>
+            <point key="canvasLocation" x="964" y="696"/>
         </scene>
         <!--Watchlist-->
         <scene sceneID="ZyO-sx-Npw">
@@ -544,13 +508,13 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7L9-TR-LyV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="420" y="-947"/>
+            <point key="canvasLocation" x="432" y="-763"/>
         </scene>
-        <!--Discover-->
+        <!--Watching-->
         <scene sceneID="3Fy-a9-G9K">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="guh-Fd-0ZE" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Discover" image="Discover" selectedImage="Discover" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="Watching" selectedImage="Discover" id="cPa-gy-q4n"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="9J6-2v-Tii">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -563,13 +527,13 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0zR-yE-bs8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="420" y="-276"/>
+            <point key="canvasLocation" x="432" y="0.0"/>
         </scene>
-        <!--Stats-->
+        <!--Watched-->
         <scene sceneID="fAg-D6-bKN">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="YjG-yI-PMw" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Stats" image="Stats" selectedImage="Stats" id="1H9-KX-sXQ"/>
+                    <tabBarItem key="tabBarItem" title="Watched" selectedImage="Stats" id="1H9-KX-sXQ"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="B0y-k1-0c2">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -582,31 +546,11 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3hg-En-hml" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="420" y="360"/>
-        </scene>
-        <!--Search-->
-        <scene sceneID="E0u-Ll-DC9">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dXc-Dl-TOG" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Search" image="Search" id="qks-4g-LRq"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="mJL-Hi-9Yb">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="tNI-zy-szv" kind="relationship" relationship="rootViewController" id="6N5-5Y-oid"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="TYd-eB-GYx" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="420" y="988"/>
+            <point key="canvasLocation" x="432" y="696"/>
         </scene>
     </scenes>
     <resources>
         <image name="Discover" width="25" height="25"/>
-        <image name="Search" width="25" height="25"/>
         <image name="Settings" width="25" height="25"/>
         <image name="Stats" width="25" height="25"/>
         <image name="Watchlist" width="25" height="25"/>
