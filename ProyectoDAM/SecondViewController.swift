@@ -15,23 +15,29 @@ class SecondViewController: UIViewController, UICollectionViewDelegate, UICollec
     @IBOutlet weak var collectionView: UICollectionView!
     
     var arrayOfTvShows = [ShowOrMovie]()
-    var arrayOfMovies = [ShowOrMovie]()
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let hudView = HudView.hudInView(view,animated: true)
         
-        Alamofire.request(.GET, "https://api-v2launch.trakt.tv/shows/popular?extended=images&page=1&limit=99", headers: Helper().getApiHeaders()).responseJSON{ response in
+        
+        
+        Alamofire.request(.GET, "https://api-v2launch.trakt.tv/sync/watched/shows?extended=full,images", headers: Helper().getApiHeaders()).responseJSON{ response in
             switch response.result {
             case .Success (let JSON):
-                if let shows = JSON as? [[String:AnyObject]] {
-                    for show in shows{
-                        self.arrayOfTvShows.append(ShowOrMovie(dictionary: show)!)
+                if let dictionaryJSON = JSON as? [[String:AnyObject]] {
+                    for showInDictionary in dictionaryJSON {
+                        if let show = showInDictionary["show"] as? [String:AnyObject]{
+                            self.arrayOfTvShows.append(ShowOrMovie(dictionary: show)!)
+                        }
                     }
-                    self.collectionView.reloadData()
-                    hudView.removeFromSuperview()
                 }
+                
+                self.collectionView.reloadData()
+                hudView.removeFromSuperview()
+                
             case .Failure (let error):
                 self.showSimpleAlert("¡Error!", message: "Ha habido un problema al realizar la petición al servidor. Vuelve a intentarlo en unos minutos.", buttonText: "Volver a intentarlo.")
                 print("Request failed with error: \(error)")
