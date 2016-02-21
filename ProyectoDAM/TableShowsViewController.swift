@@ -17,9 +17,7 @@ class TableShowsViewController: UIViewController, UITableViewDelegate, UITableVi
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //Check if there are seasons. If there are, we shouldn't download again the same seasons. This should be checked
         tvShow!.seasons = [Seasons]()
-        
         
         let hudView = HudView.hudInView(view,animated: true)
         print("\(tvShow!.title!), \(tvShow!.ids!.trakt!)")
@@ -129,7 +127,6 @@ class TableShowsViewController: UIViewController, UITableViewDelegate, UITableVi
         if segue.identifier == "ShowEpisodeDetails" {
             let vc = segue.destinationViewController as! MovieEpisodeDetailsViewController
             let indexPath = tableView.indexPathForSelectedRow
-            //vc.showOrMovie = tvShow!
             vc.episode = tvShow!.seasons![indexPath!.section].episodes![indexPath!.row]
         }
     }

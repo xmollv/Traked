@@ -322,7 +322,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CollectionCellDiscover" id="QnS-o6-kBP" customClass="BasicCellWatching" customModule="ProyectoDAM" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CollectionCellWatching" id="QnS-o6-kBP" customClass="BasicCellWatching" customModule="ProyectoDAM" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="64" width="90" height="150"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -372,7 +372,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="rB4-Bq-CdR" id="OiS-cY-qBJ"/>
-                        <segue destination="AFD-Mp-Xzj" kind="push" identifier="ShowEpisodeListFromDiscover" id="VH5-UL-Uef"/>
+                        <segue destination="AFD-Mp-Xzj" kind="push" identifier="ShowEpisodeListFromWatching" id="VH5-UL-Uef"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
@@ -451,7 +451,56 @@
                     <view key="view" contentMode="scaleToFill" id="idh-XX-TBP">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="3h3-4l-Qv3">
+                                <rect key="frame" x="16" y="4" width="288" height="545"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="HIt-E5-RI6">
+                                    <size key="itemSize" width="90" height="150"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CollectionCellWatched" id="A1R-lk-4v6" customClass="BasicCell" customModule="ProyectoDAM" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="64" width="90" height="150"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="90" height="150"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Wiz-J4-F3J">
+                                                    <rect key="frame" x="3" y="8" width="84" height="130"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="130" id="2Ju-pF-F0Z"/>
+                                                        <constraint firstAttribute="width" constant="84" id="gXh-FK-lKN"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="Wiz-J4-F3J" firstAttribute="centerX" secondItem="A1R-lk-4v6" secondAttribute="centerX" id="0FE-yb-uEP"/>
+                                            <constraint firstItem="Wiz-J4-F3J" firstAttribute="top" secondItem="A1R-lk-4v6" secondAttribute="topMargin" id="oHa-M4-Zl3"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="imageView" destination="Wiz-J4-F3J" id="hpQ-dg-f69"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="8rJ-Kc-sve" id="gzY-7k-D6I"/>
+                                    <outlet property="delegate" destination="8rJ-Kc-sve" id="WD1-cF-33i"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="3h3-4l-Qv3" firstAttribute="leading" secondItem="idh-XX-TBP" secondAttribute="leadingMargin" id="BnN-wL-Mbn"/>
+                            <constraint firstItem="cRJ-rD-R4K" firstAttribute="top" secondItem="3h3-4l-Qv3" secondAttribute="bottom" constant="-30" id="Ggr-kO-tEM"/>
+                            <constraint firstItem="3h3-4l-Qv3" firstAttribute="top" secondItem="93l-IL-HMg" secondAttribute="bottom" constant="-60" id="Nc1-Ag-Hsg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="3h3-4l-Qv3" secondAttribute="trailing" id="R1A-ZW-DgY"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Watched" id="SYN-22-7lw">
                         <barButtonItem key="leftBarButtonItem" image="Settings" id="N8W-sS-Jcl">
@@ -529,8 +578,8 @@
         <image name="Watchlist" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="TZg-zP-BZk"/>
         <segue reference="VH5-UL-Uef"/>
+        <segue reference="43o-dP-DiS"/>
         <segue reference="IS1-Fi-eYB"/>
     </inferredMetricsTieBreakers>
 </document>

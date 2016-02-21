@@ -16,13 +16,10 @@ class SecondViewController: UIViewController, UICollectionViewDelegate, UICollec
     
     var arrayOfTvShows = [ShowOrMovie]()
 
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let hudView = HudView.hudInView(view,animated: true)
-        
-        
         
         Alamofire.request(.GET, "https://api-v2launch.trakt.tv/sync/watched/shows?extended=full,images", headers: Helper().getApiHeaders()).responseJSON{ response in
             switch response.result {
@@ -54,7 +51,7 @@ class SecondViewController: UIViewController, UICollectionViewDelegate, UICollec
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell{
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("CollectionCellDiscover", forIndexPath: indexPath) as! BasicCellWatching
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("CollectionCellWatching", forIndexPath: indexPath) as! BasicCellWatching
         
         cell.imageView.image = UIImage(named: "Grey background")
             
@@ -72,11 +69,11 @@ class SecondViewController: UIViewController, UICollectionViewDelegate, UICollec
     }
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        performSegueWithIdentifier("ShowEpisodeListFromDiscover", sender: nil)
+        performSegueWithIdentifier("ShowEpisodeListFromWatching", sender: nil)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "ShowEpisodeListFromDiscover" {
+        if segue.identifier == "ShowEpisodeListFromWatching" {
             let vc = segue.destinationViewController as! TableShowsViewController
             let indexPath = collectionView.indexPathsForSelectedItems()
             vc.tvShow = arrayOfTvShows[indexPath![0].row]

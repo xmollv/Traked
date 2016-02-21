@@ -41,10 +41,6 @@ class MovieEpisodeDetailsViewController: UIViewController {
                 descriptionLabel.text = "No description yet!"
             }
             
-            
-
-            
-            
         } else {
             title = movie!.title!
             
