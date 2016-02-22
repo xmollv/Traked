@@ -425,7 +425,7 @@
 				INFOPLIST_FILE = ProyectoDAM/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = tania.xavi.ProyectoDAM2;
+				PRODUCT_BUNDLE_IDENTIFIER = tania.xavi.ProyectoDAM;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -441,7 +441,7 @@
 				INFOPLIST_FILE = ProyectoDAM/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = tania.xavi.ProyectoDAM2;
+				PRODUCT_BUNDLE_IDENTIFIER = tania.xavi.ProyectoDAM;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};

@@ -58,6 +58,25 @@ class MovieEpisodeDetailsViewController: UIViewController {
         }
         
     }
+    @IBAction func markAsSeen(sender: UIButton) {
+        if let _ = episode {
+            
+        } else {
+            
+            let parameters = ["movies": [["ids": ["trakt" : "\(movie!.ids!.trakt!)"] ]] ]
+
+            Alamofire.request(.POST, "https://api-v2launch.trakt.tv/sync/history", headers: Helper().getApiHeaders(), parameters: parameters, encoding: .JSON).responseJSON{ response in
+                switch response.result {
+                case .Success (let JSON):
+                    print("Movie marked as seen: \(JSON)")
+                    
+                case .Failure (let error):
+                    self.showSimpleAlert("¡Error!", message: "Ha habido un problema al realizar la petición al servidor. Vuelve a intentarlo en unos minutos.", buttonText: "Volver a intentarlo.")
+                    print("Request failed with error: \(error)")
+                }
+            }
+        }
+    }
     
     func showSimpleAlert(title: String, message: String, buttonText: String){
         let alertController = UIAlertController(title: title, message:message, preferredStyle: UIAlertControllerStyle.Alert)
