@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		236562D91C7B4D7900560BF2 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236562D81C7B4D7900560BF2 /* SearchViewController.swift */; };
 		470DA0FF1C57E6EB0073D6D4 /* MovieEpisodeDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470DA0FE1C57E6EB0073D6D4 /* MovieEpisodeDetailsViewController.swift */; };
 		4718BF511C56B87A00FAC195 /* TableShowsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4718BF501C56B87A00FAC195 /* TableShowsViewController.swift */; };
 		4718BF531C56B95400FAC195 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4718BF521C56B95400FAC195 /* TableViewCell.swift */; };
@@ -35,6 +36,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		236562D81C7B4D7900560BF2 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		470DA0FE1C57E6EB0073D6D4 /* MovieEpisodeDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieEpisodeDetailsViewController.swift; sourceTree = "<group>"; };
 		4718BF501C56B87A00FAC195 /* TableShowsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableShowsViewController.swift; sourceTree = "<group>"; };
 		4718BF521C56B95400FAC195 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 				4718BF501C56B87A00FAC195 /* TableShowsViewController.swift */,
 				470DA0FE1C57E6EB0073D6D4 /* MovieEpisodeDetailsViewController.swift */,
 				474E5CBC1C289934007DADBD /* Main.storyboard */,
+				236562D81C7B4D7900560BF2 /* SearchViewController.swift */,
 				47BA63231C61378800DC0E13 /* Launchscreen.storyboard */,
 				4776D85E1C553704006844CC /* Assets.xcassets */,
 				474E5CC41C289934007DADBD /* Info.plist */,
@@ -204,7 +207,7 @@
 				TargetAttributes = {
 					474E5CB21C289934007DADBD = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = 6VESDV3H2A;
+						DevelopmentTeam = L4CKCUK8WH;
 					};
 				};
 			};
@@ -304,6 +307,7 @@
 				4776D85B1C551C9E006844CC /* BasicCellWatching.swift in Sources */,
 				479823F71C50149100905454 /* Result.swift in Sources */,
 				4718BF511C56B87A00FAC195 /* TableShowsViewController.swift in Sources */,
+				236562D91C7B4D7900560BF2 /* SearchViewController.swift in Sources */,
 				4771DA561C46E29C008022A5 /* ThirdViewController.swift in Sources */,
 				47DED3521C6118940077C232 /* SettingsViewController.swift in Sources */,
 				471E24801C5136A8003FB1E6 /* LoginViewController.swift in Sources */,
@@ -416,11 +420,14 @@
 			baseConfigurationReference = CCE90DD0EE03B493502804FB /* Pods-ProyectoDAM.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = ProyectoDAM/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = tania.xavi.ProyectoDAM;
+				PRODUCT_BUNDLE_IDENTIFIER = tania.xavi.ProyectoDAM2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -429,11 +436,14 @@
 			baseConfigurationReference = 9AB7A56224743243529506F3 /* Pods-ProyectoDAM.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = ProyectoDAM/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = tania.xavi.ProyectoDAM;
+				PRODUCT_BUNDLE_IDENTIFIER = tania.xavi.ProyectoDAM2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
