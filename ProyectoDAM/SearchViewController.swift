@@ -249,7 +249,11 @@ class SearchViewController: UIViewController, UICollectionViewDelegate, UICollec
         } else if segue.identifier == "ShowMovieDetailsSearch"{
             let vc = segue.destinationViewController as! MovieEpisodeDetailsViewController
             let indexPath = collectionView.indexPathsForSelectedItems()
-            vc.movie = arrayOfMovies[indexPath![0].row]
+             if EMPTY == true {
+                vc.movie = arrayOfMovies[indexPath![0].row]
+            } else{
+                vc.movie = arrayOfSearch[indexPath![0].row].showOrMovie!
+            }
         }
         
     }
