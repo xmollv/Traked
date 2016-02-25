@@ -19,6 +19,9 @@ class MovieEpisodeDetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationController?.navigationBarHidden = false
+        
         if let _ = episode {
             
             print("\(episode!.season!), \(episode!.number!)")

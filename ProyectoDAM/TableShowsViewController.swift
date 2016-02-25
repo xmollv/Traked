@@ -17,6 +17,8 @@ class TableShowsViewController: UIViewController, UITableViewDelegate, UITableVi
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationController?.navigationBarHidden = false
+        
         tvShow!.seasons = [Seasons]()
         
         let hudView = HudView.hudInView(view,animated: true)
