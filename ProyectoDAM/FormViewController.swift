@@ -22,7 +22,7 @@ class FormViewController: UIViewController, MFMailComposeViewControllerDelegate,
     @IBOutlet weak var subject: UITextField!
     @IBOutlet weak var message: UITextView!
     
-    var sendTo : [String] = ["taniafontcubertamercadal@gmail.com"]
+    var sendTo : [String] = ["damproject@gmail.com"]
     var insideMessage = false
     
     override func viewDidLoad() {
