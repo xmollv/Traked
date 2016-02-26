@@ -22,7 +22,6 @@ class FormViewController: UIViewController, MFMailComposeViewControllerDelegate,
     @IBOutlet weak var subject: UITextField!
     @IBOutlet weak var message: UITextView!
     
-    
     var sendTo : [String] = ["taniafontcubertamercadal@gmail.com"]
     var insideMessage = false
     
@@ -49,7 +48,7 @@ class FormViewController: UIViewController, MFMailComposeViewControllerDelegate,
         
     }
     
-    @IBAction func sendMail(sender: UIButton) {
+    @IBAction func sendMail(sender: AnyObject) {
         print(insideMessage)
         if (message.text != "" && insideMessage == true && subject.text != "") {
             let picker = MFMailComposeViewController()
@@ -92,9 +91,9 @@ class FormViewController: UIViewController, MFMailComposeViewControllerDelegate,
         }
         return true
     }
+
     @IBAction func closeView(sender: AnyObject) {
         dismissViewControllerAnimated(true, completion: nil)
-        
     }
     
     
