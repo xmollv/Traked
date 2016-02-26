@@ -14,8 +14,8 @@ class SettingsViewController: UIViewController {
         super.viewDidLoad()
     }
     
-    @IBAction func closeView(sender: UIButton) {
+ /*   @IBAction func closeView(sender: UIButton) {
         dismissViewControllerAnimated(true, completion: nil)
-    }
+    }*/
 
 }
