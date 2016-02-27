@@ -14,6 +14,7 @@ public class Result {
 	public var listed_at : String?
 	public var type : String?
 	public var showOrMovie : ShowOrMovie?
+    public var last_watched_at : String?
 
 /**
     Returns an array of models based on given dictionary.
@@ -52,6 +53,7 @@ public class Result {
 		type = dictionary["type"] as? String
 		if (dictionary["show"] != nil) { showOrMovie = ShowOrMovie(dictionary: dictionary["show"] as! NSDictionary) }
         if (dictionary["movie"] != nil) { showOrMovie = ShowOrMovie(dictionary: dictionary["movie"] as! NSDictionary) }
+        if (dictionary["last_watched_at"] != nil) {last_watched_at = dictionary["last_watched_at"] as? String }
 	}
 
 		
