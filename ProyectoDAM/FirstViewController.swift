@@ -95,7 +95,6 @@ class FirstViewController: UIViewController, UICollectionViewDataSource, UIColle
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell{
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("CollectionCellWatchlist", forIndexPath: indexPath) as! BasicCell
-        //cell.containerRemainingDays.layer.cornerRadius = 6
         
         cell.imageView.image = UIImage(named: "Grey background")
         
@@ -135,7 +134,7 @@ class FirstViewController: UIViewController, UICollectionViewDataSource, UIColle
         }
     }
     
-    func showSimpleAlert(title: String, message: String, buttonText: String){
+    func showSimpleAlert(title: String, message: String, buttonText: String) {
         let alertController = UIAlertController(title: title, message:message, preferredStyle: UIAlertControllerStyle.Alert)
         alertController.addAction(UIAlertAction(title: buttonText, style: UIAlertActionStyle.Default, handler: nil))
         self.presentViewController(alertController, animated: true, completion: nil)
