@@ -26,6 +26,7 @@ public class ShowOrMovie {
     public var votes : Int?
     public var language : String?
     public var certification : String?
+    public var aired_episodes : Int?
 
 /**
     Returns an array of models based on given dictionary.
@@ -75,6 +76,7 @@ public class ShowOrMovie {
         votes = dictionary["votes"] as? Int
         language = dictionary["language"] as? String
         certification = dictionary["certification"] as? String
+        aired_episodes = dictionary["aired_episodes"] as? Int
 	}
 
 		
