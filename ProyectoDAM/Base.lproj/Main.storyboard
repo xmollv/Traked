@@ -6,7 +6,7 @@
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
-        <!--Form View Controller-->
+        <!--Formulario de contacto-->
         <scene sceneID="Qg6-pl-wp9">
             <objects>
                 <viewController id="IKx-Mn-FHX" customClass="FormViewController" customModule="ProyectoDAM" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,14 +18,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Formulario de contacto" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4cT-Ky-aaK">
-                                <rect key="frame" x="71" y="105" width="178" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Asunto" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TvB-Te-QXh">
-                                <rect key="frame" x="60" y="176" width="200" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Asunto" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TvB-Te-QXh">
+                                <rect key="frame" x="60" y="144" width="200" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="Dyd-4c-G1L"/>
                                     <constraint firstAttribute="height" constant="30" id="Wdn-7s-BhL"/>
@@ -33,8 +27,15 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" text="Inserte su mensaje..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="tCa-vL-H4F">
-                                <rect key="frame" x="35" y="254" width="250" height="150"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XlU-Ik-bMT">
+                                <rect key="frame" x="139" y="444" width="42" height="30"/>
+                                <state key="normal" title="Enviar"/>
+                                <connections>
+                                    <action selector="sendMail:" destination="IKx-Mn-FHX" eventType="touchUpInside" id="wbf-2J-nJC"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Inserte su mensaje..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="tCa-vL-H4F">
+                                <rect key="frame" x="35" y="234" width="250" height="150"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="DsT-Ys-Xo2"/>
@@ -43,27 +44,19 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XlU-Ik-bMT">
-                                <rect key="frame" x="139" y="443" width="42" height="30"/>
-                                <state key="normal" title="Enviar"/>
-                                <connections>
-                                    <action selector="sendMail:" destination="IKx-Mn-FHX" eventType="touchUpInside" id="wbf-2J-nJC"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="TvB-Te-QXh" firstAttribute="centerX" secondItem="UDN-sr-yWi" secondAttribute="centerX" id="3g4-Yo-k6t"/>
-                            <constraint firstItem="4cT-Ky-aaK" firstAttribute="centerX" secondItem="UDN-sr-yWi" secondAttribute="centerX" id="Cjp-Dj-aa0"/>
-                            <constraint firstItem="XlU-Ik-bMT" firstAttribute="top" secondItem="tCa-vL-H4F" secondAttribute="bottom" constant="39" id="WQ3-ud-Pj0"/>
-                            <constraint firstItem="tCa-vL-H4F" firstAttribute="top" secondItem="TvB-Te-QXh" secondAttribute="bottom" constant="48" id="mTM-iV-YhA"/>
+                            <constraint firstItem="XlU-Ik-bMT" firstAttribute="top" secondItem="tCa-vL-H4F" secondAttribute="bottom" constant="60" id="WQ3-ud-Pj0"/>
+                            <constraint firstItem="tCa-vL-H4F" firstAttribute="top" secondItem="TvB-Te-QXh" secondAttribute="bottom" constant="60" id="mTM-iV-YhA"/>
                             <constraint firstItem="tCa-vL-H4F" firstAttribute="centerX" secondItem="UDN-sr-yWi" secondAttribute="centerX" id="ow3-dW-XLk"/>
                             <constraint firstItem="XlU-Ik-bMT" firstAttribute="centerX" secondItem="UDN-sr-yWi" secondAttribute="centerX" id="rGk-BG-Kfy"/>
-                            <constraint firstItem="TvB-Te-QXh" firstAttribute="top" secondItem="4cT-Ky-aaK" secondAttribute="bottom" constant="50" id="uRb-5L-O3x"/>
+                            <constraint firstItem="TvB-Te-QXh" firstAttribute="top" secondItem="v7u-Xh-sbc" secondAttribute="bottom" constant="80" id="ywP-EH-akh"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="WCM-dT-EG5">
+                    <navigationItem key="navigationItem" title="Formulario de contacto" id="WCM-dT-EG5">
                         <barButtonItem key="leftBarButtonItem" systemItem="stop" id="1hB-Hw-sRt">
                             <connections>
                                 <action selector="closeView:" destination="IKx-Mn-FHX" id="RGb-78-uf5"/>
@@ -821,7 +814,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ip-9e-9OH">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ip-9e-9OH">
                                             <rect key="frame" x="13" y="13" width="302" height="27.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
