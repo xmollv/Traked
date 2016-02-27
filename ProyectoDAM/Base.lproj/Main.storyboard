@@ -80,7 +80,7 @@
             </objects>
             <point key="canvasLocation" x="4372" y="-133"/>
         </scene>
-        <!--Search View Controller-->
+        <!--Búsqueda-->
         <scene sceneID="pKB-A4-kMF">
             <objects>
                 <viewController id="faq-hP-Ct5" customClass="SearchViewController" customModule="ProyectoDAM" customModuleProvider="target" sceneMemberID="viewController">
@@ -163,7 +163,13 @@
                             <constraint firstItem="e32-GU-Alx" firstAttribute="leading" secondItem="us1-Zo-Irg" secondAttribute="leadingMargin" id="qVi-DT-hUC"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="pea-xb-wQa"/>
+                    <navigationItem key="navigationItem" title="Búsqueda" id="Zzb-Oe-Oxf">
+                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="mx0-7t-byP">
+                            <connections>
+                                <action selector="closeView:" destination="faq-hP-Ct5" id="5Js-6W-wcc"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="e32-GU-Alx" id="Zlb-2H-K0Y"/>
                         <outlet property="searchBarDiscover" destination="lkF-Kp-jUG" id="e8F-uS-wi9"/>
@@ -258,7 +264,7 @@
                                 <segue destination="COM-U8-3FD" kind="modal" identifier="ShowSettings" id="TiR-kp-pDH"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="hxi-mv-DYk">
+                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="hxi-mv-DYk">
                             <connections>
                                 <segue destination="Vfw-fS-1qL" kind="modal" id="VcW-k1-AC5"/>
                             </connections>
@@ -511,7 +517,7 @@
                                 <segue destination="COM-U8-3FD" kind="modal" id="43o-dP-DiS"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="H2c-Wc-gkH">
+                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="H2c-Wc-gkH">
                             <connections>
                                 <segue destination="Vfw-fS-1qL" kind="modal" id="Qbx-7V-8gA"/>
                             </connections>
@@ -669,7 +675,7 @@
                                 <segue destination="COM-U8-3FD" kind="modal" id="TZg-zP-BZk"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="jZi-oP-BNg">
+                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="jZi-oP-BNg">
                             <connections>
                                 <segue destination="Vfw-fS-1qL" kind="modal" id="P3M-QQ-vj9"/>
                             </connections>
@@ -880,9 +886,9 @@
         <image name="Watchlist" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="TZg-zP-BZk"/>
-        <segue reference="P3M-QQ-vj9"/>
-        <segue reference="Ffs-8b-Nlx"/>
-        <segue reference="IS1-Fi-eYB"/>
+        <segue reference="TiR-kp-pDH"/>
+        <segue reference="VcW-k1-AC5"/>
+        <segue reference="enH-cW-SbP"/>
+        <segue reference="6ej-Nv-MGX"/>
     </inferredMetricsTieBreakers>
 </document>

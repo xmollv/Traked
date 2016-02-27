@@ -28,7 +28,7 @@ class SearchViewController: UIViewController, UICollectionViewDelegate, UICollec
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationController?.navigationBarHidden = true
+       // navigationController?.navigationBarHidden = true
         searchBarDiscover.delegate = self
         
         let hudView = HudView.hudInView(view,animated: true)
@@ -256,6 +256,9 @@ class SearchViewController: UIViewController, UICollectionViewDelegate, UICollec
             }
         }
         
+    }
+    @IBAction func closeView(sender: AnyObject) {
+        dismissViewControllerAnimated(true, completion: nil)
     }
     
     func showSimpleAlert(title: String, message: String, buttonText: String){
