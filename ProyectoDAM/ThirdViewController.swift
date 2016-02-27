@@ -142,14 +142,9 @@ class ThirdViewController: UIViewController, UICollectionViewDataSource, UIColle
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "ShowEpisodeListFromWatched" {
-            //let vc = segue.destinationViewController as! TableShowsViewController
-            //let indexPath = collectionView.indexPathsForSelectedItems()
-            //vc.tvShow = arrayOfTvShows[indexPath![0].row].showOrMovie!
-            
             let vc = segue.destinationViewController as! TableShowsViewController
             let indexPath = collectionView.indexPathsForSelectedItems()
             vc.tvShow = arrayOfTvShows[indexPath![0].row]
-            
         } else if segue.identifier == "ShowMovieDetailsFromWatched"{
             let vc = segue.destinationViewController as! MovieEpisodeDetailsViewController
             let indexPath = collectionView.indexPathsForSelectedItems()
