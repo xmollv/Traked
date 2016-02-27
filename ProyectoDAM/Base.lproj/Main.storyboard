@@ -801,7 +801,7 @@
         <!--FAQ-->
         <scene sceneID="W1q-89-Ns9">
             <objects>
-                <viewController id="5fm-9W-xu4" customClass="FAQViewController" sceneMemberID="viewController">
+                <viewController id="5fm-9W-xu4" customClass="FAQViewController" customModule="ProyectoDAM" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="Au3-zd-8iF">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -835,8 +835,21 @@
                                 </connections>
                             </tableViewCell>
                         </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="5fm-9W-xu4" id="Whd-p2-5Ve"/>
+                            <outlet property="delegate" destination="5fm-9W-xu4" id="HM2-7V-mKj"/>
+                        </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="FAQ" id="D8n-ms-rhC" userLabel="FAQ"/>
+                    <navigationItem key="navigationItem" title="FAQ" id="D8n-ms-rhC" userLabel="FAQ">
+                        <barButtonItem key="leftBarButtonItem" title="Item" systemItem="stop" id="cjK-cV-hQb">
+                            <connections>
+                                <action selector="closeView:" destination="5fm-9W-xu4" id="yRi-ay-ZzR"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="Au3-zd-8iF" id="CjS-2H-EE0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TG5-Pj-dhB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -854,7 +867,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="5fm-9W-xu4" kind="relationship" relationship="rootViewController" id="YbY-mL-KYo"/>
+                        <segue destination="5fm-9W-xu4" kind="relationship" relationship="rootViewController" id="xyD-xg-H2A"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nfw-1J-Kx1" userLabel="First Responder" sceneMemberID="firstResponder"/>
