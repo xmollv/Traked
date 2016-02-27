@@ -28,7 +28,8 @@ class ThirdViewController: UIViewController, UICollectionViewDataSource, UIColle
     override func viewDidAppear(animated: Bool) {
         if refreshThirdVC {
             downloadContentThirdViewController()
-            refreshFirstVC = false
+            
+            refreshThirdVC = false
         }
         self.collectionView.resetScrollPositionToTop()
     }
@@ -49,11 +50,28 @@ class ThirdViewController: UIViewController, UICollectionViewDataSource, UIColle
                             self.arrayOfTvShows.append(ShowOrMovie(dictionary: show)!)
                         }
                     }
+
+                    
+                    Alamofire.request(.GET, "https://api-v2launch.trakt.tv/sync/watched/movies?extended=full,images", headers: Helper().getApiHeaders()).responseJSON{ response in
+                        switch response.result {
+                        case .Success (let JSON):
+                            if let movies = JSON as? [[String:AnyObject]] {
+                                for movie in movies{
+                                    self.arrayOfMovies.append(Result(dictionary: movie)!)
+                                }
+                                self.collectionView.reloadData()
+                                hudView.removeFromSuperview()
+                            }
+                        case .Failure (let error):
+                            self.showSimpleAlert("¡Error!", message: "Ha habido un problema al realizar la petición al servidor. Vuelve a intentarlo en unos minutos.", buttonText: "Volver a intentarlo.")
+                            print("Request failed with error: \(error)")
+                        }
+                    }
+                    
+                    
+                    
+                    
                 }
-                
-                self.collectionView.reloadData()
-                hudView.removeFromSuperview()
-                
             case .Failure (let error):
                 self.showSimpleAlert("¡Error!", message: "Ha habido un problema al realizar la petición al servidor. Vuelve a intentarlo en unos minutos.", buttonText: "Volver a intentarlo.")
                 print("Request failed with error: \(error)")
