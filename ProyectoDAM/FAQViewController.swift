@@ -10,8 +10,7 @@ import UIKit
 
 class FAQViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    @IBOutlet weak var tableView: UITableView!
-    var i = -1
+    @IBOutlet var tableView: UITableView!
     var faq : [AnswerQuestion] = [
         AnswerQuestion(
             question: "¿How do I watch a TV show or movie??",
@@ -70,11 +69,18 @@ class FAQViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
-  
-    func showSimpleAlert(title: String, message: String, buttonText: String){
-        let alertController = UIAlertController(title: title, message:message, preferredStyle: UIAlertControllerStyle.Alert)
-        alertController.addAction(UIAlertAction(title: buttonText, style: UIAlertActionStyle.Default, handler: nil))
-        self.presentViewController(alertController, animated: true, completion: nil)
+    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
     }
+    
+    func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
+    }
+    
+    @IBAction func closeView(sender: AnyObject) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+   
     
 }
