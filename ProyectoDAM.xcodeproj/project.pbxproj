@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		231263871C822AC600726FAF /* FAQViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231263861C822AC600726FAF /* FAQViewController.swift */; };
+		231263891C822ADB00726FAF /* TableViewFAQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231263881C822ADB00726FAF /* TableViewFAQ.swift */; };
+		2312638B1C822AEF00726FAF /* AnswerQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2312638A1C822AEF00726FAF /* AnswerQuestion.swift */; };
 		236562D91C7B4D7900560BF2 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236562D81C7B4D7900560BF2 /* SearchViewController.swift */; };
 		23EA04D31C81090F0086A193 /* FormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EA04D21C81090F0086A193 /* FormViewController.swift */; };
 		470DA0FF1C57E6EB0073D6D4 /* MovieEpisodeDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470DA0FE1C57E6EB0073D6D4 /* MovieEpisodeDetailsViewController.swift */; };
@@ -32,11 +35,13 @@
 		479823FA1C50149100905454 /* ShowOrMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479823F01C50149100905454 /* ShowOrMovie.swift */; };
 		479823FD1C50177900905454 /* HudView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479823FC1C50177900905454 /* HudView.swift */; };
 		47BA63241C61378800DC0E13 /* Launchscreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47BA63231C61378800DC0E13 /* Launchscreen.storyboard */; };
-		47DED3521C6118940077C232 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DED3511C6118940077C232 /* SettingsViewController.swift */; };
 		6BB7E658DDC5C294CBF2A5F9 /* Pods_ProyectoDAM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7263278990CED0354C36A6DD /* Pods_ProyectoDAM.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		231263861C822AC600726FAF /* FAQViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAQViewController.swift; sourceTree = "<group>"; };
+		231263881C822ADB00726FAF /* TableViewFAQ.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewFAQ.swift; sourceTree = "<group>"; };
+		2312638A1C822AEF00726FAF /* AnswerQuestion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswerQuestion.swift; sourceTree = "<group>"; };
 		236562D81C7B4D7900560BF2 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		23EA04D21C81090F0086A193 /* FormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormViewController.swift; sourceTree = "<group>"; };
 		470DA0FE1C57E6EB0073D6D4 /* MovieEpisodeDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieEpisodeDetailsViewController.swift; sourceTree = "<group>"; };
@@ -64,7 +69,6 @@
 		479823F01C50149100905454 /* ShowOrMovie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowOrMovie.swift; sourceTree = "<group>"; };
 		479823FC1C50177900905454 /* HudView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HudView.swift; sourceTree = "<group>"; };
 		47BA63231C61378800DC0E13 /* Launchscreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Launchscreen.storyboard; sourceTree = "<group>"; };
-		47DED3511C6118940077C232 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		7263278990CED0354C36A6DD /* Pods_ProyectoDAM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProyectoDAM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AB7A56224743243529506F3 /* Pods-ProyectoDAM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProyectoDAM.release.xcconfig"; path = "Pods/Target Support Files/Pods-ProyectoDAM/Pods-ProyectoDAM.release.xcconfig"; sourceTree = "<group>"; };
 		CCE90DD0EE03B493502804FB /* Pods-ProyectoDAM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProyectoDAM.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ProyectoDAM/Pods-ProyectoDAM.debug.xcconfig"; sourceTree = "<group>"; };
@@ -93,6 +97,7 @@
 				4750C5461C723AF000DB92A5 /* Screenshot.swift */,
 				4718BF551C56C13400FAC195 /* Seasons.swift */,
 				4718BF541C56C13400FAC195 /* Episodes.swift */,
+				2312638A1C822AEF00726FAF /* AnswerQuestion.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -128,8 +133,8 @@
 				4771DA551C46E29C008022A5 /* ThirdViewController.swift */,
 				4718BF501C56B87A00FAC195 /* TableShowsViewController.swift */,
 				470DA0FE1C57E6EB0073D6D4 /* MovieEpisodeDetailsViewController.swift */,
-				47DED3511C6118940077C232 /* SettingsViewController.swift */,
 				23EA04D21C81090F0086A193 /* FormViewController.swift */,
+				231263861C822AC600726FAF /* FAQViewController.swift */,
 				236562D81C7B4D7900560BF2 /* SearchViewController.swift */,
 				474E5CBC1C289934007DADBD /* Main.storyboard */,
 				47BA63231C61378800DC0E13 /* Launchscreen.storyboard */,
@@ -145,6 +150,7 @@
 				4771DA591C46E6FE008022A5 /* BasicCell.swift */,
 				4776D85A1C551C9E006844CC /* BasicCellWatching.swift */,
 				4718BF521C56B95400FAC195 /* TableViewCell.swift */,
+				231263881C822ADB00726FAF /* TableViewFAQ.swift */,
 			);
 			name = "Basic Cells";
 			sourceTree = "<group>";
@@ -298,8 +304,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				231263891C822ADB00726FAF /* TableViewFAQ.swift in Sources */,
 				479823F51C50149100905454 /* Ids.swift in Sources */,
 				479823FA1C50149100905454 /* ShowOrMovie.swift in Sources */,
+				2312638B1C822AEF00726FAF /* AnswerQuestion.swift in Sources */,
 				474E5CBB1C289934007DADBD /* SecondViewController.swift in Sources */,
 				4718BF531C56B95400FAC195 /* TableViewCell.swift in Sources */,
 				474E5CB71C289934007DADBD /* AppDelegate.swift in Sources */,
@@ -313,10 +321,10 @@
 				236562D91C7B4D7900560BF2 /* SearchViewController.swift in Sources */,
 				23EA04D31C81090F0086A193 /* FormViewController.swift in Sources */,
 				4771DA561C46E29C008022A5 /* ThirdViewController.swift in Sources */,
-				47DED3521C6118940077C232 /* SettingsViewController.swift in Sources */,
 				471E24801C5136A8003FB1E6 /* LoginViewController.swift in Sources */,
 				474E5CB91C289934007DADBD /* FirstViewController.swift in Sources */,
 				4771DA5A1C46E6FE008022A5 /* BasicCell.swift in Sources */,
+				231263871C822AC600726FAF /* FAQViewController.swift in Sources */,
 				470DA0FF1C57E6EB0073D6D4 /* MovieEpisodeDetailsViewController.swift in Sources */,
 				4750C5471C723AF000DB92A5 /* Screenshot.swift in Sources */,
 				479823E71C50122400905454 /* Helper.swift in Sources */,
