@@ -59,6 +59,9 @@ class ThirdViewController: UIViewController, UICollectionViewDataSource, UIColle
                                 for movie in movies{
                                     self.arrayOfMovies.append(Result(dictionary: movie)!)
                                 }
+                                
+                                self.arrayOfMovies.sortInPlace({ $0.last_watched_at! > $1.last_watched_at! })
+                                
                                 self.collectionView.reloadData()
                                 hudView.removeFromSuperview()
                             }
