@@ -642,6 +642,7 @@
                             </collectionView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="1bZ-al-d6m">
                                 <rect key="frame" x="16" y="69" width="288" height="29"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <segments>
                                     <segment title="TV Shows"/>
                                     <segment title="Movies"/>
@@ -677,11 +678,13 @@
                     <connections>
                         <outlet property="collectionView" destination="3h3-4l-Qv3" id="tAk-9j-0KN"/>
                         <outlet property="segmentedControl" destination="1bZ-al-d6m" id="8X1-BC-FeT"/>
+                        <segue destination="dtE-hX-sLk" kind="push" identifier="ShowMovieDetailsFromWatched" id="z5t-e1-dak"/>
+                        <segue destination="AFD-Mp-Xzj" kind="push" identifier="ShowEpisodeListFromWatched" id="Ffs-8b-Nlx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YZa-Ip-xgI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="964" y="696"/>
+            <point key="canvasLocation" x="1506" y="734"/>
         </scene>
         <!--Watchlist-->
         <scene sceneID="ZyO-sx-Npw">
@@ -840,8 +843,8 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="TZg-zP-BZk"/>
-        <segue reference="enH-cW-SbP"/>
-        <segue reference="6ej-Nv-MGX"/>
+        <segue reference="Ffs-8b-Nlx"/>
         <segue reference="P3M-QQ-vj9"/>
+        <segue reference="z5t-e1-dak"/>
     </inferredMetricsTieBreakers>
 </document>

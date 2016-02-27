@@ -133,11 +133,28 @@ class ThirdViewController: UIViewController, UICollectionViewDataSource, UIColle
     }
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        /*if segmentedControl.selectedSegmentIndex == 0 {
-            performSegueWithIdentifier("ShowEpisodeList", sender: nil)
+        if segmentedControl.selectedSegmentIndex == 0 {
+            performSegueWithIdentifier("ShowEpisodeListFromWatched", sender: nil)
         } else {
-            performSegueWithIdentifier("ShowMovieDetails", sender: nil)
-        }*/
+            performSegueWithIdentifier("ShowMovieDetailsFromWatched", sender: nil)
+        }
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "ShowEpisodeListFromWatched" {
+            //let vc = segue.destinationViewController as! TableShowsViewController
+            //let indexPath = collectionView.indexPathsForSelectedItems()
+            //vc.tvShow = arrayOfTvShows[indexPath![0].row].showOrMovie!
+            
+            let vc = segue.destinationViewController as! TableShowsViewController
+            let indexPath = collectionView.indexPathsForSelectedItems()
+            vc.tvShow = arrayOfTvShows[indexPath![0].row]
+            
+        } else if segue.identifier == "ShowMovieDetailsFromWatched"{
+            let vc = segue.destinationViewController as! MovieEpisodeDetailsViewController
+            let indexPath = collectionView.indexPathsForSelectedItems()
+            vc.movie = arrayOfMovies[indexPath![0].row].showOrMovie!
+        }
     }
     
     func showSimpleAlert(title: String, message: String, buttonText: String) {
