@@ -10,6 +10,8 @@ import UIKit
 import Alamofire
 import AlamofireImage
 
+var refreshSecondVC = false
+
 class SecondViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
     @IBOutlet weak var collectionView: UICollectionView!
@@ -18,7 +20,19 @@ class SecondViewController: UIViewController, UICollectionViewDelegate, UICollec
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        downloadContentsForTheSecondVC()
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        if refreshSecondVC {
+            downloadContentsForTheSecondVC()
+            refreshSecondVC = false
+        }
+        self.collectionView.resetScrollPositionToTop()
+    }
+    
+    func downloadContentsForTheSecondVC() {
+        arrayOfTvShows = [ShowOrMovie]()
         let hudView = HudView.hudInView(view,animated: true)
         
         Alamofire.request(.GET, "https://api-v2launch.trakt.tv/sync/watched/shows?extended=full,images", headers: Helper().getApiHeaders()).responseJSON{ response in
@@ -40,10 +54,6 @@ class SecondViewController: UIViewController, UICollectionViewDelegate, UICollec
                 print("Request failed with error: \(error)")
             }
         }
-    }
-    
-    override func viewDidAppear(animated: Bool) {
-        self.collectionView.resetScrollPositionToTop()
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

@@ -62,7 +62,10 @@ class MovieEpisodeDetailsViewController: UIViewController {
         
     }
     @IBAction func markAsSeen(sender: UIButton) {
+        refreshFirstVC = true
+        refreshThirdVC = true
         if let _ = episode {
+            refreshSecondVC = true
             
             let parameters = ["episodes": [["ids": ["trakt" : "\(episode!.ids!.trakt!)"] ]] ]
             

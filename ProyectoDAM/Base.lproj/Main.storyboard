@@ -19,13 +19,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Formulario de contacto" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4cT-Ky-aaK">
-                                <rect key="frame" x="71" y="105" width="178" height="20.5"/>
+                                <rect key="frame" x="71" y="105" width="178" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Asunto" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TvB-Te-QXh">
-                                <rect key="frame" x="60" y="175.5" width="200" height="30"/>
+                                <rect key="frame" x="60" y="176" width="200" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="Dyd-4c-G1L"/>
                                     <constraint firstAttribute="height" constant="30" id="Wdn-7s-BhL"/>
@@ -34,7 +34,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" text="Inserte su mensaje..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="tCa-vL-H4F">
-                                <rect key="frame" x="35" y="253.5" width="250" height="150"/>
+                                <rect key="frame" x="35" y="254" width="250" height="150"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="DsT-Ys-Xo2"/>
@@ -44,7 +44,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XlU-Ik-bMT">
-                                <rect key="frame" x="139" y="442.5" width="42" height="30"/>
+                                <rect key="frame" x="139" y="443" width="42" height="30"/>
                                 <state key="normal" title="Enviar"/>
                                 <connections>
                                     <action selector="sendMail:" destination="IKx-Mn-FHX" eventType="touchUpInside" id="wbf-2J-nJC"/>
@@ -371,10 +371,10 @@
                                 <inset key="separatorInset" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TableViewCell" id="cqx-BQ-Ks5" customClass="TableViewCell" customModule="ProyectoDAM" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="113.5" width="328" height="44"/>
+                                        <rect key="frame" x="0.0" y="114" width="328" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cqx-BQ-Ks5" id="8cI-uy-jLm">
-                                            <rect key="frame" x="0.0" y="0.0" width="295" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="295" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="nbU-SY-p41">
@@ -600,7 +600,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="3h3-4l-Qv3">
-                                <rect key="frame" x="16" y="102" width="288" height="447"/>
+                                <rect key="frame" x="16" y="37" width="288" height="512"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="HIt-E5-RI6">
                                     <size key="itemSize" width="90" height="150"/>
@@ -656,7 +656,7 @@
                             <constraint firstItem="cRJ-rD-R4K" firstAttribute="top" secondItem="3h3-4l-Qv3" secondAttribute="bottom" constant="-30" id="Ggr-kO-tEM"/>
                             <constraint firstItem="1bZ-al-d6m" firstAttribute="leading" secondItem="idh-XX-TBP" secondAttribute="leadingMargin" id="ICx-16-xCB"/>
                             <constraint firstAttribute="trailingMargin" secondItem="3h3-4l-Qv3" secondAttribute="trailing" id="R1A-ZW-DgY"/>
-                            <constraint firstItem="3h3-4l-Qv3" firstAttribute="top" secondItem="1bZ-al-d6m" secondAttribute="bottom" constant="5" id="qJq-j5-9YH"/>
+                            <constraint firstItem="3h3-4l-Qv3" firstAttribute="top" secondItem="1bZ-al-d6m" secondAttribute="bottom" constant="-60" id="qJq-j5-9YH"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Watched" id="SYN-22-7lw">
@@ -832,9 +832,9 @@
         <image name="Watchlist" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="TiR-kp-pDH"/>
+        <segue reference="enH-cW-SbP"/>
         <segue reference="VcW-k1-AC5"/>
         <segue reference="6ej-Nv-MGX"/>
-        <segue reference="TiR-kp-pDH"/>
-        <segue reference="IS1-Fi-eYB"/>
     </inferredMetricsTieBreakers>
 </document>

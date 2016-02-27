@@ -10,6 +10,8 @@ import UIKit
 import Alamofire
 import AlamofireImage
 
+var refreshFirstVC = false
+
 class FirstViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
@@ -19,48 +21,58 @@ class FirstViewController: UIViewController, UICollectionViewDataSource, UIColle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let hudView = HudView.hudInView(view,animated: true)
-        
         if let _ = Helper().getUserToken() {
             print("Client ID -> \(Helper().clientId)")
             print("User Token -> \(Helper().getUserToken()!)")
             
-            Alamofire.request(.GET, "https://api-v2launch.trakt.tv/users/me/watchlist/shows?extended=images", headers: Helper().getApiHeaders()).responseJSON{ response in
-                switch response.result {
-                case .Success (let JSON):
-                    if let shows = JSON as? [[String:AnyObject]] {
-                        for show in shows{
-                            self.arrayOfTvShows.append(Result(dictionary: show)!)
-                        }
-                        
-                        Alamofire.request(.GET, "https://api-v2launch.trakt.tv/users/me/watchlist/movies?extended=images,full", headers: Helper().getApiHeaders()).responseJSON{ response in
-                            switch response.result {
-                            case .Success (let JSON):
-                                if let movies = JSON as? [[String:AnyObject]] {
-                                    for movie in movies{
-                                        self.arrayOfMovies.append(Result(dictionary: movie)!)
-                                    }
-                                    self.collectionView.reloadData()
-                                    hudView.removeFromSuperview()
-                                }
-                            case .Failure (let error):
-                                self.showSimpleAlert("¡Error!", message: "Ha habido un problema al realizar la petición al servidor. Vuelve a intentarlo en unos minutos.", buttonText: "Volver a intentarlo.")
-                                print("Request failed with error: \(error)")
-                            }
-                        }
-                        
-                    }
-                case .Failure (let error):
-                    self.showSimpleAlert("¡Error!", message: "Ha habido un problema al realizar la petición al servidor. Vuelve a intentarlo en unos minutos.", buttonText: "Volver a intentarlo.")
-                    print("Request failed with error: \(error)")
-                }
-            }
+            downloadContentFirstViewController()
         }
     }
     
     override func viewDidAppear(animated: Bool) {
+        if refreshFirstVC {
+            downloadContentFirstViewController()
+            refreshFirstVC = false
+        }
         self.collectionView.resetScrollPositionToTop()
+    }
+    
+    func downloadContentFirstViewController() {
+        arrayOfTvShows = [Result]()
+        arrayOfMovies = [Result]()
+        
+        let hudView = HudView.hudInView(view,animated: true)
+        
+        Alamofire.request(.GET, "https://api-v2launch.trakt.tv/users/me/watchlist/shows?extended=images", headers: Helper().getApiHeaders()).responseJSON{ response in
+            switch response.result {
+            case .Success (let JSON):
+                if let shows = JSON as? [[String:AnyObject]] {
+                    for show in shows{
+                        self.arrayOfTvShows.append(Result(dictionary: show)!)
+                    }
+                    
+                    Alamofire.request(.GET, "https://api-v2launch.trakt.tv/users/me/watchlist/movies?extended=images,full", headers: Helper().getApiHeaders()).responseJSON{ response in
+                        switch response.result {
+                        case .Success (let JSON):
+                            if let movies = JSON as? [[String:AnyObject]] {
+                                for movie in movies{
+                                    self.arrayOfMovies.append(Result(dictionary: movie)!)
+                                }
+                                self.collectionView.reloadData()
+                                hudView.removeFromSuperview()
+                            }
+                        case .Failure (let error):
+                            self.showSimpleAlert("¡Error!", message: "Ha habido un problema al realizar la petición al servidor. Vuelve a intentarlo en unos minutos.", buttonText: "Volver a intentarlo.")
+                            print("Request failed with error: \(error)")
+                        }
+                    }
+                    
+                }
+            case .Failure (let error):
+                self.showSimpleAlert("¡Error!", message: "Ha habido un problema al realizar la petición al servidor. Vuelve a intentarlo en unos minutos.", buttonText: "Volver a intentarlo.")
+                print("Request failed with error: \(error)")
+            }
+        }
     }
     
     @IBAction func segmentedControlAction(sender: UISegmentedControl) {

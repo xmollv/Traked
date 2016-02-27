@@ -8,9 +8,17 @@
 
 import UIKit
 
+var refreshThirdVC = false
+
 class ThirdViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        if refreshThirdVC {
+            
+        }
     }
 }
