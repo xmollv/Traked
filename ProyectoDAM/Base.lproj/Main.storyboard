@@ -778,11 +778,11 @@
             </objects>
             <point key="canvasLocation" x="3308" y="-133"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Form-->
         <scene sceneID="mWv-xv-ueD">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cbI-sp-pdH" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" selectedImage="Settings" systemItem="more" id="0aF-zc-1t7"/>
+                    <tabBarItem key="tabBarItem" title="Form" image="form" id="0aF-zc-1t7"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="EjH-dP-QzX">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -817,7 +817,7 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ip-9e-9OH">
                                             <rect key="frame" x="13" y="13" width="302" height="27.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -854,11 +854,11 @@
             </objects>
             <point key="canvasLocation" x="4372" y="589"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--FAQ-->
         <scene sceneID="Umg-NS-3WA">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="DFH-I1-dlh" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" systemItem="topRated" id="aC4-Uj-WMz"/>
+                    <tabBarItem key="tabBarItem" title="FAQ" image="FAQ" id="aC4-Uj-WMz"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="bCd-AX-m58">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -875,8 +875,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="FAQ" width="25" height="25"/>
         <image name="Settings" width="25" height="25"/>
         <image name="Watchlist" width="25" height="25"/>
+        <image name="form" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="TiR-kp-pDH"/>
