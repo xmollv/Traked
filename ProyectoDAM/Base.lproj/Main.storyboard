@@ -478,12 +478,40 @@
                                                         <constraint firstAttribute="height" constant="130" id="fqR-VW-3Cl"/>
                                                     </constraints>
                                                 </imageView>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BzC-Cg-jai">
+                                                    <rect key="frame" x="15" y="118" width="60" height="20"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TYr-5c-jnP">
+                                                            <rect key="frame" x="5" y="2" width="8.5" height="16"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DAYS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gcx-Rw-BzR">
+                                                            <rect key="frame" x="18.5" y="2.5" width="33.5" height="16"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="0.69803921570000005" green="0.16862745100000001" blue="0.062745098040000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstItem="TYr-5c-jnP" firstAttribute="leading" secondItem="BzC-Cg-jai" secondAttribute="leading" constant="5" id="5r6-Bn-o8J"/>
+                                                        <constraint firstAttribute="width" constant="60" id="9XP-cS-dGj"/>
+                                                        <constraint firstItem="TYr-5c-jnP" firstAttribute="centerY" secondItem="BzC-Cg-jai" secondAttribute="centerY" id="BuQ-ON-eB2"/>
+                                                        <constraint firstItem="gcx-Rw-BzR" firstAttribute="centerY" secondItem="BzC-Cg-jai" secondAttribute="centerY" id="NpI-1Z-9Zs"/>
+                                                        <constraint firstAttribute="height" constant="20" id="rqh-cW-fIB"/>
+                                                        <constraint firstItem="gcx-Rw-BzR" firstAttribute="leading" secondItem="TYr-5c-jnP" secondAttribute="trailing" constant="5" id="wdI-DB-Qcz"/>
+                                                    </constraints>
+                                                </view>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <constraints>
                                             <constraint firstItem="5YJ-Vu-dPa" firstAttribute="top" secondItem="QnS-o6-kBP" secondAttribute="topMargin" id="0l3-FC-dfT"/>
+                                            <constraint firstItem="BzC-Cg-jai" firstAttribute="centerX" secondItem="5YJ-Vu-dPa" secondAttribute="centerX" id="Dgt-m4-flP"/>
                                             <constraint firstItem="5YJ-Vu-dPa" firstAttribute="centerX" secondItem="QnS-o6-kBP" secondAttribute="centerX" id="hX5-Ca-lDQ"/>
+                                            <constraint firstItem="BzC-Cg-jai" firstAttribute="baseline" secondItem="5YJ-Vu-dPa" secondAttribute="baseline" id="lI0-2r-cwR"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="imageView" destination="5YJ-Vu-dPa" id="xaU-vo-tyl"/>
@@ -881,9 +909,9 @@
         <image name="form" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="TiR-kp-pDH"/>
-        <segue reference="VcW-k1-AC5"/>
+        <segue reference="43o-dP-DiS"/>
         <segue reference="enH-cW-SbP"/>
-        <segue reference="6ej-Nv-MGX"/>
+        <segue reference="VH5-UL-Uef"/>
+        <segue reference="Qbx-7V-8gA"/>
     </inferredMetricsTieBreakers>
 </document>
