@@ -13,9 +13,11 @@ class MovieEpisodeDetailsViewController: UIViewController {
     
     @IBOutlet weak var imageHeader: UIImageView!
     @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var markAsSeenButton: UIButton!
     
     var movie: ShowOrMovie?
     var episode: Episodes?
+    var movieWatched: Bool?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,6 +59,10 @@ class MovieEpisodeDetailsViewController: UIViewController {
                 descriptionLabel.text = overview
             } else {
                 descriptionLabel.text = "No overview yet"
+            }
+            
+            if movieWatched == true {
+                markAsSeenButton.hidden = true
             }
         }
         

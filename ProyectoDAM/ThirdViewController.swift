@@ -152,6 +152,7 @@ class ThirdViewController: UIViewController, UICollectionViewDataSource, UIColle
             let vc = segue.destinationViewController as! MovieEpisodeDetailsViewController
             let indexPath = collectionView.indexPathsForSelectedItems()
             vc.movie = arrayOfMovies[indexPath![0].row].showOrMovie!
+            vc.movieWatched = true
         }
     }
     

@@ -346,6 +346,7 @@
                     <connections>
                         <outlet property="descriptionLabel" destination="lA6-aZ-Vxp" id="BWm-ir-ZzG"/>
                         <outlet property="imageHeader" destination="j4I-ao-KeD" id="9cM-RH-jwX"/>
+                        <outlet property="markAsSeenButton" destination="Ve7-DX-oiA" id="7AJ-pb-KpW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0PC-JY-Twi" userLabel="First Responder" sceneMemberID="firstResponder"/>
