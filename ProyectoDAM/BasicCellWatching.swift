@@ -11,9 +11,12 @@ import UIKit
 class BasicCellWatching: UICollectionViewCell{
     
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var remainingDaysLabel: UILabel!
+    @IBOutlet weak var containerRemainingDaysView: UIView!
 
     override func prepareForReuse() {
         super.prepareForReuse()
         imageView.image = nil
+        remainingDaysLabel.text = ""
     }
 }

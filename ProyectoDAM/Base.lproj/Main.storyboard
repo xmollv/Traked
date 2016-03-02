@@ -514,7 +514,9 @@
                                             <constraint firstItem="BzC-Cg-jai" firstAttribute="baseline" secondItem="5YJ-Vu-dPa" secondAttribute="baseline" id="lI0-2r-cwR"/>
                                         </constraints>
                                         <connections>
+                                            <outlet property="containerRemainingDaysView" destination="BzC-Cg-jai" id="Nzc-Rz-Nnb"/>
                                             <outlet property="imageView" destination="5YJ-Vu-dPa" id="xaU-vo-tyl"/>
+                                            <outlet property="remainingDaysLabel" destination="TYr-5c-jnP" id="VSm-ye-njZ"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>

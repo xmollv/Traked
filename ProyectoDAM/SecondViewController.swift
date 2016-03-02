@@ -62,8 +62,9 @@ class SecondViewController: UIViewController, UICollectionViewDelegate, UICollec
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell{
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("CollectionCellWatching", forIndexPath: indexPath) as! BasicCellWatching
-        
+        cell.containerRemainingDaysView.layer.cornerRadius = 5
         cell.imageView.image = UIImage(named: "Grey background")
+        cell.remainingDaysLabel.text = "0"
             
         if let thumb = arrayOfTvShows[indexPath.row].images!.poster!.thumb {
             cell.imageView.af_setImageWithURL(NSURL(string: thumb)!)
