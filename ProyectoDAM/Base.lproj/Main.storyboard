@@ -351,6 +351,7 @@
                     <size key="freeformSize" width="320" height="568"/>
                     <connections>
                         <outlet property="descriptionLabel" destination="lA6-aZ-Vxp" id="BWm-ir-ZzG"/>
+                        <outlet property="displayTvShowDetails" destination="xuc-lg-moL" id="1vO-5e-qS4"/>
                         <outlet property="imageHeader" destination="j4I-ao-KeD" id="9cM-RH-jwX"/>
                         <outlet property="markAsSeenButton" destination="Ve7-DX-oiA" id="7AJ-pb-KpW"/>
                     </connections>

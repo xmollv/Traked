@@ -14,6 +14,7 @@ class MovieEpisodeDetailsViewController: UIViewController {
     @IBOutlet weak var imageHeader: UIImageView!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var markAsSeenButton: UIButton!
+    @IBOutlet weak var displayTvShowDetails: UIBarButtonItem!
     
     var movie: ShowOrMovie?
     var tvShow: ShowOrMovie?
@@ -26,6 +27,8 @@ class MovieEpisodeDetailsViewController: UIViewController {
         navigationController?.navigationBarHidden = false
         
         if let _ = episode {
+            displayTvShowDetails.enabled = true
+            displayTvShowDetails.tintColor = nil
             
             print("\(episode!.season!), \(episode!.number!)")
             
@@ -48,6 +51,10 @@ class MovieEpisodeDetailsViewController: UIViewController {
             }
             
         } else {
+            
+            displayTvShowDetails.enabled = false
+            displayTvShowDetails.tintColor = UIColor.clearColor()
+            
             title = movie!.title!
             
             if let poster = movie!.images!.poster!.thumb {
