@@ -16,6 +16,7 @@ class MovieEpisodeDetailsViewController: UIViewController {
     @IBOutlet weak var markAsSeenButton: UIButton!
     
     var movie: ShowOrMovie?
+    var tvShow: ShowOrMovie?
     var episode: Episodes?
     var movieWatched: Bool?
     
@@ -100,6 +101,13 @@ class MovieEpisodeDetailsViewController: UIViewController {
                     print("Request failed with error: \(error)")
                 }
             }
+        }
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "DisplayTVShowDetails" {
+            let vc = segue.destinationViewController as! TVShowDetailsViewController
+            vc.show = tvShow!
         }
     }
     

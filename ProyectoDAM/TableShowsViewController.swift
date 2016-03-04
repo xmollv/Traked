@@ -130,6 +130,7 @@ class TableShowsViewController: UIViewController, UITableViewDelegate, UITableVi
             let vc = segue.destinationViewController as! MovieEpisodeDetailsViewController
             let indexPath = tableView.indexPathForSelectedRow
             vc.episode = tvShow!.seasons![indexPath!.section].episodes![indexPath!.row]
+            vc.tvShow = tvShow!
         }
     }
     

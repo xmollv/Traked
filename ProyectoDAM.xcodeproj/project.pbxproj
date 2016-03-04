@@ -18,6 +18,8 @@
 		4718BF561C56C13400FAC195 /* Episodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4718BF541C56C13400FAC195 /* Episodes.swift */; };
 		4718BF571C56C13400FAC195 /* Seasons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4718BF551C56C13400FAC195 /* Seasons.swift */; };
 		471E24801C5136A8003FB1E6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471E247F1C5136A8003FB1E6 /* LoginViewController.swift */; };
+		473ACB661C89DF6200F40639 /* TVShowDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473ACB651C89DF6200F40639 /* TVShowDetailsViewController.swift */; };
+		473ACB681C89E06800F40639 /* CollectionViewCellForActors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473ACB671C89E06800F40639 /* CollectionViewCellForActors.swift */; };
 		474E5CB71C289934007DADBD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474E5CB61C289934007DADBD /* AppDelegate.swift */; };
 		474E5CB91C289934007DADBD /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474E5CB81C289934007DADBD /* FirstViewController.swift */; };
 		474E5CBB1C289934007DADBD /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474E5CBA1C289934007DADBD /* SecondViewController.swift */; };
@@ -50,6 +52,8 @@
 		4718BF541C56C13400FAC195 /* Episodes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Episodes.swift; sourceTree = "<group>"; };
 		4718BF551C56C13400FAC195 /* Seasons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Seasons.swift; sourceTree = "<group>"; };
 		471E247F1C5136A8003FB1E6 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		473ACB651C89DF6200F40639 /* TVShowDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVShowDetailsViewController.swift; sourceTree = "<group>"; };
+		473ACB671C89E06800F40639 /* CollectionViewCellForActors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCellForActors.swift; sourceTree = "<group>"; };
 		474E5CB31C289934007DADBD /* ProyectoDAM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProyectoDAM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		474E5CB61C289934007DADBD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		474E5CB81C289934007DADBD /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -133,6 +137,7 @@
 				4771DA551C46E29C008022A5 /* ThirdViewController.swift */,
 				4718BF501C56B87A00FAC195 /* TableShowsViewController.swift */,
 				470DA0FE1C57E6EB0073D6D4 /* MovieEpisodeDetailsViewController.swift */,
+				473ACB651C89DF6200F40639 /* TVShowDetailsViewController.swift */,
 				23EA04D21C81090F0086A193 /* FormViewController.swift */,
 				231263861C822AC600726FAF /* FAQViewController.swift */,
 				236562D81C7B4D7900560BF2 /* SearchViewController.swift */,
@@ -151,6 +156,7 @@
 				4776D85A1C551C9E006844CC /* BasicCellWatching.swift */,
 				4718BF521C56B95400FAC195 /* TableViewCell.swift */,
 				231263881C822ADB00726FAF /* TableViewFAQ.swift */,
+				473ACB671C89E06800F40639 /* CollectionViewCellForActors.swift */,
 			);
 			name = "Basic Cells";
 			sourceTree = "<group>";
@@ -318,8 +324,10 @@
 				4776D85B1C551C9E006844CC /* BasicCellWatching.swift in Sources */,
 				479823F71C50149100905454 /* Result.swift in Sources */,
 				4718BF511C56B87A00FAC195 /* TableShowsViewController.swift in Sources */,
+				473ACB681C89E06800F40639 /* CollectionViewCellForActors.swift in Sources */,
 				236562D91C7B4D7900560BF2 /* SearchViewController.swift in Sources */,
 				23EA04D31C81090F0086A193 /* FormViewController.swift in Sources */,
+				473ACB661C89DF6200F40639 /* TVShowDetailsViewController.swift in Sources */,
 				4771DA561C46E29C008022A5 /* ThirdViewController.swift in Sources */,
 				471E24801C5136A8003FB1E6 /* LoginViewController.swift in Sources */,
 				474E5CB91C289934007DADBD /* FirstViewController.swift in Sources */,
