@@ -15,14 +15,18 @@ class MovieEpisodeDetailsViewController: UIViewController {
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var markAsSeenButton: UIButton!
     @IBOutlet weak var displayTvShowDetails: UIBarButtonItem!
+    @IBOutlet weak var seenDate: UILabel!
     
-    var movie: ShowOrMovie?
+    //var movie: ShowOrMovie?
+    var movie: Result!?
     var tvShow: ShowOrMovie?
     var episode: Episodes?
     var movieWatched: Bool?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        seenDate.hidden = true
         
         navigationController?.navigationBarHidden = false
         
@@ -55,15 +59,15 @@ class MovieEpisodeDetailsViewController: UIViewController {
             displayTvShowDetails.enabled = false
             displayTvShowDetails.tintColor = UIColor.clearColor()
             
-            title = movie!.title!
+            title = movie!.showOrMovie!.title!
             
-            if let poster = movie!.images!.poster!.thumb {
+            if let poster = movie!.showOrMovie!.images!.poster!.thumb {
                 imageHeader.af_setImageWithURL(NSURL(string: poster)!)
             } else {
                 imageHeader.image = UIImage(named: "No Image")
             }
             
-            if let overview = movie!.overview {
+            if let overview = movie!.showOrMovie!.overview {
                 descriptionLabel.text = overview
             } else {
                 descriptionLabel.text = "No overview yet"
@@ -71,6 +75,8 @@ class MovieEpisodeDetailsViewController: UIViewController {
             
             if movieWatched == true {
                 markAsSeenButton.hidden = true
+                seenDate.hidden = false
+                seenDate.text = movie!.last_watched_at!
             }
         }
         
@@ -96,7 +102,7 @@ class MovieEpisodeDetailsViewController: UIViewController {
             
         } else {
             
-            let parameters = ["movies": [["ids": ["trakt" : "\(movie!.ids!.trakt!)"] ]] ]
+            let parameters = ["movies": [["ids": ["trakt" : "\(movie!.showOrMovie!.ids!.trakt!)"] ]] ]
 
             Alamofire.request(.POST, "https://api-v2launch.trakt.tv/sync/history", headers: Helper().getApiHeaders(), parameters: parameters, encoding: .JSON).responseJSON{ response in
                 switch response.result {

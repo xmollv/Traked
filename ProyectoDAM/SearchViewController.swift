@@ -250,9 +250,11 @@ class SearchViewController: UIViewController, UICollectionViewDelegate, UICollec
             let vc = segue.destinationViewController as! MovieEpisodeDetailsViewController
             let indexPath = collectionView.indexPathsForSelectedItems()
              if EMPTY == true {
-                vc.movie = arrayOfMovies[indexPath![0].row]
+                //FIX THIS
+                //vc.movie = arrayOfMovies[indexPath![0].row]
             } else{
-                vc.movie = arrayOfSearch[indexPath![0].row].showOrMovie!
+                //FIX THIS
+                //vc.movie = arrayOfSearch[indexPath![0].row].showOrMovie!
             }
         }
         

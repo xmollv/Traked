@@ -302,6 +302,12 @@
                                                     <action selector="markAsSeen:" destination="dtE-hX-sLk" eventType="touchUpInside" id="86c-WU-NLe"/>
                                                 </connections>
                                             </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uhb-E3-npf">
+                                                <rect key="frame" x="139" y="194" width="42" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lA6-aZ-Vxp">
                                                 <rect key="frame" x="20" y="230" width="280" height="18"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -312,7 +318,9 @@
                                         <constraints>
                                             <constraint firstItem="j4I-ao-KeD" firstAttribute="leading" secondItem="0r7-rB-D6q" secondAttribute="leading" constant="20" id="1bC-jA-qIA"/>
                                             <constraint firstItem="lA6-aZ-Vxp" firstAttribute="top" secondItem="Ve7-DX-oiA" secondAttribute="bottom" constant="10" id="4Rx-fg-yxB"/>
+                                            <constraint firstItem="Uhb-E3-npf" firstAttribute="centerX" secondItem="Ve7-DX-oiA" secondAttribute="centerX" id="B2d-lq-sbf"/>
                                             <constraint firstItem="Ve7-DX-oiA" firstAttribute="top" secondItem="j4I-ao-KeD" secondAttribute="bottom" constant="10" id="Dfe-ak-fh2"/>
+                                            <constraint firstItem="Uhb-E3-npf" firstAttribute="centerY" secondItem="Ve7-DX-oiA" secondAttribute="centerY" id="PdZ-f6-Spo"/>
                                             <constraint firstItem="lA6-aZ-Vxp" firstAttribute="leading" secondItem="0r7-rB-D6q" secondAttribute="leading" constant="20" id="TEq-ju-epB"/>
                                             <constraint firstAttribute="trailing" secondItem="lA6-aZ-Vxp" secondAttribute="trailing" constant="20" id="ZxC-G0-sjZ"/>
                                             <constraint firstItem="Ve7-DX-oiA" firstAttribute="centerX" secondItem="0r7-rB-D6q" secondAttribute="centerX" id="hnZ-GT-D29"/>
@@ -354,6 +362,7 @@
                         <outlet property="displayTvShowDetails" destination="xuc-lg-moL" id="1vO-5e-qS4"/>
                         <outlet property="imageHeader" destination="j4I-ao-KeD" id="9cM-RH-jwX"/>
                         <outlet property="markAsSeenButton" destination="Ve7-DX-oiA" id="7AJ-pb-KpW"/>
+                        <outlet property="seenDate" destination="Uhb-E3-npf" id="wHJ-Cy-dSU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0PC-JY-Twi" userLabel="First Responder" sceneMemberID="firstResponder"/>
