@@ -348,18 +348,11 @@
                             <constraint firstItem="NQ7-6K-Rvl" firstAttribute="top" secondItem="cPW-uX-lgZ" secondAttribute="bottom" constant="-60" id="weS-Tc-iUg"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="(MOVIE/EPISODE TITLE)" id="egW-Jd-a7A">
-                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="xuc-lg-moL">
-                            <connections>
-                                <segue destination="uB6-0V-xjp" kind="modal" identifier="DisplayTVShowDetails" id="wTb-Z2-9iB"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="(MOVIE/EPISODE TITLE)" id="egW-Jd-a7A"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="568"/>
                     <connections>
                         <outlet property="descriptionLabel" destination="lA6-aZ-Vxp" id="BWm-ir-ZzG"/>
-                        <outlet property="displayTvShowDetails" destination="xuc-lg-moL" id="1vO-5e-qS4"/>
                         <outlet property="imageHeader" destination="j4I-ao-KeD" id="9cM-RH-jwX"/>
                         <outlet property="markAsSeenButton" destination="Ve7-DX-oiA" id="7AJ-pb-KpW"/>
                         <outlet property="seenDate" destination="Uhb-E3-npf" id="wHJ-Cy-dSU"/>
@@ -473,7 +466,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ill-L4-hFY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2606" y="0.0"/>
+            <point key="canvasLocation" x="1539" y="-718"/>
         </scene>
         <!--(SHOW TITLE)-->
         <scene sceneID="Uxt-GY-RE0">
@@ -493,10 +486,10 @@
                                 <inset key="separatorInset" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TableViewCell" id="cqx-BQ-Ks5" customClass="TableViewCell" customModule="ProyectoDAM" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="114" width="328" height="44"/>
+                                        <rect key="frame" x="0.0" y="113.5" width="328" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cqx-BQ-Ks5" id="8cI-uy-jLm">
-                                            <rect key="frame" x="0.0" y="0.0" width="295" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="295" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="nbU-SY-p41">
@@ -556,7 +549,13 @@
                             <constraint firstItem="XbX-RC-Zx4" firstAttribute="leading" secondItem="QD7-Ow-kGa" secondAttribute="leadingMargin" constant="-20" id="sxJ-W6-aKf"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="(SHOW TITLE)" id="vrN-Vu-3oJ"/>
+                    <navigationItem key="navigationItem" title="(SHOW TITLE)" id="vrN-Vu-3oJ">
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="asE-oJ-tfF">
+                            <connections>
+                                <segue destination="uB6-0V-xjp" kind="modal" identifier="DisplayTVShowDetails" id="GLh-sB-grq"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="XbX-RC-Zx4" id="0vX-ch-Axn"/>
                     </connections>
@@ -961,10 +960,10 @@
                         <inset key="separatorInset" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TableViewFAQ" id="sdD-G9-8Tn" customClass="TableViewFAQ" customModule="ProyectoDAM" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="114" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="113.5" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="sdD-G9-8Tn" id="hOJ-na-KVM">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ip-9e-9OH">
@@ -1034,9 +1033,9 @@
         <image name="form" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="43o-dP-DiS"/>
-        <segue reference="enH-cW-SbP"/>
-        <segue reference="VH5-UL-Uef"/>
         <segue reference="Qbx-7V-8gA"/>
+        <segue reference="43o-dP-DiS"/>
+        <segue reference="VH5-UL-Uef"/>
+        <segue reference="IS1-Fi-eYB"/>
     </inferredMetricsTieBreakers>
 </document>

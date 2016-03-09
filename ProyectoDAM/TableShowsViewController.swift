@@ -131,6 +131,9 @@ class TableShowsViewController: UIViewController, UITableViewDelegate, UITableVi
             let indexPath = tableView.indexPathForSelectedRow
             vc.episode = tvShow!.seasons![indexPath!.section].episodes![indexPath!.row]
             vc.tvShow = tvShow!
+        } else if segue.identifier == "DisplayTVShowDetails" {
+            let vc = segue.destinationViewController as! TVShowDetailsViewController
+            vc.show = tvShow!
         }
     }
     
