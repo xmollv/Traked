@@ -47,7 +47,7 @@ class ThirdViewController: UIViewController, UICollectionViewDataSource, UIColle
                     for showInDictionary in dictionaryJSON {
                         if let show = showInDictionary["show"] as? [String:AnyObject]{
                             //The shows should only be added if the user has seen EVERY episode. For now, I'll add them just for testing purpouses.
-                            self.arrayOfTvShows.append(ShowOrMovie(dictionary: show)!)
+                            //self.arrayOfTvShows.append(ShowOrMovie(dictionary: show)!)
                         }
                     }
 
