@@ -76,7 +76,18 @@ class MovieEpisodeDetailsViewController: UIViewController {
             if movieWatched == true {
                 markAsSeenButton.hidden = true
                 seenDate.hidden = false
-                seenDate.text = movie!.last_watched_at!
+                
+                let dateFormatter = NSDateFormatter()
+                dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+                let cal = NSCalendar.currentCalendar()
+                
+                let date = dateFormatter.dateFromString(movie!.last_watched_at!)!
+                
+                let year = cal.component(NSCalendarUnit.Year, fromDate: date)
+                let month = cal.component(NSCalendarUnit.Month, fromDate: date)
+                let day = cal.component(NSCalendarUnit.Day, fromDate: date)
+                
+                seenDate.text = "\(day)/\(month)/\(year)"
             }
         }
         
