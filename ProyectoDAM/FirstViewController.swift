@@ -43,7 +43,7 @@ class FirstViewController: UIViewController, UICollectionViewDataSource, UIColle
         
         let hudView = HudView.hudInView(view,animated: true)
         
-        Alamofire.request(.GET, "https://api-v2launch.trakt.tv/users/me/watchlist/shows?extended=images", headers: Helper().getApiHeaders()).responseJSON{ response in
+        Alamofire.request(.GET, "https://api-v2launch.trakt.tv/sync/watchlist/shows?extended=full,images", headers: Helper().getApiHeaders()).responseJSON{ response in
             switch response.result {
             case .Success (let JSON):
                 if let shows = JSON as? [[String:AnyObject]] {
@@ -51,7 +51,7 @@ class FirstViewController: UIViewController, UICollectionViewDataSource, UIColle
                         self.arrayOfTvShows.append(Result(dictionary: show)!)
                     }
                     
-                    Alamofire.request(.GET, "https://api-v2launch.trakt.tv/users/me/watchlist/movies?extended=images,full", headers: Helper().getApiHeaders()).responseJSON{ response in
+                    Alamofire.request(.GET, "https://api-v2launch.trakt.tv/sync/watchlist/movies?extended=full,images", headers: Helper().getApiHeaders()).responseJSON{ response in
                         switch response.result {
                         case .Success (let JSON):
                             if let movies = JSON as? [[String:AnyObject]] {
