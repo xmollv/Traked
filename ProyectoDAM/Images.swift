@@ -11,6 +11,7 @@ import Foundation
 public class Images {
 	public var poster : Poster?
     public var screenshot : Screenshot?
+    public var headshot : Headshot?
 
 /**
     Returns an array of models based on given dictionary.
@@ -45,6 +46,7 @@ public class Images {
 	required public init?(dictionary: NSDictionary) {
 		if (dictionary["poster"] != nil) { poster = Poster(dictionary: dictionary["poster"] as! NSDictionary) }
         if (dictionary["screenshot"] != nil) { screenshot = Screenshot(dictionary: dictionary["screenshot"] as! NSDictionary) }
+        if (dictionary["headshot"] != nil) { headshot = Headshot(dictionary: dictionary["headshot"] as! NSDictionary) }
 	}
 
 		
@@ -59,6 +61,7 @@ public class Images {
 
 		dictionary.setValue(self.poster?.dictionaryRepresentation(), forKey: "poster")
         dictionary.setValue(self.screenshot?.dictionaryRepresentation(), forKey: "screenshot")
+        dictionary.setValue(self.headshot?.dictionaryRepresentation(), forKey: "headshot")
 
 		return dictionary
 	}

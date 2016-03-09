@@ -37,6 +37,10 @@
 		479823FA1C50149100905454 /* ShowOrMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479823F01C50149100905454 /* ShowOrMovie.swift */; };
 		479823FD1C50177900905454 /* HudView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479823FC1C50177900905454 /* HudView.swift */; };
 		47BA63241C61378800DC0E13 /* Launchscreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47BA63231C61378800DC0E13 /* Launchscreen.storyboard */; };
+		47D7C83A1C90AA9A00AD9BDD /* People.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D7C8391C90AA9A00AD9BDD /* People.swift */; };
+		47D7C83E1C90AACA00AD9BDD /* Cast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D7C83B1C90AACA00AD9BDD /* Cast.swift */; };
+		47D7C83F1C90AACA00AD9BDD /* Headshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D7C83C1C90AACA00AD9BDD /* Headshot.swift */; };
+		47D7C8401C90AACA00AD9BDD /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D7C83D1C90AACA00AD9BDD /* Person.swift */; };
 		6BB7E658DDC5C294CBF2A5F9 /* Pods_ProyectoDAM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7263278990CED0354C36A6DD /* Pods_ProyectoDAM.framework */; };
 /* End PBXBuildFile section */
 
@@ -73,6 +77,10 @@
 		479823F01C50149100905454 /* ShowOrMovie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowOrMovie.swift; sourceTree = "<group>"; };
 		479823FC1C50177900905454 /* HudView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HudView.swift; sourceTree = "<group>"; };
 		47BA63231C61378800DC0E13 /* Launchscreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Launchscreen.storyboard; sourceTree = "<group>"; };
+		47D7C8391C90AA9A00AD9BDD /* People.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = People.swift; sourceTree = "<group>"; };
+		47D7C83B1C90AACA00AD9BDD /* Cast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cast.swift; sourceTree = "<group>"; };
+		47D7C83C1C90AACA00AD9BDD /* Headshot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Headshot.swift; sourceTree = "<group>"; };
+		47D7C83D1C90AACA00AD9BDD /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		7263278990CED0354C36A6DD /* Pods_ProyectoDAM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProyectoDAM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AB7A56224743243529506F3 /* Pods-ProyectoDAM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProyectoDAM.release.xcconfig"; path = "Pods/Target Support Files/Pods-ProyectoDAM/Pods-ProyectoDAM.release.xcconfig"; sourceTree = "<group>"; };
 		CCE90DD0EE03B493502804FB /* Pods-ProyectoDAM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProyectoDAM.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ProyectoDAM/Pods-ProyectoDAM.debug.xcconfig"; sourceTree = "<group>"; };
@@ -102,6 +110,10 @@
 				4718BF551C56C13400FAC195 /* Seasons.swift */,
 				4718BF541C56C13400FAC195 /* Episodes.swift */,
 				2312638A1C822AEF00726FAF /* AnswerQuestion.swift */,
+				47D7C8391C90AA9A00AD9BDD /* People.swift */,
+				47D7C83B1C90AACA00AD9BDD /* Cast.swift */,
+				47D7C83C1C90AACA00AD9BDD /* Headshot.swift */,
+				47D7C83D1C90AACA00AD9BDD /* Person.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -321,8 +333,10 @@
 				479823F91C50149100905454 /* Poster.swift in Sources */,
 				479823F61C50149100905454 /* Images.swift in Sources */,
 				4718BF571C56C13400FAC195 /* Seasons.swift in Sources */,
+				47D7C8401C90AACA00AD9BDD /* Person.swift in Sources */,
 				4776D85B1C551C9E006844CC /* BasicCellWatching.swift in Sources */,
 				479823F71C50149100905454 /* Result.swift in Sources */,
+				47D7C83E1C90AACA00AD9BDD /* Cast.swift in Sources */,
 				4718BF511C56B87A00FAC195 /* TableShowsViewController.swift in Sources */,
 				473ACB681C89E06800F40639 /* CollectionViewCellForActors.swift in Sources */,
 				236562D91C7B4D7900560BF2 /* SearchViewController.swift in Sources */,
@@ -330,7 +344,9 @@
 				473ACB661C89DF6200F40639 /* TVShowDetailsViewController.swift in Sources */,
 				4771DA561C46E29C008022A5 /* ThirdViewController.swift in Sources */,
 				471E24801C5136A8003FB1E6 /* LoginViewController.swift in Sources */,
+				47D7C83A1C90AA9A00AD9BDD /* People.swift in Sources */,
 				474E5CB91C289934007DADBD /* FirstViewController.swift in Sources */,
+				47D7C83F1C90AACA00AD9BDD /* Headshot.swift in Sources */,
 				4771DA5A1C46E6FE008022A5 /* BasicCell.swift in Sources */,
 				231263871C822AC600726FAF /* FAQViewController.swift in Sources */,
 				470DA0FF1C57E6EB0073D6D4 /* MovieEpisodeDetailsViewController.swift in Sources */,
