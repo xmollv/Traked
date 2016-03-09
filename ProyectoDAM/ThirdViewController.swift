@@ -27,8 +27,9 @@ class ThirdViewController: UIViewController, UICollectionViewDataSource, UIColle
     
     override func viewDidAppear(animated: Bool) {
         if refreshThirdVC {
+            arrayOfTvShows = []
+            arrayOfMovies = []
             downloadContentThirdViewController()
-            
             refreshThirdVC = false
         }
         self.collectionView.resetScrollPositionToTop()
