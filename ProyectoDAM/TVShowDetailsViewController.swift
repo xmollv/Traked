@@ -32,7 +32,7 @@ class TVShowDetailsViewController: UIViewController, UICollectionViewDelegate, U
         }
         
         let hudView = HudView.hudInView(view,animated: true)
-        Alamofire.request(.GET, "https://api-v2launch.trakt.tv/shows/19792/people?extended=images", headers: Helper().getApiHeaders()).responseJSON{ response in
+        Alamofire.request(.GET, "https://api-v2launch.trakt.tv/shows/\(show!.ids!.trakt!)/people?extended=images", headers: Helper().getApiHeaders()).responseJSON{ response in
             switch response.result {
             case .Success (let JSON):
                 if let dict = JSON as? [String:AnyObject] {
@@ -61,7 +61,6 @@ class TVShowDetailsViewController: UIViewController, UICollectionViewDelegate, U
         } else {
             return 0
         }
-        //return 20
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
@@ -69,7 +68,7 @@ class TVShowDetailsViewController: UIViewController, UICollectionViewDelegate, U
         cell.imageView.image = UIImage(named: "Trakt")
         
         if arrayOfCast.count != 0 {
-            var elem = arrayOfCast[indexPath.row] as! Cast
+            let elem = arrayOfCast[indexPath.row]
             cell.imageView.af_setImageWithURL(NSURL(string: elem.person!.images!.headshot!.thumb!)!)
         }
         
