@@ -69,7 +69,12 @@ class TVShowDetailsViewController: UIViewController, UICollectionViewDelegate, U
         
         if arrayOfCast.count != 0 {
             let elem = arrayOfCast[indexPath.row]
-            cell.imageView.af_setImageWithURL(NSURL(string: elem.person!.images!.headshot!.thumb!)!)
+            if let headShot = elem.person!.images!.headshot!.thumb {
+                cell.imageView.af_setImageWithURL(NSURL(string: headShot)!)
+            } else {
+                cell.imageView.image = UIImage()
+            }
+            
         }
         
         return cell
