@@ -9,6 +9,7 @@
 import UIKit
 import Alamofire
 import AlamofireImage
+import SafariServices
 
 class TVShowDetailsViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
@@ -78,6 +79,15 @@ class TVShowDetailsViewController: UIViewController, UICollectionViewDelegate, U
         }
         
         return cell
+    }
+    
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        if let IMDBId = arrayOfCast[indexPath.row].person!.ids!.imdb {
+            let svc = SFSafariViewController(URL: NSURL(string: "http://www.imdb.com/name/\(IMDBId)/")!)
+            self.presentViewController(svc, animated: true, completion: nil)
+        } else {
+            showSimpleAlert("Woops :(", message: "\(arrayOfCast[indexPath.row].person!.name!) doesn't have an IMDB page.", buttonText: "Try another one.")
+        }
     }
     
     func showSimpleAlert(title: String, message: String, buttonText: String){
