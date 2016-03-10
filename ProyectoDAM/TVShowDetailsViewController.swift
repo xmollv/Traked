@@ -25,7 +25,12 @@ class TVShowDetailsViewController: UIViewController, UICollectionViewDelegate, U
     override func viewDidLoad() {
         super.viewDidLoad()
         showTitle.title = show!.title!
-        showImage.af_setImageWithURL(NSURL(string: show!.images!.poster!.thumb!)!)
+        if let poster = show!.images!.poster!.thumb {
+            showImage.af_setImageWithURL(NSURL(string: poster)!)
+        } else {
+            showImage.image = UIImage()
+        }
+        
         if let _ = show!.overview {
             showDescription.text = show!.overview!
         } else {
