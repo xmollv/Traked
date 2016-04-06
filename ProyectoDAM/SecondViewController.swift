@@ -3,7 +3,7 @@
 //  ProyectoDAM
 //
 //  Created by Xavi Moll Villalonga on 21/12/15.
-//  Copyright © 2015 TaniaXavi. All rights reserved.
+//  Copyright © 2015 Xavi. All rights reserved.
 //
 
 import UIKit

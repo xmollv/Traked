@@ -3,14 +3,7 @@
 //  ProyectoDAM
 //
 //  Created by Tania Fontcuberta Mercadal on 26/2/16.
-//  Copyright © 2016 TaniaXavi. All rights reserved.
-//
-//
-//  SettingsViewController.swift
-//  ProyectoDAM
-//
-//  Created by Xavi Moll Villalonga on 02/02/16.
-//  Copyright © 2016 TaniaXavi. All rights reserved.
+//  Copyright © 2016 Xavi. All rights reserved.
 //
 
 import UIKit
