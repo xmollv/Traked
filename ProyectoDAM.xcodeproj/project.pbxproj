@@ -10,7 +10,6 @@
 		231263871C822AC600726FAF /* FAQViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231263861C822AC600726FAF /* FAQViewController.swift */; };
 		231263891C822ADB00726FAF /* TableViewFAQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231263881C822ADB00726FAF /* TableViewFAQ.swift */; };
 		2312638B1C822AEF00726FAF /* AnswerQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2312638A1C822AEF00726FAF /* AnswerQuestion.swift */; };
-		236562D91C7B4D7900560BF2 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236562D81C7B4D7900560BF2 /* SearchViewController.swift */; };
 		23EA04D31C81090F0086A193 /* FormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EA04D21C81090F0086A193 /* FormViewController.swift */; };
 		470DA0FF1C57E6EB0073D6D4 /* MovieEpisodeDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470DA0FE1C57E6EB0073D6D4 /* MovieEpisodeDetailsViewController.swift */; };
 		4718BF511C56B87A00FAC195 /* TableShowsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4718BF501C56B87A00FAC195 /* TableShowsViewController.swift */; };
@@ -41,6 +40,7 @@
 		47D7C83E1C90AACA00AD9BDD /* Cast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D7C83B1C90AACA00AD9BDD /* Cast.swift */; };
 		47D7C83F1C90AACA00AD9BDD /* Headshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D7C83C1C90AACA00AD9BDD /* Headshot.swift */; };
 		47D7C8401C90AACA00AD9BDD /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D7C83D1C90AACA00AD9BDD /* Person.swift */; };
+		47D832FF1CBA66380048EA02 /* NewSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D832FE1CBA66380048EA02 /* NewSearchViewController.swift */; };
 		6BB7E658DDC5C294CBF2A5F9 /* Pods_ProyectoDAM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7263278990CED0354C36A6DD /* Pods_ProyectoDAM.framework */; };
 /* End PBXBuildFile section */
 
@@ -48,7 +48,6 @@
 		231263861C822AC600726FAF /* FAQViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAQViewController.swift; sourceTree = "<group>"; };
 		231263881C822ADB00726FAF /* TableViewFAQ.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewFAQ.swift; sourceTree = "<group>"; };
 		2312638A1C822AEF00726FAF /* AnswerQuestion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswerQuestion.swift; sourceTree = "<group>"; };
-		236562D81C7B4D7900560BF2 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		23EA04D21C81090F0086A193 /* FormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormViewController.swift; sourceTree = "<group>"; };
 		470DA0FE1C57E6EB0073D6D4 /* MovieEpisodeDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieEpisodeDetailsViewController.swift; sourceTree = "<group>"; };
 		4718BF501C56B87A00FAC195 /* TableShowsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableShowsViewController.swift; sourceTree = "<group>"; };
@@ -81,6 +80,7 @@
 		47D7C83B1C90AACA00AD9BDD /* Cast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cast.swift; sourceTree = "<group>"; };
 		47D7C83C1C90AACA00AD9BDD /* Headshot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Headshot.swift; sourceTree = "<group>"; };
 		47D7C83D1C90AACA00AD9BDD /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		47D832FE1CBA66380048EA02 /* NewSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewSearchViewController.swift; sourceTree = "<group>"; };
 		7263278990CED0354C36A6DD /* Pods_ProyectoDAM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProyectoDAM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AB7A56224743243529506F3 /* Pods-ProyectoDAM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProyectoDAM.release.xcconfig"; path = "Pods/Target Support Files/Pods-ProyectoDAM/Pods-ProyectoDAM.release.xcconfig"; sourceTree = "<group>"; };
 		CCE90DD0EE03B493502804FB /* Pods-ProyectoDAM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProyectoDAM.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ProyectoDAM/Pods-ProyectoDAM.debug.xcconfig"; sourceTree = "<group>"; };
@@ -152,7 +152,7 @@
 				473ACB651C89DF6200F40639 /* TVShowDetailsViewController.swift */,
 				23EA04D21C81090F0086A193 /* FormViewController.swift */,
 				231263861C822AC600726FAF /* FAQViewController.swift */,
-				236562D81C7B4D7900560BF2 /* SearchViewController.swift */,
+				47D832FE1CBA66380048EA02 /* NewSearchViewController.swift */,
 				474E5CBC1C289934007DADBD /* Main.storyboard */,
 				47BA63231C61378800DC0E13 /* Launchscreen.storyboard */,
 				4776D85E1C553704006844CC /* Assets.xcassets */,
@@ -339,12 +339,12 @@
 				47D7C83E1C90AACA00AD9BDD /* Cast.swift in Sources */,
 				4718BF511C56B87A00FAC195 /* TableShowsViewController.swift in Sources */,
 				473ACB681C89E06800F40639 /* CollectionViewCellForActors.swift in Sources */,
-				236562D91C7B4D7900560BF2 /* SearchViewController.swift in Sources */,
 				23EA04D31C81090F0086A193 /* FormViewController.swift in Sources */,
 				473ACB661C89DF6200F40639 /* TVShowDetailsViewController.swift in Sources */,
 				4771DA561C46E29C008022A5 /* ThirdViewController.swift in Sources */,
 				471E24801C5136A8003FB1E6 /* LoginViewController.swift in Sources */,
 				47D7C83A1C90AA9A00AD9BDD /* People.swift in Sources */,
+				47D832FF1CBA66380048EA02 /* NewSearchViewController.swift in Sources */,
 				474E5CB91C289934007DADBD /* FirstViewController.swift in Sources */,
 				47D7C83F1C90AACA00AD9BDD /* Headshot.swift in Sources */,
 				4771DA5A1C46E6FE008022A5 /* BasicCell.swift in Sources */,
@@ -461,7 +461,7 @@
 				INFOPLIST_FILE = ProyectoDAM/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = tania.xavi.ProyectoDAM;
+				PRODUCT_BUNDLE_IDENTIFIER = xavi.ProyectoDAM;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -477,7 +477,7 @@
 				INFOPLIST_FILE = ProyectoDAM/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = tania.xavi.ProyectoDAM;
+				PRODUCT_BUNDLE_IDENTIFIER = xavi.ProyectoDAM;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
