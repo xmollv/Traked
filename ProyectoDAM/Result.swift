@@ -55,6 +55,10 @@ public class Result {
         if (dictionary["movie"] != nil) { showOrMovie = ShowOrMovie(dictionary: dictionary["movie"] as! NSDictionary) }
         if (dictionary["last_watched_at"] != nil) {last_watched_at = dictionary["last_watched_at"] as? String }
 	}
+    
+    init (type: ShowOrMovie) {
+        self.showOrMovie = type
+    }
 
 		
 /**

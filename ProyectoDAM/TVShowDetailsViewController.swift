@@ -17,14 +17,28 @@ class TVShowDetailsViewController: UIViewController, UICollectionViewDelegate, U
     @IBOutlet weak var showImage: UIImageView!
     @IBOutlet weak var showDescription: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var navigationBarToBeHidden: UINavigationBar!
+    @IBOutlet weak var doneBarButtonItem: UIBarButtonItem!
     
     var show: ShowOrMovie?
     var arrayOfPeople = [People]()
     var arrayOfCast = [Cast]()
+    var comingFromDiscover = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        showTitle.title = show!.title!
+        
+        if comingFromDiscover == true {
+            navigationBarToBeHidden.removeFromSuperview()
+            doneBarButtonItem.tintColor = UIColor.clearColor()
+            title = show!.title!
+        } else {
+            showTitle.title = show!.title!
+        }
+        
+        comingFromDiscover = false
+        
+        
         if let poster = show!.images!.poster!.thumb {
             showImage.af_setImageWithURL(NSURL(string: poster)!)
         } else {
